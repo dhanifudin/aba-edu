@@ -1,0 +1,13 @@
+build/
+laporan-akhir/scan/pages.json
+laporan-akhir/scan/*.pdf
+!laporan-akhir/scan/placeholder.typ
+images/signature-dian.png
+docs/proposal.pdf
+docs/laporan-kemajuan.pdf
+docs/pkm-usman.docx
+docs/pkm-usman-graph/
+graphify-out/
+.DS_Store
+*.swp
+.env*
