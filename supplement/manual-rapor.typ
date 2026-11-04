@@ -187,6 +187,6 @@ Pada akhir tahun ajaran, buka *Kenaikan Kelas*, pilih kelas asal, tekan *Tampilk
 #table(
   columns: (4cm, 1fr),
   [Pihak], [Kontak],
-  [Tim pendukung modul rapor], [#ketua-modul, Politeknik Negeri Malang],
+  [Tim pendukung modul rapor], [#ketua-modul],
   [Pengelola yayasan], [#laporan.mitra.nama-pendek, #laporan.mitra.alamat],
 )

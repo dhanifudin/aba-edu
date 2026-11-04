@@ -190,6 +190,6 @@ Buka *Pengumuman Sekolah*, isi judul, tanggal kegiatan, dan isi pesan, lalu teka
 #table(
   columns: (4cm, 1fr),
   [Pihak], [Kontak],
-  [Tim pendukung Polinema], [#laporan.ketua.nama, #laporan.ketua.email, #laporan.ketua.hp],
+  [Tim pendukung ABA-EDU Web], [#laporan.ketua.nama, #laporan.ketua.email, #laporan.ketua.hp],
   [Pengelola yayasan], [#laporan.mitra.nama-pendek, #laporan.mitra.alamat],
 )

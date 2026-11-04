@@ -90,6 +90,6 @@
     #text(size: 9pt, fill: muted)[Disusun oleh] \
     #text(size: 13pt, weight: "bold")[#penulis] \
     #v(0.2cm)
-    #text(size: 10pt, fill: muted)[Politeknik Negeri Malang · #laporan.bulan-tahun-laporan]
+    #text(size: 10pt, fill: muted)[#laporan.bulan-tahun-laporan]
   ]
 ]
