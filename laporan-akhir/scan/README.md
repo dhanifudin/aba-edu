@@ -6,3 +6,5 @@
 `images/signature-dian.png` (tanda tangan ketua) ikut repositori sehingga `make laporan` langsung berjalan.
 `pernyataan-keaslian.pdf` dan `sptjb.pdf` kini berisi pindaian bertanda tangan (13 Oktober 2026). Sumbernya di `docs/` tertukar namanya: `docs/sptjb-pkm.pdf` berisi surat pernyataan keaslian dan `docs/surat-keaslian-pkm.pdf` berisi SPTJB; berkas disalin sesuai isinya.
 `sptjb.pdf` dan `pernyataan-keaslian.pdf` dikompres (Ghostscript `-dPDFSETTINGS=/ebook`, 150 dpi) dari berkas asli di `docs/` menjadi di bawah 1 MB (sekitar 190 KB dan 175 KB); salinan siap unggah ada di `build/sptjb-signed-under1MB.pdf` dan `build/pernyataan-keaslian-signed-under1MB.pdf`. Untuk mengulang: `gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=/ebook -dNOPAUSE -dQUIET -dBATCH -sOutputFile=keluaran.pdf asli.pdf`.
+
+`a-pengesahan.pdf`, `sptjb.pdf`, dan `pernyataan-keaslian.pdf` (pindaian asli bertanda tangan) dilacak git; `kesediaan-mitra.pdf` dan `pernyataan-ketua.pdf` masih placeholder yang dibuat otomatis dan tidak dilacak sampai pindaian aslinya ada (hapus negasi yang sesuai pada `.gitignore` saat itu).

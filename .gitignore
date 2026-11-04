@@ -2,6 +2,10 @@ build/
 laporan-akhir/scan/pages.json
 laporan-akhir/scan/*.pdf
 !laporan-akhir/scan/placeholder.typ
+# pindaian asli bertanda tangan ikut repositori; placeholder otomatis (kesediaan-mitra, pernyataan-ketua) tidak
+!laporan-akhir/scan/a-pengesahan.pdf
+!laporan-akhir/scan/sptjb.pdf
+!laporan-akhir/scan/pernyataan-keaslian.pdf
 docs/proposal.pdf
 docs/laporan-kemajuan.pdf
 docs/pkm-usman.docx
