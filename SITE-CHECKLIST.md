@@ -35,7 +35,8 @@ Masih sementara/kosong: `a-pengesahan.pdf` (sementara halaman pengesahan usulan;
 | SPTJB | `supplement-sptjb.pdf` | Cetak, meterai, tanda tangan, pindai ke `scan/sptjb.pdf` (realisasi belanja asli; konfirmasi uraian baris ke P3M) |
 | Kuesioner Kepuasan Mitra | `supplement-kuesioner-mitra.pdf` | Cetak, isi oleh pimpinan/pengelola, isi rekap di halaman 3 dan Tabel 5.4 laporan |
 | Form HKI | `supplement-form-hki.pdf` | Isi alamat rumah, tanggal, tanda tangan, dan pindaian KTP 6 pencipta |
-| Buku panduan (manual book) | `supplement-manual-book.pdf` | Tangkapan layar halaman setelah login (`images/manual-*.jpg`) diambil dari akun demo Kiddy School ERP; ambil ulang bila tampilan berubah dan samarkan data bila memakai data nyata |
+| Buku panduan modul PPDB (tim Dian dkk) | `supplement-manual-ppdb.pdf` | Tangkapan layar setelah login (`images/manual-*.jpg`) dari akun demo; ambil ulang bila tampilan berubah |
+| Buku panduan modul Rapor (tim Usman dkk) | `supplement-manual-rapor.pdf` | Sampul memuat nama ketua saja ("Usman Nurhasan, S.Kom., M.T. dkk"); lengkapi bila perlu; jangan menambah nomor kontak sebelum dikonfirmasi |
 | SOP | `supplement-sop.pdf` | Isi nomor/tanggal, dahulukan pembahasan dengan pengurus, pimpinan menandatangani, pindai ke Lampiran 6 |
 | BAST | `supplement-bast.pdf` | Isi hari/tanggal, jumlah akun, nilai aset; tanda tangan di atas meterai |
 | Naskah rilis + storyboard video | `supplement-rilis-video.pdf` | Isi kutipan narasumber; kirim rilis ke Pokja Humas; produksi video (maks. 5 menit) |

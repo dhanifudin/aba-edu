@@ -85,7 +85,7 @@ Berlaku bagi Admin Yayasan dan Operator Pendaftaran dalam pengelolaan akun, peng
 + SOP ditinjau setidaknya setahun sekali.
 
 = Dokumen Terkait
-Buku panduan ABA-EDU Web; Berita Acara Serah Terima; kuesioner kepuasan mitra.
+Buku panduan ABA-EDU Web (modul PPDB dan modul rapor); Berita Acara Serah Terima; kuesioner kepuasan mitra.
 
 #v(0.6cm)
 

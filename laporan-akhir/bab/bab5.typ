@@ -31,7 +31,7 @@ Arsitektur sistem dirumuskan bersama anggota tim yang menangani jaringan dan kea
 
 === Fitur Aplikasi
 
-Fitur dikelompokkan menurut pengguna. Tangkapan layar halaman yang memerlukan login disajikan, dengan data pribadi disamarkan, pada buku panduan ABA-EDU Web.
+Fitur dikelompokkan menurut pengguna. Tangkapan layar halaman yang memerlukan login disajikan, dengan data pribadi disamarkan, pada buku panduan modul PPDB dan modul rapor ABA-EDU Web.
 
 #fitur([Halaman Profil Lembaga], [pengunjung])
 

@@ -41,8 +41,9 @@ Kedua belah pihak sepakat melakukan serah terima hasil kegiatan "#laporan.judul"
   [1], [Sistem ABA-EDU Web], [Website profil dan portal PPDB online pada #laporan.mitra.situs (Laravel, Bootstrap 5; tenant platform Kiddy School ERP)], [1 sistem],
   [2], [Hak akses admin sistem], [Akun Admin Yayasan dan Operator Pendaftaran beserta panduan penggantian kata sandi (#dummy[#n-akun akun])], [#dummy[#n-akun akun]],
   [3], [Dokumen SOP], [SOP Pengelolaan Website dan PPDB Online ABA-EDU Web yang telah disahkan], [1 dokumen],
-  [4], [Buku panduan], [Buku panduan penggunaan ABA-EDU Web (manual book)], [1 dokumen],
-  [5], [Data awal], [Data profil lembaga, cabang sekolah, dan konten yang telah dimasukkan #dummy[(profil lembaga, satu cabang sekolah, dan konten awal galeri)]], [1 paket],
+  [4], [Buku panduan], [Buku panduan ABA-EDU Web: Modul Profil Lembaga dan PPDB Online], [1 dokumen],
+  [5], [Buku panduan], [Buku panduan ABA-EDU Web: Modul E-Rapor dan Kegiatan Pembelajaran], [1 dokumen],
+  [6], [Data awal], [Data profil lembaga, cabang sekolah, dan konten yang telah dimasukkan #dummy[(profil lembaga, satu cabang sekolah, dan konten awal galeri)]], [1 paket],
 )
 
 Nilai aset: sistem berjalan sebagai layanan pada platform tim pelaksana sehingga tidak ada perpindahan kepemilikan perangkat keras; nilai total aset yang diserahkan Rp #dummy[0,-]. Pihak pertama tetap menyediakan dukungan teknis platform selama #dummy[#masa-dukungan]. Pihak kedua bertanggung jawab atas pengelolaan sehari-hari sesuai SOP, termasuk kerahasiaan data pendaftar.

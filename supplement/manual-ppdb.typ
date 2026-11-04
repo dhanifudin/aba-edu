@@ -1,58 +1,20 @@
-// Buku panduan (manual book) ABA-EDU Web -- lampiran pendaftaran Hak Cipta program komputer
-// dan bahan pelatihan pengelola. Tangkapan layar halaman publik: images/web-*.jpg
-// (scripts/screenshots.sh); halaman setelah login: images/manual-*.jpg, diambil dari akun demo
-// Kiddy School ERP (data demo, bukan data pribadi nyata).
+// Buku panduan ABA-EDU Web -- Modul Profil Lembaga dan PPDB Online (tim Dian Hanifudin Subhi dkk).
+// Lampiran pendaftaran Hak Cipta dan bahan pelatihan pengelola. Tangkapan layar halaman publik:
+// images/web-*.jpg (scripts/screenshots.sh); halaman setelah login: images/manual-*.jpg, diambil
+// dari akun demo Kiddy School ERP (data demo, bukan data pribadi nyata).
 #import "common.typ": laporan
+#import "manual-common.typ": *
 
-#let accent = rgb("#1e40af")
-#let accent-soft = rgb("#eff6ff")
-#let ink = rgb("#1f2937")
-#let muted = rgb("#6b7280")
-#let polos(nama) = nama.split(",").at(0).trim()
+#show: manual.with("Buku Panduan ABA-EDU Web · Modul Profil Lembaga dan PPDB Online")
 
-#set page(paper: "a4", margin: 2cm, numbering: "1", footer: context [
-  #set text(size: 8.5pt, fill: muted)
-  Buku Panduan ABA-EDU Web #h(1fr) #counter(page).display()
-])
-#set text(font: ("Noto Sans", "DejaVu Sans"), size: 10.5pt, lang: "id", region: "ID", fill: ink)
-#set par(justify: false, leading: 0.7em, spacing: 1.1em)
-#set heading(numbering: "1.1.")
-#show heading.where(level: 1): it => {
-  pagebreak(weak: true)
-  v(0.4cm)
-  block(below: 0.5cm, sticky: true, text(size: 18pt, weight: "bold", fill: accent)[#counter(heading).display() #it.body])
-}
-#show heading.where(level: 2): it => { v(0.35cm, weak: true); block(below: 0.2cm, sticky: true, text(size: 12.5pt, weight: "bold")[#it]) }
-#show figure.caption: it => text(size: 9pt, fill: muted, it)
-#set table(stroke: (x: none, y: 0.5pt + rgb("#e2e8f0")), inset: 6pt)
-#show table.cell.where(y: 0): it => { set text(weight: "bold", fill: accent); it }
-
-#let tip(body) = block(width: 100%, fill: accent-soft, stroke: (left: 3pt + accent), inset: 8pt, body)
-
-// ---------------------------------------------------------------- sampul
-#page(numbering: none, footer: none)[
-  #v(3cm)
-  #align(center)[
-    #image("/images/logo.png", width: 3cm)
-    #v(1cm)
-    #text(size: 28pt, weight: "bold", fill: accent)[ABA-EDU Web]
-    #v(0.2cm)
-    #text(size: 14pt)[Buku Panduan Penggunaan]
-    #v(0.2cm)
-    #text(size: 11pt, fill: muted)[Website Profil dan Sistem Pendaftaran Peserta Didik Baru (PPDB) Online]
-    #v(2cm)
-    #text(size: 11pt)[Disusun untuk #laporan.mitra.nama-pendek]
-    #v(0.3cm)
-    #text(size: 10pt, fill: muted)[Alamat sistem: #laporan.mitra.situs]
-  ]
-  #v(1fr)
-  #align(center)[
-    #text(size: 10pt, fill: muted)[Tim penyusun] \
-    #text(size: 10pt)[#((laporan.ketua.nama,) + laporan.anggota.map(a => a.nama)).map(polos).join(" · ")] \
-    #v(0.4cm)
-    #text(size: 11pt, weight: "bold")[Politeknik Negeri Malang · #laporan.bulan-tahun-laporan]
-  ]
-]
+#cover(
+  "Modul Profil Lembaga dan PPDB Online",
+  "Profil Lembaga dan PPDB Online",
+  "Website resmi lembaga dan pendaftaran peserta didik baru secara daring: dari informasi sekolah, akun orang tua, hingga verifikasi calon siswa.",
+  motif-sekolah(),
+  ("Profil", "Daftar akun", "Isi formulir", "Verifikasi"),
+  laporan.ketua.nama + " dkk",
+)
 
 #outline(title: [Daftar Isi], depth: 2)
 
@@ -66,11 +28,12 @@ ABA-EDU Web adalah aplikasi web untuk lembaga pendidikan anak usia dini yang men
   columns: (3.4cm, 1fr),
   [Peran], [Kegunaan],
   [Pengunjung], [Membaca profil lembaga dan membuka portal PPDB tanpa akun.],
-  [Wali Murid (orang tua)], [Membuat akun, mendaftarkan anak, lalu memantau rapor, pertumbuhan fisik, materi, dan jurnal harian anak.],
-  [Admin (Kepala Sekolah/Operator)], [Memverifikasi calon siswa, mengelola data siswa dan kelas, pengaturan kuota, presensi, rapor, dan pengumuman.],
-  [Guru], [Mengisi presensi, jurnal harian, materi, perkembangan fisik, dan rapor kelas yang diampu.],
+  [Wali Murid (orang tua)], [Membuat akun, mendaftarkan anak melalui formulir PPDB, dan mengakses portal wali murid.],
+  [Admin (Kepala Sekolah/Operator)], [Mengatur kuota pendaftaran, memverifikasi calon siswa, mengelola data siswa dan kelas, dan menerbitkan pengumuman.],
   [Super Admin yayasan], [Mengatur akses dan data lembaga pada tingkat yayasan.],
 )
+
+#tip[Rapor, presensi, jurnal harian, materi, dan pemantauan tumbuh kembang dibahas pada *Buku Panduan ABA-EDU Web · Modul E-Rapor dan Kegiatan Pembelajaran*.]
 
 == Kebutuhan perangkat
 - Peramban (browser) versi terbaru: Chrome, Firefox, Edge, atau Safari.
@@ -124,7 +87,7 @@ Tekan tombol *Daftar PPDB Online* pada halaman profil. Portal menampilkan piliha
 Pilih tab *Masuk Portal*, isi email atau nomor telepon dan kata sandi, lalu tekan *Login*. Centang *Ingat Saya* hanya pada perangkat pribadi. Bila lupa kata sandi, gunakan tautan *Lupa Password* pada halaman login.
 
 == Dasbor Wali Murid
-Setelah masuk, orang tua melihat dasbor yang memuat *Daftar Anak Anda*, pengumuman sekolah, dan menu *Rapor Anak*, *Laporan Fisik*, *Materi Pelajaran*, *Jurnal Harian Anak*, serta *Tautkan Anak (NISN)*. Tombol *+ Tambah Anak* membuka kembali halaman pendaftaran.
+Setelah masuk, orang tua melihat dasbor yang memuat *Daftar Anak Anda* dan pengumuman sekolah. Tombol *+ Tambah Anak* membuka kembali halaman pendaftaran. Menu rapor, laporan fisik, materi, dan jurnal harian anak dijelaskan pada buku panduan modul rapor.
 
 #figure(
   image("/images/manual-w-beranda.jpg", width: 90%),
@@ -152,27 +115,15 @@ Pada halaman pendaftaran, pilih cabang tujuan dengan tombol *Isi Form* (contoh: 
   caption: [Formulir pendaftaran siswa baru (bagian atas).],
 )
 
-== Memantau anak
-Setelah anak diterima dan ditempatkan pada kelas, orang tua membuka menu berikut.
-- *Rapor Anak:* laporan perkembangan anak per semester.
-- *Laporan Fisik:* riwayat tinggi badan, berat badan, dan lingkar kepala.
-- *Jurnal Harian Anak:* catatan kegiatan harian beserta foto dokumentasi.
-- *Materi Pelajaran:* materi yang diunggah guru untuk kelas anak.
-
-#grid(columns: (1fr, 1fr), gutter: 8pt,
-  figure(image("/images/manual-w-rapor.jpg", width: 100%), caption: [Rapor Anak.]),
-  figure(image("/images/manual-w-jurnal.jpg", width: 100%), caption: [Jurnal Harian Anak.]),
-)
-
 = Portal Admin Sekolah (untuk Admin dan Kepala Sekolah)
 
 #tip[Bab ini ditujukan bagi petugas yayasan. Gambar memakai akun demonstrasi sehingga nama dan data siswa adalah data contoh.]
 
 == Masuk sebagai admin
-Buka halaman login, masukkan email dan kata sandi akun admin. Setiap petugas memakai akun sendiri sesuai SOP. Menu samping mengelompokkan fitur menjadi *Data Akademik*, *Kegiatan & Presensi*, serta *E-Rapor & Arsip*; pilihan tahun ajaran dan semester ada di kanan atas.
+Buka halaman login, masukkan email dan kata sandi akun admin. Setiap petugas memakai akun sendiri sesuai SOP. Menu samping mengelompokkan fitur menjadi *Data Akademik*, *Kegiatan & Presensi*, serta *E-Rapor & Arsip*; bagian pertama dibahas pada bab ini, dua lainnya pada buku panduan modul rapor. Pilihan tahun ajaran dan semester ada di kanan atas.
 
 == Membaca dasbor
-Dasbor menampilkan total siswa aktif, rombongan belajar, status akses pengisian rapor, antrean persetujuan materi, distribusi siswa per kelas, dan pengumuman sekolah terbaru.
+Dasbor menampilkan total siswa aktif, rombongan belajar, status akses pengisian rapor, antrean persetujuan materi, distribusi siswa per kelas, dan pengumuman sekolah terbaru. Kartu rapor dan materi dijelaskan pada buku panduan modul rapor.
 
 #figure(
   image("/images/manual-a-dashboard.jpg", width: 90%),
@@ -180,7 +131,7 @@ Dasbor menampilkan total siswa aktif, rombongan belajar, status akses pengisian 
 )
 
 == Mengatur kuota dan pengaturan sekolah
-Buka *Pengaturan Sekolah*. Pada *Pengaturan Pendaftaran & Kuota*, isi kuota TK Pagi, TK Siang, dan PAUD serta pilih batas pendaftaran inden (1 sampai 3 tahun ke depan), lalu tekan *Simpan Pengaturan Pendaftaran*. Halaman yang sama memuat penugasan wali kelas, pengaturan tahun ajaran dan semester, kontrol akses rapor, dan hak akses menu.
+Buka *Pengaturan Sekolah*. Pada *Pengaturan Pendaftaran & Kuota*, isi kuota TK Pagi, TK Siang, dan PAUD serta pilih batas pendaftaran inden (1 sampai 3 tahun ke depan), lalu tekan *Simpan Pengaturan Pendaftaran*. Halaman yang sama memuat penugasan wali kelas, pengaturan tahun ajaran dan semester, dan hak akses menu (kontrol akses rapor dibahas pada buku panduan modul rapor).
 
 #figure(
   image("/images/manual-a-pengaturan.jpg", width: 90%),
@@ -206,16 +157,6 @@ Menu *Data Kelas* menampilkan rombongan belajar beserta jumlah siswa. Menu *Data
 #grid(columns: (1fr, 1fr), gutter: 8pt,
   figure(image("/images/manual-a-calon-siswa.jpg", width: 100%), caption: [Daftar calon siswa.]),
   figure(image("/images/manual-a-detail-calon.jpg", width: 100%), caption: [Profil calon siswa.]),
-)
-
-== Kegiatan, presensi, dan rapor
-- *Presensi Harian* dan *Rekap Presensi:* mengisi kehadiran per kelas dan mencetak rekap.
-- *Jurnal Harian*, *Persetujuan Materi*, dan *Perkembangan Fisik:* mengelola catatan pembelajaran, menyetujui materi guru, dan memantau pertumbuhan anak.
-- *Isi Rapor*, *Cetak Rapor*, *Arsip Rapor*, *Template Rapor*, dan *Kenaikan Kelas:* mengisi, mencetak, mengarsipkan rapor, dan menaikkan kelas di akhir tahun ajaran.
-
-#grid(columns: (1fr, 1fr), gutter: 8pt,
-  figure(image("/images/manual-a-presensi.jpg", width: 100%), caption: [Presensi Harian.]),
-  figure(image("/images/manual-a-persetujuan.jpg", width: 100%), caption: [Persetujuan Materi.]),
 )
 
 == Menerbitkan pengumuman

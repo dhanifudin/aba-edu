@@ -9,11 +9,11 @@ SCAN_DIR = laporan-akhir/scan
 SCAN_NAMES = a-pengesahan pernyataan-keaslian kesediaan-mitra pernyataan-ketua sptjb
 SCAN_PDFS = $(patsubst %,$(SCAN_DIR)/%.pdf,$(SCAN_NAMES))
 
-SUPPLEMENTS = pernyataan-keaslian ringkasan-pkm sptjb dokumen-prototype form-ttg lembar-keberdayaan kuesioner-mitra form-hki manual-book sop bast rilis-video
+SUPPLEMENTS = pernyataan-keaslian ringkasan-pkm sptjb dokumen-prototype form-ttg lembar-keberdayaan kuesioner-mitra form-hki manual-ppdb manual-rapor sop bast rilis-video
 SUPPLEMENT_PDFS = $(patsubst %,$(BUILD_DIR)/supplement-%.pdf,$(SUPPLEMENTS))
 EMBEDDED_PDFS = $(BUILD_DIR)/supplement-ringkasan-pkm.pdf $(BUILD_DIR)/supplement-dokumen-prototype.pdf $(BUILD_DIR)/supplement-form-ttg.pdf $(BUILD_DIR)/supplement-lembar-keberdayaan.pdf $(BUILD_DIR)/supplement-form-hki.pdf $(BUILD_DIR)/supplement-rilis-video.pdf $(BUILD_DIR)/supplement-sop.pdf $(BUILD_DIR)/supplement-bast.pdf
 
-.PHONY: supplement sptjb ringkasan hki manual-book sop bast kuesioner rilis-video pengesahan pernyataan all laporan laporan-watch laporan-view scan-placeholders scan-index screenshots clean help
+.PHONY: supplement sptjb ringkasan hki manual-ppdb manual-rapor sop bast kuesioner rilis-video pengesahan pernyataan all laporan laporan-watch laporan-view scan-placeholders scan-index screenshots clean help
 all: laporan
 
 $(BUILD_DIR):
@@ -38,13 +38,15 @@ supplement: $(SUPPLEMENT_PDFS)
 $(BUILD_DIR)/supplement-%.pdf: supplement/%.typ supplement/common.typ laporan-akhir/config.typ | $(BUILD_DIR)
 	typst compile --root . $< $@
 
-$(BUILD_DIR)/supplement-manual-book.pdf: $(wildcard images/web-*.png)
+$(BUILD_DIR)/supplement-manual-ppdb.pdf: supplement/manual-common.typ $(wildcard images/web-*.jpg images/manual-*.jpg)
+$(BUILD_DIR)/supplement-manual-rapor.pdf: supplement/manual-common.typ $(wildcard images/manual-*.jpg)
 $(BUILD_DIR)/supplement-form-hki.pdf: supplement/common.typ
 
 sptjb: $(BUILD_DIR)/supplement-sptjb.pdf
 ringkasan: $(BUILD_DIR)/supplement-ringkasan-pkm.pdf
 hki: $(BUILD_DIR)/supplement-form-hki.pdf
-manual-book: $(BUILD_DIR)/supplement-manual-book.pdf
+manual-ppdb: $(BUILD_DIR)/supplement-manual-ppdb.pdf
+manual-rapor: $(BUILD_DIR)/supplement-manual-rapor.pdf
 sop: $(BUILD_DIR)/supplement-sop.pdf
 bast: $(BUILD_DIR)/supplement-bast.pdf
 kuesioner: $(BUILD_DIR)/supplement-kuesioner-mitra.pdf
