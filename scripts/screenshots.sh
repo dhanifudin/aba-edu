@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # Tangkap halaman publik abs.halokes.com (desktop + mobile) ke images/web-*.png.
-# Halaman di balik login (admin, daftar pendaftar) tidak dapat ditangkap otomatis;
-# simpan manual ke images/ dengan nama yang dirujuk di bab5.typ. Samarkan data pribadi.
+# Halaman di balik login (admin dan wali murid) tidak ditangkap skrip ini: gambar manual-*.jpg
+# pada buku panduan diambil dari akun demo (data contoh); samarkan data bila memakai data nyata.
 set -euo pipefail
 cd "$(dirname "$0")/.."
 BASE="${BASE:-https://abs.halokes.com/y/ABS}"

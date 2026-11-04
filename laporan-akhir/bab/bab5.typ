@@ -116,27 +116,31 @@ Orang tua membuat akun sebelum mendaftarkan anak agar data pendaftaran tersimpan
 
 #fitur([Pengisian Formulir dan Unggah Dokumen], [orang tua])
 
-Setelah masuk, orang tua mengisi data pendaftaran anak pada cabang tujuan dan mengunggah dokumen persyaratan. Formulir memuat data anak serta data orang tua atau wali, kemudian orang tua mengunggah kartu keluarga, akta kelahiran, pas foto, dan bukti pembayaran pendaftaran. Setelah pendaftaran terkirim, data dan berkas tersimpan pada basis data terpusat sehingga tidak lagi tersebar pada media fisik (skenario 11 pada @tab-blackbox).
+Orang tua memilih cabang (TK atau PAUD), tahun ajaran, dan program kelas, kemudian mengisi formulir pendaftaran dalam empat bagian: data pribadi calon siswa, alamat dengan penentuan lokasi rumah pada peta, data ayah dan ibu, serta data fisik anak (tinggi badan, berat badan, lingkar kepala). Orang tua mengunggah pas foto anak, kartu keluarga, akta kelahiran, dan bukti pembayaran pendaftaran (maksimum 2 MB per berkas). Setelah dikirim, data dan berkas tersimpan pada basis data terpusat sehingga tidak lagi tersebar pada media fisik (skenario 11 pada @tab-blackbox).
 
-#fitur([Dasbor Ringkasan Statistik Pendaftaran], [admin dan operator])
+#fitur([Portal Wali Murid], [orang tua])
 
-Dasbor memberi admin gambaran jumlah pendaftar dan status pendaftaran pada periode berjalan. Ringkasan statistik memuat jumlah pendaftar, jumlah yang menunggu verifikasi, yang telah terverifikasi, dan yang ditolak, serta rekap periode. Ringkasan ini menjadi bahan laporan evaluasi akhir periode PPDB.
+Setelah masuk, orang tua memperoleh dasbor wali murid yang memuat daftar anak, pengumuman sekolah, dan menu Rapor Anak, Laporan Fisik, Materi Pelajaran, Jurnal Harian Anak, serta Tautkan Anak (NISN). Orang tua memantau rapor, riwayat pertumbuhan fisik, materi, dan jurnal harian anak, dan dapat menambahkan anak lain ke akunnya.
 
-#fitur([Manajemen Cabang dan Periode PPDB], [admin])
+#fitur([Dasbor Admin Yayasan], [admin])
 
-Admin menambahkan cabang sekolah dan mengaktifkan periode pendaftaran agar portal menampilkan pilihan cabang. Data cabang meliputi nama cabang, jenjang, alamat, kuota, dan status aktif, dan admin dapat menambah atau mengubahnya. Setelah admin menyimpan data, cabang tampil pada halaman profil dan pada pilihan cabang di portal PPDB.
+Dasbor admin menampilkan jumlah siswa aktif, jumlah rombongan belajar, status akses pengisian rapor, antrean persetujuan materi, distribusi siswa per kelas, dan pengumuman sekolah terbaru. Menu samping mengelompokkan fitur menjadi Data Akademik (Pengaturan Sekolah, Data Kelas, Data Siswa), Kegiatan dan Presensi, serta E-Rapor dan Arsip.
 
-#fitur([Manajemen dan Verifikasi Pendaftar], [operator dan admin])
+#fitur([Pengaturan Pendaftaran dan Kuota], [admin])
 
-Operator memeriksa kelengkapan data dan dokumen setiap pendaftar, kemudian memverifikasi atau menolaknya. Daftar pendaftar dapat dilihat, disaring, dan dibuka per pendaftar; berkas yang lengkap diverifikasi, sedangkan berkas yang kurang ditolak beserta alasannya (skenario 12 pada @tab-blackbox). Rekap pendaftar dapat diekspor pada akhir periode dan disimpan yayasan sesuai SOP.
+Pada menu Pengaturan Sekolah, admin menetapkan kuota siswa per kelompok (TK Pagi, TK Siang, PAUD) dan batas pendaftaran inden hingga tiga tahun ajaran ke depan. Admin juga mengatur tahun ajaran dan semester aktif, penugasan wali kelas, dan hak akses menu. Data kelas (rombongan belajar) dikelola pada menu Data Kelas.
 
-#fitur([Manajemen Konten Website], [admin])
+#fitur([Verifikasi Calon Siswa], [admin])
 
-Admin memperbarui informasi profil, berita atau pengumuman, dan foto kegiatan tanpa keterampilan pemrograman. Perubahan yang disimpan langsung tampil pada halaman profil publik.
+Pada menu Data Siswa, admin menyaring daftar dengan pilihan _Calon Siswa (Menunggu Verifikasi)_ dan dapat membuka profil lengkap setiap calon, termasuk data orang tua dan bukti pembayaran. Calon yang berkasnya lengkap diverifikasi dengan tombol _Verifikasi & Terima_ lalu diaktifkan sebagai siswa dan ditempatkan pada kelas (skenario 12 pada @tab-blackbox). Daftar siswa dapat dicari berdasarkan nama, NIK, atau NISN.
 
-#fitur([Manajemen Pengguna Berbasis Peran], [admin])
+#fitur([Pengumuman dan Pengelolaan Konten], [admin])
 
-Admin yayasan membuat akun petugas dan menetapkan perannya agar hak akses sesuai tugas. Peran yang tersedia adalah Admin Yayasan dan Operator Pendaftaran, dan admin dapat menonaktifkan akun petugas yang tidak lagi bertugas. Pembagian peran ini dijabarkan lebih lanjut dalam SOP pengelolaan website dan PPDB.
+Admin menerbitkan pengumuman sekolah (judul, tanggal kegiatan, dan isi pesan) yang tampil pada dasbor admin dan portal wali murid dan berpindah ke arsip setelah tanggal kegiatan lewat. Pembaruan konten halaman profil lembaga dilakukan melalui pendampingan tim bersama pengelola yayasan.
+
+#fitur([Pengguna dan Hak Akses Berbasis Peran], [admin])
+
+Sistem membedakan peran Wali Murid, Guru, Admin, Kepala Sekolah, dan Super Admin yayasan; tiap peran melihat menu yang sesuai tugasnya, dan admin mengatur hak akses menu pada Pengaturan Sekolah. Pembagian peran ini dijabarkan lebih lanjut dalam SOP pengelolaan website dan PPDB.
 
 === Kesesuaian dengan Spesifikasi pada Surat Kesediaan Mitra
 
@@ -150,12 +154,12 @@ Surat kesediaan kerja sama mitra (9 Februari 2026) menyepakati delapan kemampuan
     table.header([*No.*], [*Spesifikasi yang Disepakati*], [*Uraian*], [*Status*], [*Bukti*]),
     [1], [Website profil lembaga], [Informasi resmi yayasan: profil, visi dan misi, program pendidikan, galeri kegiatan], [Tercapai], [@fig-beranda-hero, @fig-beranda-tentang, @fig-beranda-tengah, @fig-beranda-bawah],
     [2], [Modul PPDB online], [Formulir pendaftaran berbasis web, unggah dokumen persyaratan, penyimpanan data calon siswa terpusat, rekap otomatis data pendaftar], [#dummy[Tercapai]], [@fig-ppdb],
-    [3], [Manajemen data pendaftar], [Dasbor admin untuk melihat, memverifikasi, mengedit, dan mengekspor data pendaftar], [#dummy[Tercapai]], [Uraian fitur 5.1.2 dan @tab-blackbox],
-    [4], [Manajemen konten website (CMS sederhana)], [Admin memperbarui berita, pengumuman, dan foto kegiatan tanpa keterampilan pemrograman], [#dummy[Tercapai]], [Uraian fitur 5.1.2],
+    [3], [Manajemen data pendaftar], [Daftar calon siswa, profil lengkap beserta berkas, dan verifikasi oleh admin; rekap dicetak dari menu presensi dan rapor], [Tercapai], [Uraian fitur 5.1.2 dan @tab-blackbox],
+    [4], [Manajemen konten website (CMS sederhana)], [Admin menerbitkan pengumuman sekolah tanpa keterampilan pemrograman; konten halaman profil diperbarui melalui pendampingan tim], [Sebagian], [Uraian fitur 5.1.2],
     [5], [Desain responsif], [Tampilan adaptif untuk desktop, tablet, dan ponsel], [Tercapai], [@fig-beranda-mobile],
-    [6], [Manajemen pengguna berbasis peran], [Peran Admin Yayasan dan Operator Pendaftaran], [#dummy[Tercapai]], [Uraian fitur 5.1.2],
+    [6], [Manajemen pengguna berbasis peran], [Peran Wali Murid, Guru, Admin, Kepala Sekolah, dan Super Admin dengan hak akses menu], [Tercapai], [Uraian fitur 5.1.2],
     [7], [Keamanan data dasar], [Otentikasi admin, validasi input, dan pencadangan data], [#dummy[Tercapai]], [@tab-keamanan],
-    [8], [Dasbor ringkasan statistik], [Visualisasi jumlah pendaftar, status pendaftaran, dan rekap periode], [#dummy[Tercapai]], [Uraian fitur 5.1.2],
+    [8], [Dasbor ringkasan statistik], [Kartu ringkasan siswa aktif, rombongan belajar, antrean materi, dan distribusi siswa per kelas], [Tercapai], [Uraian fitur 5.1.2],
   ),
   caption: [Kesesuaian realisasi dengan spesifikasi pada surat kesediaan mitra],
 ) <tab-kesesuaian>
@@ -204,7 +208,7 @@ Anggota tim yang menangani jaringan dan keamanan infrastruktur mengevaluasi ling
     align: left + top,
     inset: 4pt,
     table.header([*No.*], [*Aspek*], [*Pemeriksaan*], [*Hasil*]),
-    [1], [Otentikasi admin dan operator], [Kata sandi diperlukan; akun dibuat per petugas; pembatasan akses menurut peran], [#dummy[Sesuai]],
+    [1], [Otentikasi admin dan petugas], [Kata sandi diperlukan; akun dibuat per petugas; pembatasan akses menurut peran], [#dummy[Sesuai]],
     [2], [Validasi input], [Isian wajib, format, dan konfirmasi kata sandi divalidasi sebelum data disimpan], [#dummy[Sesuai]],
     [3], [Lalu lintas dan akses publik], [Akses melalui HTTPS dan jaringan Cloudflare], [#dummy[Sesuai]],
     [4], [Pencadangan data], [Pencadangan basis data berkala pada sisi platform], [#dummy[Sesuai]],

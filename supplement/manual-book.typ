@@ -1,8 +1,8 @@
 // Buku panduan (manual book) ABA-EDU Web -- lampiran pendaftaran Hak Cipta program komputer
-// dan bahan pelatihan pengelola. Tangkapan layar halaman publik diambil dari
-// abs.halokes.com (images/web-*.png); halaman di balik login berupa kotak TODO sampai
-// tangkapan layar tersedia (samarkan data pribadi anak dan orang tua).
-#import "common.typ": laporan, todo
+// dan bahan pelatihan pengelola. Tangkapan layar halaman publik: images/web-*.jpg
+// (scripts/screenshots.sh); halaman setelah login: images/manual-*.jpg, diambil dari akun demo
+// Kiddy School ERP (data demo, bukan data pribadi nyata).
+#import "common.typ": laporan
 
 #let accent = rgb("#1e40af")
 #let accent-soft = rgb("#eff6ff")
@@ -28,7 +28,6 @@
 #show table.cell.where(y: 0): it => { set text(weight: "bold", fill: accent); it }
 
 #let tip(body) = block(width: 100%, fill: accent-soft, stroke: (left: 3pt + accent), inset: 8pt, body)
-#let ph(nama, tinggi: 6cm) = block(width: 100%, height: tinggi, stroke: (paint: red, dash: "dashed"), inset: 8pt, align(center + horizon, text(fill: red, size: 9.5pt)[\[TODO: sisipkan tangkapan layar images/#(nama + ".png") (data disamarkan)\]]))
 
 // ---------------------------------------------------------------- sampul
 #page(numbering: none, footer: none)[
@@ -60,15 +59,17 @@
 = Pengantar
 
 == Tentang ABA-EDU Web
-ABA-EDU Web adalah aplikasi web untuk lembaga pendidikan anak usia dini yang menyediakan (1) website profil yang menampilkan identitas, visi dan misi, program, galeri, dan keunggulan lembaga, serta (2) portal PPDB online tempat orang tua membuat akun dan mendaftarkan anak. Pengelola yayasan memperbarui konten dan memverifikasi pendaftar melalui panel pengelolaan. Sistem berjalan pada platform Kiddy School ERP (halokes.com) dan dapat dibuka dari komputer maupun ponsel tanpa memasang aplikasi.
+ABA-EDU Web adalah aplikasi web untuk lembaga pendidikan anak usia dini yang menyediakan (1) website profil yang menampilkan identitas, visi dan misi, program, galeri, dan keunggulan lembaga, serta (2) portal PPDB online tempat orang tua membuat akun dan mendaftarkan anak. Pengelola yayasan memverifikasi pendaftar dan mengelola data sekolah melalui portal ERP. Sistem berjalan pada platform Kiddy School ERP (halokes.com) dan dapat dibuka dari komputer maupun ponsel tanpa memasang aplikasi.
 
 == Pengguna dan peran
 #table(
   columns: (3.4cm, 1fr),
   [Peran], [Kegunaan],
-  [Pengunjung/orang tua], [Membaca profil lembaga, membuat akun, dan mendaftarkan anak melalui portal PPDB.],
-  [Operator Pendaftaran], [Memeriksa data dan dokumen pendaftar, memverifikasi atau menolak berkas.],
-  [Admin Yayasan], [Mengelola akun petugas, konten profil, cabang sekolah, periode PPDB, dan rekap data.],
+  [Pengunjung], [Membaca profil lembaga dan membuka portal PPDB tanpa akun.],
+  [Wali Murid (orang tua)], [Membuat akun, mendaftarkan anak, lalu memantau rapor, pertumbuhan fisik, materi, dan jurnal harian anak.],
+  [Admin (Kepala Sekolah/Operator)], [Memverifikasi calon siswa, mengelola data siswa dan kelas, pengaturan kuota, presensi, rapor, dan pengumuman.],
+  [Guru], [Mengisi presensi, jurnal harian, materi, perkembangan fisik, dan rapor kelas yang diampu.],
+  [Super Admin yayasan], [Mengatur akses dan data lembaga pada tingkat yayasan.],
 )
 
 == Kebutuhan perangkat
@@ -113,48 +114,121 @@ Tekan tombol *Daftar PPDB Online* pada halaman profil. Portal menampilkan piliha
 )
 
 == Membuat akun orang tua
-+ Pada kolom kanan, pilih tab *Buat Akun Baru*.
++ Pada kolom kanan portal PPDB, pilih tab *Buat Akun Baru*.
 + Isi nama lengkap, nomor telepon/WhatsApp, email (boleh dikosongkan), kata sandi, dan konfirmasi kata sandi.
 + Tekan tombol pembuatan akun. Bila ada kolom yang salah, sistem menampilkan pesan dan akun belum dibuat.
 
 #tip[Gunakan kata sandi minimal 8 karakter dan jangan membagikannya. Nomor telepon dipakai pengelola untuk menghubungi Anda.]
 
-
 == Masuk ke portal
-Pilih tab *Masuk Portal*, isi email atau nomor telepon dan kata sandi, lalu tekan *Masuk ke Portal Sekarang*. Centang *Ingat Saya* hanya pada perangkat pribadi.
+Pilih tab *Masuk Portal*, isi email atau nomor telepon dan kata sandi, lalu tekan *Login*. Centang *Ingat Saya* hanya pada perangkat pribadi. Bila lupa kata sandi, gunakan tautan *Lupa Password* pada halaman login.
 
-== Mendaftarkan anak
-+ Pilih cabang sekolah tujuan.
-+ Lengkapi formulir pendaftaran: data anak dan data orang tua/wali.
-+ Unggah dokumen persyaratan: kartu keluarga dan akta kelahiran, pas foto anak (3x4, setengah badan), dan bukti pembayaran pendaftaran (struk atau transfer bank).
-+ Periksa kembali, lalu kirim pendaftaran. Pantau status pendaftaran dari portal.
+== Dasbor Wali Murid
+Setelah masuk, orang tua melihat dasbor yang memuat *Daftar Anak Anda*, pengumuman sekolah, dan menu *Rapor Anak*, *Laporan Fisik*, *Materi Pelajaran*, *Jurnal Harian Anak*, serta *Tautkan Anak (NISN)*. Tombol *+ Tambah Anak* membuka kembali halaman pendaftaran.
 
+#figure(
+  image("/images/manual-w-beranda.jpg", width: 90%),
+  caption: [Dasbor Wali Murid.],
+)
 
-= Panel Pengelolaan (untuk Admin dan Operator)
+== Memilih cabang sekolah
+Pada halaman pendaftaran, pilih cabang tujuan dengan tombol *Isi Form* (contoh: TK Aboe Bakar Soemijati atau PAUD Aboe Bakar Soemijati). Halaman ini juga mengingatkan dokumen yang perlu disiapkan.
 
-#tip[Bab ini ditujukan bagi petugas yayasan. Nama menu dapat sedikit berbeda menurut versi platform yang berjalan.]
+#figure(
+  image("/images/manual-w-daftar.jpg", width: 90%),
+  caption: [Pilihan cabang sekolah dan dokumen yang perlu disiapkan.],
+)
 
-== Masuk sebagai petugas
-Buka halaman login, masukkan email dan kata sandi akun petugas. Setiap petugas memakai akun sendiri sesuai SOP.
+== Mengisi formulir pendaftaran
++ Pilih *Cabang TK / PAUD*, *Tahun Ajaran*, dan *Program Kelas*.
++ *A. Data pribadi calon siswa:* nama lengkap, NIK, nomor KK, jenis kelamin, tempat dan tanggal lahir, agama, anak ke-, dan jumlah saudara.
++ *B. Alamat, koordinat, dan kontak:* cari atau geser pin lokasi rumah pada peta (atau tekan *Deteksi Lokasi Saya*), lalu isi alamat jalan, RT/RW, desa/kelurahan, kecamatan, kode pos, jenis tinggal, transportasi, jarak ke sekolah, dan nomor HP/WhatsApp.
++ *C. Data orang tua/wali:* nama, NIK, tahun lahir, pendidikan, pekerjaan, dan penghasilan bulanan ayah dan ibu.
++ *D. Fisik dan dokumen upload:* tinggi badan, berat badan, lingkar kepala; unggah pas foto anak, scan/foto KK, akta kelahiran, dan bukti pembayaran (maksimum 2 MB per berkas; JPG/PNG, KK dan akta boleh PDF).
++ Tekan *Kirim Formulir Pendaftaran Siswa*. Pihak sekolah memverifikasi pendaftaran dalam 1 x 24 jam.
 
+#figure(
+  image("/images/manual-w-formulir.jpg", width: 90%),
+  caption: [Formulir pendaftaran siswa baru (bagian atas).],
+)
 
-== Mengelola konten profil
-Admin memperbarui profil lembaga, visi dan misi, galeri, dan informasi kontak melalui menu pengelolaan profil Simpan perubahan, lalu periksa tampilan pada halaman publik dan pada ponsel.
+== Memantau anak
+Setelah anak diterima dan ditempatkan pada kelas, orang tua membuka menu berikut.
+- *Rapor Anak:* laporan perkembangan anak per semester.
+- *Laporan Fisik:* riwayat tinggi badan, berat badan, dan lingkar kepala.
+- *Jurnal Harian Anak:* catatan kegiatan harian beserta foto dokumentasi.
+- *Materi Pelajaran:* materi yang diunggah guru untuk kelas anak.
 
-== Mengelola cabang sekolah dan periode PPDB
-Admin menambahkan cabang sekolah (nama, jenjang, alamat, kuota) dan mengaktifkan periode pendaftaran agar portal menampilkan pilihan cabang.
+#grid(columns: (1fr, 1fr), gutter: 8pt,
+  figure(image("/images/manual-w-rapor.jpg", width: 100%), caption: [Rapor Anak.]),
+  figure(image("/images/manual-w-jurnal.jpg", width: 100%), caption: [Jurnal Harian Anak.]),
+)
 
+= Portal Admin Sekolah (untuk Admin dan Kepala Sekolah)
 
-== Memverifikasi pendaftar
-+ Buka daftar pendaftar
-+ Pilih pendaftar, periksa data dan dokumen.
-+ Verifikasi bila lengkap, atau tolak dengan catatan alasan bila kurang.
-+ Ekspor rekap pendaftar pada akhir periode dan simpan sesuai SOP.
+#tip[Bab ini ditujukan bagi petugas yayasan. Gambar memakai akun demonstrasi sehingga nama dan data siswa adalah data contoh.]
 
+== Masuk sebagai admin
+Buka halaman login, masukkan email dan kata sandi akun admin. Setiap petugas memakai akun sendiri sesuai SOP. Menu samping mengelompokkan fitur menjadi *Data Akademik*, *Kegiatan & Presensi*, serta *E-Rapor & Arsip*; pilihan tahun ajaran dan semester ada di kanan atas.
+
+== Membaca dasbor
+Dasbor menampilkan total siswa aktif, rombongan belajar, status akses pengisian rapor, antrean persetujuan materi, distribusi siswa per kelas, dan pengumuman sekolah terbaru.
+
+#figure(
+  image("/images/manual-a-dashboard.jpg", width: 90%),
+  caption: [Dasbor admin.],
+)
+
+== Mengatur kuota dan pengaturan sekolah
+Buka *Pengaturan Sekolah*. Pada *Pengaturan Pendaftaran & Kuota*, isi kuota TK Pagi, TK Siang, dan PAUD serta pilih batas pendaftaran inden (1 sampai 3 tahun ke depan), lalu tekan *Simpan Pengaturan Pendaftaran*. Halaman yang sama memuat penugasan wali kelas, pengaturan tahun ajaran dan semester, kontrol akses rapor, dan hak akses menu.
+
+#figure(
+  image("/images/manual-a-pengaturan.jpg", width: 90%),
+  caption: [Pengaturan Sekolah: kuota pendaftaran dan penugasan wali kelas.],
+)
+
+== Mengelola kelas dan data siswa
+Menu *Data Kelas* menampilkan rombongan belajar beserta jumlah siswa. Menu *Data Siswa* menampilkan daftar peserta didik, status kelas atau pendaftaran, dan akun orang tua. Gunakan filter kelas, tahun pendaftaran, atau kolom pencarian nama, NIK, atau NISN. Tombol *Lihat Detail* membuka profil, *Set Kelas* menempatkan siswa pada kelas, dan *+ Tambah Siswa* membuka formulir pendaftaran.
+
+#figure(
+  image("/images/manual-a-data-siswa.jpg", width: 90%),
+  caption: [Data Siswa.],
+)
+
+== Memverifikasi calon siswa
++ Buka *Data Siswa*, lalu pilih filter *Calon Siswa (Menunggu Verifikasi)*.
++ Tekan *Lihat Detail* untuk memeriksa biodata, data orang tua, dan berkas (termasuk bukti pembayaran).
++ Bila lengkap, tekan *Verifikasi & Terima*, kemudian *Terima & Aktifkan Siswa*.
++ Tempatkan siswa pada kelas dengan *Set Kelas*.
+
+#tip[Jika berkas kurang, hubungi orang tua melalui nomor HP/WhatsApp pada profil sebelum menerima calon siswa.]
+
+#grid(columns: (1fr, 1fr), gutter: 8pt,
+  figure(image("/images/manual-a-calon-siswa.jpg", width: 100%), caption: [Daftar calon siswa.]),
+  figure(image("/images/manual-a-detail-calon.jpg", width: 100%), caption: [Profil calon siswa.]),
+)
+
+== Kegiatan, presensi, dan rapor
+- *Presensi Harian* dan *Rekap Presensi:* mengisi kehadiran per kelas dan mencetak rekap.
+- *Jurnal Harian*, *Persetujuan Materi*, dan *Perkembangan Fisik:* mengelola catatan pembelajaran, menyetujui materi guru, dan memantau pertumbuhan anak.
+- *Isi Rapor*, *Cetak Rapor*, *Arsip Rapor*, *Template Rapor*, dan *Kenaikan Kelas:* mengisi, mencetak, mengarsipkan rapor, dan menaikkan kelas di akhir tahun ajaran.
+
+#grid(columns: (1fr, 1fr), gutter: 8pt,
+  figure(image("/images/manual-a-presensi.jpg", width: 100%), caption: [Presensi Harian.]),
+  figure(image("/images/manual-a-persetujuan.jpg", width: 100%), caption: [Persetujuan Materi.]),
+)
+
+== Menerbitkan pengumuman
+Buka *Pengumuman Sekolah*, isi judul, tanggal kegiatan, dan isi pesan, lalu tekan *Terbitkan Pengumuman*. Pengumuman tampil pada dasbor admin dan portal wali murid, dan berpindah ke arsip setelah tanggal kegiatan lewat.
+
+#figure(
+  image("/images/manual-a-pengumuman.jpg", width: 90%),
+  caption: [Pengumuman Sekolah.],
+)
 
 = Keamanan dan Data Pribadi
 
-- Data anak dan orang tua adalah data pribadi; hanya Admin dan Operator yang berwenang boleh mengaksesnya.
+- Data anak dan orang tua adalah data pribadi; hanya admin, kepala sekolah, dan guru yang berwenang boleh mengaksesnya.
 - Jangan membagikan kata sandi; nonaktifkan akun petugas yang tidak lagi bertugas.
 - Jangan mengirim berkas pendaftar melalui kanal publik atau grup pesan.
 - Laporkan dugaan kebocoran data kepada pimpinan yayasan dan tim pendukung dalam 1 x 24 jam.
@@ -164,8 +238,8 @@ Admin menambahkan cabang sekolah (nama, jenjang, alamat, kuota) dan mengaktifkan
 #table(
   columns: (5cm, 1fr),
   [Pertanyaan], [Jawaban],
-  [Pilihan cabang kosong.], [Cabang sekolah dan periode PPDB belum diaktifkan Admin. Hubungi pengelola yayasan.],
-  [Lupa kata sandi.], [Gunakan tautan lupa kata sandi pada halaman login atau minta Admin menyetel ulang akun.],
+  [Pilihan cabang atau tahun ajaran kosong.], [Cabang atau tahun ajaran belum tersedia pada pengaturan. Hubungi pengelola yayasan.],
+  [Lupa kata sandi.], [Gunakan tautan *Lupa Password* pada halaman login atau minta admin menyetel ulang akun.],
   [Dokumen gagal diunggah.], [Pastikan berkas berupa foto atau pindaian yang jelas dan ukurannya tidak terlalu besar; coba lagi dengan jaringan yang stabil.],
   [Tampilan tidak sesuai pada ponsel.], [Perbarui peramban dan muat ulang halaman; bila masih terjadi, laporkan kepada tim pendukung.],
 )

@@ -35,7 +35,7 @@ Masih sementara/kosong: `a-pengesahan.pdf` (sementara halaman pengesahan usulan;
 | SPTJB | `supplement-sptjb.pdf` | Cetak, meterai, tanda tangan, pindai ke `scan/sptjb.pdf` (realisasi belanja asli; konfirmasi uraian baris ke P3M) |
 | Kuesioner Kepuasan Mitra | `supplement-kuesioner-mitra.pdf` | Cetak, isi oleh pimpinan/pengelola, isi rekap di halaman 3 dan Tabel 5.4 laporan |
 | Form HKI | `supplement-form-hki.pdf` | Isi alamat rumah, tanggal, tanda tangan, dan pindaian KTP 6 pencipta |
-| Buku panduan (manual book) | `supplement-manual-book.pdf` | Isi tangkapan layar admin dan nama menu (TODO bertanda) |
+| Buku panduan (manual book) | `supplement-manual-book.pdf` | Tangkapan layar halaman setelah login (`images/manual-*.jpg`) diambil dari akun demo Kiddy School ERP; ambil ulang bila tampilan berubah dan samarkan data bila memakai data nyata |
 | SOP | `supplement-sop.pdf` | Isi nomor/tanggal, dahulukan pembahasan dengan pengurus, pimpinan menandatangani, pindai ke Lampiran 6 |
 | BAST | `supplement-bast.pdf` | Isi hari/tanggal, jumlah akun, nilai aset; tanda tangan di atas meterai |
 | Naskah rilis + storyboard video | `supplement-rilis-video.pdf` | Isi kutipan narasumber; kirim rilis ke Pokja Humas; produksi video (maks. 5 menit) |
@@ -72,7 +72,7 @@ Seluruh angka hasil dan tanggal pelaksanaan berikut adalah **dummy**, tampil **b
 - Realisasi anggaran = rencana per uraian (Rp 8.000.000).
 - Tanggal: koordinasi 8 April; website aktif 20 Mei; PPDB aktif dan diuji 24 Juni; repositori 8 Juli; digitalisasi 22 Juli; pelatihan 5 dan 19 Agustus, 2, 16, dan 30 September; SOP disahkan 7 Oktober; rapat refleksi 9 Oktober; BAST 12 Oktober 2026.
 - Nyata (bukan dummy): jarak 9,2 km (rute peta), kontribusi mitra Rp 0 (halaman pengesahan proposal).
-- Tetap TODO (bukan angka/tanggal): URL dan status artikel/media/video/Hak Cipta, nomor SOP, nomor surat perjanjian, tingkat TKT, tangkapan layar dan uraian fitur admin, kutipan narasumber, nama menu manual book.
+- Belum final (bukan angka/tanggal): URL dan status artikel/media/video/Hak Cipta, nomor SOP, nomor surat perjanjian, tingkat TKT. Uraian fitur admin dan orang tua sudah mengikuti menu nyata di abs.halokes.com (akun demo); konten profil lembaga belum punya menu pengelolaan sendiri pada portal admin (diperbarui melalui pendampingan tim) dan spesifikasi surat kesediaan nomor 4 ditandai "Sebagian".
 - `supplement/ringkasan-pkm.typ` sengaja tetap berkata "kegiatan masih berlangsung" (permintaan sebelumnya), jadi tidak memuat angka dummy.
 
 ## 10. Status luaran dan placeholder (diperbarui)

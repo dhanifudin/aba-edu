@@ -36,7 +36,7 @@
   [
     - Platform multi-lembaga Kiddy School ERP (halokes.com); ABA-EDU Web berjalan sebagai tenant #raw("/y/ABS") pada subdomain #laporan.mitra.situs.
     - Kerangka kerja Laravel (PHP), antarmuka Bootstrap 5, diakses melalui jaringan Cloudflare; desain responsif.
-    - Delapan kemampuan sesuai surat kesediaan mitra: website profil; modul PPDB online (formulir, unggah dokumen, penyimpanan terpusat, rekap otomatis); manajemen data pendaftar (lihat, verifikasi, ubah, ekspor); manajemen konten website (berita, pengumuman, foto kegiatan); desain responsif; manajemen pengguna berbasis peran (Admin Yayasan, Operator Pendaftaran); keamanan data dasar (otentikasi admin, validasi input, pencadangan data); dasbor ringkasan statistik pendaftaran.
+    - Delapan kemampuan sesuai surat kesediaan mitra: website profil; modul PPDB online (formulir, unggah dokumen, penyimpanan terpusat, rekap otomatis); manajemen data pendaftar (daftar calon siswa, profil lengkap, verifikasi); manajemen konten (pengumuman sekolah; konten profil melalui pendampingan tim); desain responsif; manajemen pengguna berbasis peran (Wali Murid, Guru, Admin, Kepala Sekolah, Super Admin); keamanan data dasar (otentikasi admin, validasi input, pencadangan data); dasbor ringkasan statistik pendaftaran.
     - Status tiap kemampuan: lihat BAB V laporan akhir, Tabel Kesesuaian Spesifikasi.
   ],
 )
@@ -78,5 +78,5 @@
   ),
 )
 
-- *Cara kerja.* Orang tua membuka website profil, memilih menu PPDB, membuat akun, memilih cabang sekolah tujuan, mengisi formulir pendaftaran, dan mengunggah dokumen persyaratan (kartu keluarga, akta kelahiran, pas foto, dan bukti pembayaran). Admin atau operator yayasan masuk melalui panel pengelolaan untuk memperbarui konten profil, mengelola cabang dan periode PPDB, serta memverifikasi dan merekap data pendaftar. Data tersimpan pada basis data terpusat dan dilindungi otentikasi, validasi input, dan pencadangan data.
+- *Cara kerja.* Orang tua membuka website profil, memilih menu PPDB, membuat akun, memilih cabang sekolah tujuan, mengisi formulir pendaftaran, dan mengunggah dokumen persyaratan (kartu keluarga, akta kelahiran, pas foto, dan bukti pembayaran). Admin atau operator yayasan masuk melalui portal ERP untuk mengatur kuota pendaftaran, menerbitkan pengumuman, serta memverifikasi calon siswa dan menempatkannya pada kelas. Data tersimpan pada basis data terpusat dan dilindungi otentikasi, validasi input, dan pencadangan data.
 - *Pemeliharaan.* Pengelolaan sehari-hari dilakukan admin internal yayasan berdasarkan SOP pengelolaan website dan PPDB; platform dipelihara tim pelaksana.

@@ -31,7 +31,7 @@
 Menjamin website profil dan portal PPDB online #laporan.mitra.situs dikelola secara tertib, aman, dan berkelanjutan oleh pengelola yayasan.
 
 = Ruang Lingkup
-Berlaku bagi Admin Yayasan dan Operator Pendaftaran dalam pengelolaan akun, konten profil, periode dan cabang PPDB, verifikasi berkas pendaftar, pencadangan data, dan pelindungan data pribadi.
+Berlaku bagi Admin Yayasan dan Operator Pendaftaran dalam pengelolaan akun, pengumuman sekolah, pengaturan kuota PPDB, verifikasi calon siswa, pencadangan data, dan pelindungan data pribadi.
 
 = Definisi
 - *ABA-EDU Web:* website profil dan sistem PPDB online yang berjalan pada platform Kiddy School ERP.
@@ -44,8 +44,8 @@ Berlaku bagi Admin Yayasan dan Operator Pendaftaran dalam pengelolaan akun, kont
   columns: (3.6cm, 1fr),
   stroke: 0.5pt,
   inset: 5pt,
-  [*Admin Yayasan*], [Mengelola akun pengguna dan hak akses; memperbarui konten profil; membuka dan menutup periode serta cabang PPDB; memantau rekap pendaftar; melaporkan kendala kepada tim pendukung.],
-  [*Operator Pendaftaran*], [Memeriksa kelengkapan data dan dokumen pendaftar; memverifikasi atau menolak berkas disertai alasan; menghubungi orang tua bila ada kekurangan berkas.],
+  [*Admin Yayasan*], [Mengelola akun pengguna dan hak akses menu; menerbitkan pengumuman sekolah; mengatur kuota dan batas inden PPDB pada Pengaturan Sekolah; memantau data siswa dan calon siswa; melaporkan kendala kepada tim pendukung.],
+  [*Operator Pendaftaran*], [Memeriksa kelengkapan data dan dokumen pendaftar; memverifikasi calon siswa pada menu Data Siswa (Verifikasi & Terima); menghubungi orang tua bila ada kekurangan berkas.],
   [*Pimpinan Yayasan*], [Menetapkan Admin dan Operator; menyetujui jadwal PPDB; meninjau laporan evaluasi.],
   [*Tim pendukung (Polinema)*], [Memberi dukungan teknis platform dan bimbingan penggunaan sesuai kesepakatan selama #dummy[#masa-dukungan].],
 )
@@ -62,20 +62,20 @@ Berlaku bagi Admin Yayasan dan Operator Pendaftaran dalam pengelolaan akun, kont
 + Foto kegiatan yang memuat wajah anak hanya diunggah dengan persetujuan orang tua.
 + Admin memeriksa tampilan pada ponsel setelah setiap pembaruan.
 
-== Pembukaan periode dan cabang PPDB
+== Pengaturan kuota dan pembukaan PPDB
 + Pimpinan menyetujui jadwal, kuota, dan persyaratan PPDB.
-+ Admin mengaktifkan cabang sekolah tujuan dan periode pendaftaran serta memeriksa bahwa portal dapat menerima pendaftaran.
++ Admin mengisi kuota TK Pagi, TK Siang, dan PAUD serta batas inden pada Pengaturan Sekolah, lalu memeriksa bahwa portal dapat menerima pendaftaran.
 + Admin mengumumkan jadwal PPDB melalui website dan kanal komunikasi yayasan.
 
 == Verifikasi berkas pendaftar
 + Operator memeriksa data anak, data orang tua, kartu keluarga, akta kelahiran, pas foto, dan bukti pembayaran.
-+ Berkas yang lengkap diverifikasi; berkas yang kurang atau tidak jelas ditolak dengan catatan alasan.
++ Berkas yang lengkap diverifikasi dengan tombol Verifikasi & Terima; bila berkas kurang atau tidak jelas, operator menghubungi orang tua sebelum menerima calon siswa.
 + Operator menyelesaikan verifikasi paling lambat #dummy[#batas-verifikasi] sejak pendaftaran diterima.
-+ Rekap pendaftar diekspor pada akhir periode dan disimpan oleh yayasan.
++ Daftar siswa dan rekap presensi dicetak pada akhir periode dan disimpan oleh yayasan.
 
 == Pencadangan dan keamanan data
 + Pencadangan basis data dilakukan berkala pada sisi platform #dummy[(otomatis setiap hari oleh tim platform)].
-+ Admin mengekspor rekap pendaftar setiap akhir periode PPDB dan menyimpannya pada penyimpanan yayasan.
++ Admin mencetak atau menyimpan rekap data siswa setiap akhir periode PPDB pada penyimpanan yayasan.
 + Data pribadi anak dan orang tua hanya diakses petugas berwenang dan tidak dikirim melalui kanal publik.
 + Kebocoran atau penyalahgunaan data dilaporkan kepada Pimpinan dan tim pendukung dalam 1 x 24 jam.
 
