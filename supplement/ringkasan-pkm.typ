@@ -1,7 +1,7 @@
 // Ringkasan PKM -- tata letak mengikuti "Template Ringkasan Penelitian&PKM" (Lampiran 29 panduan):
 // banner judul oranye, kolom Pelaksana + Ringkasan Eksekutif + Luaran (halaman 1),
 // Latar Belakang, Metode, Hasil dan Manfaat (halaman 2).
-#import "common.typ": laporan, todo, doc
+#import "common.typ": laporan, doc
 
 #show: doc
 #set text(size: 10.5pt)
@@ -55,7 +55,7 @@
     #v(0.3cm)
     #laporan.mitra.nama-pendek adalah lembaga PAUD yang belum memiliki website profil resmi maupun sistem pendaftaran peserta didik baru (PPDB) online, sehingga komunikasi dengan orang tua terbatas, data pendaftar tersebar secara manual, dan dokumentasi untuk akreditasi sulit dihimpun. Kegiatan pengabdian ini mentransformasikan layanan lembaga secara digital melalui pendampingan dan implementasi ABA-EDU Web, yaitu website profil dan portal PPDB online yang berjalan pada #laporan.mitra.situs.
 
-    Kegiatan dilaksanakan secara partisipatif dalam delapan tahap: perencanaan dan konsolidasi, pengembangan website profil, implementasi PPDB online, penataan repositori data pendaftar, digitalisasi administrasi, pelatihan dan pendampingan literasi digital (lima sesi dengan pre-test dan post-test), pendampingan penyusunan SOP, serta evaluasi dan keberlanjutan. Peningkatan kompetensi pengelola diukur dengan N-Gain #todo[N-Gain rata-rata].
+    Kegiatan dilaksanakan secara partisipatif dalam delapan tahap: perencanaan dan konsolidasi, pengembangan website profil, implementasi PPDB online, penataan repositori data pendaftar, digitalisasi administrasi, pelatihan dan pendampingan literasi digital (lima sesi dengan pre-test dan post-test), pendampingan penyusunan SOP, serta evaluasi dan keberlanjutan. Peningkatan kompetensi pengelola akan diukur dengan pre-test dan post-test yang dianalisis menggunakan N-Gain.
 
     *Kata kunci:* transformasi digital, PAUD, ABA-EDU Web, PPDB online, literasi digital, tata kelola sekolah
 
@@ -63,11 +63,11 @@
     #pill[Luaran PKM]
     #v(0.3cm)
     #enum(
-      [Peningkatan penerapan iptek pada mitra: dua kanal layanan digital resmi (website profil dan PPDB online) beserta analisis peningkatan level keberdayaan mitra.],
-      [Artikel ilmiah pada Jurnal Pengabdian kepada Masyarakat Unindra #todo[status: submitted / accepted / published].],
-      [Publikasi media massa #todo[URL] dan video kegiatan #todo[URL YouTube].],
-      [Produk/teknologi tepat guna ABA-EDU Web dan SOP pengelolaan website dan PPDB.],
-      [Hak Cipta program komputer ABA-EDU Web #todo[status: registered / granted].],
+      [Peningkatan penerapan iptek pada mitra: dua kanal layanan digital resmi (website profil dan PPDB online) beserta analisis peningkatan level keberdayaan mitra yang disusun pada akhir kegiatan.],
+      [Artikel ilmiah pada Jurnal Pengabdian kepada Masyarakat Unindra (dalam penyusunan).],
+      [Publikasi media massa dan video kegiatan (dalam persiapan).],
+      [Produk/teknologi tepat guna ABA-EDU Web dan SOP pengelolaan website dan PPDB (dalam penyusunan bersama pengurus yayasan).],
+      [Hak Cipta program komputer ABA-EDU Web (dalam proses pendaftaran).],
     )
   ],
 )
@@ -94,13 +94,13 @@
   [
     #pill[Hasil dan Manfaat]
     #v(0.3cm)
-    ABA-EDU Web beroperasi di #laporan.mitra.situs dengan website profil responsif dan portal PPDB online TA 2026/2027. Pengelola mitra dilatih mengoperasikan sistem (N-Gain #todo[nilai]), SOP pengelolaan disahkan pimpinan yayasan #todo[tanggal], dan kepuasan mitra pada kuesioner akhir bernilai #todo[rata-rata skala 1--5].
+    Kegiatan masih berlangsung. Saat ini ABA-EDU Web beroperasi di #laporan.mitra.situs dengan website profil responsif dan portal PPDB online TA 2026/2027, sementara pelatihan dan pendampingan pengelola serta penyusunan SOP bersama pengurus terus dilaksanakan. Hasil pengukuran kompetensi (N-Gain) dan kepuasan mitra akan dilaporkan setelah seluruh sesi selesai.
 
     Manfaatnya bagi mitra: kanal informasi resmi yang meningkatkan kredibilitas lembaga, pendaftaran yang tertib dengan data terpusat, serta dasar dokumentasi digital untuk persiapan akreditasi. Model pendampingan ini dapat direplikasi pada PAUD lain karena platform yang digunakan bersifat multi-lembaga.
 
     #v(0.3cm)
     #figure(
-      image("/images/web-beranda-atas.png", width: 100%),
+      image("/images/web-beranda-atas.jpg", width: 100%),
       caption: [Halaman profil ABA-EDU Web (#laporan.mitra.situs).],
       numbering: n => [#n],
     )

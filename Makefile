@@ -11,7 +11,7 @@ SCAN_PDFS = $(patsubst %,$(SCAN_DIR)/%.pdf,$(SCAN_NAMES))
 
 SUPPLEMENTS = pernyataan-keaslian ringkasan-pkm sptjb dokumen-prototype form-ttg lembar-keberdayaan kuesioner-mitra form-hki manual-book sop bast rilis-video
 SUPPLEMENT_PDFS = $(patsubst %,$(BUILD_DIR)/supplement-%.pdf,$(SUPPLEMENTS))
-EMBEDDED_PDFS = $(BUILD_DIR)/supplement-ringkasan-pkm.pdf $(BUILD_DIR)/supplement-dokumen-prototype.pdf $(BUILD_DIR)/supplement-form-ttg.pdf $(BUILD_DIR)/supplement-lembar-keberdayaan.pdf
+EMBEDDED_PDFS = $(BUILD_DIR)/supplement-ringkasan-pkm.pdf $(BUILD_DIR)/supplement-dokumen-prototype.pdf $(BUILD_DIR)/supplement-form-ttg.pdf $(BUILD_DIR)/supplement-lembar-keberdayaan.pdf $(BUILD_DIR)/supplement-form-hki.pdf $(BUILD_DIR)/supplement-rilis-video.pdf $(BUILD_DIR)/supplement-sop.pdf $(BUILD_DIR)/supplement-bast.pdf
 
 .PHONY: supplement sptjb ringkasan hki manual-book sop bast kuesioner rilis-video pengesahan pernyataan all laporan laporan-watch laporan-view scan-placeholders scan-index screenshots clean help
 all: laporan

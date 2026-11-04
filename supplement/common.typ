@@ -41,3 +41,4 @@
   line(length: 100%, stroke: 1.5pt)
   v(0.4cm)
 }
+#import "../laporan-akhir/dummy.typ": dummy, fmt, rp, peserta, n-peserta, ng, kat, rata-pre, rata-post, rata-ng, kenaikan, n-tinggi, n-sedang, n-rendah, s-pre, s-post, s-ng, s-naik, kat-ng, aspek-kepuasan, kat-puas, rata-aspek, rata-puas, s-puas, n-skenario, n-valid, n-pendaftar-uji, n-akun, n-admin-internal, masa-dukungan, batas-verifikasi, tgl

@@ -10,7 +10,7 @@ Unit Pelaksana Teknis Penelitian dan Pengabdian kepada Masyarakat (P3M) Politekn
 P3M juga rutin menyelenggarakan pelatihan penyusunan proposal dan berbagi pengalaman pengabdian melalui narasumber terpercaya. Hasilnya, jumlah usulan pengabdian terus meningkat seperti pada @fig-rekap-p3m: pada tahun 2021 terdapat 240 usulan dengan 185 proposal didanai, dan pada tahun 2022 terdapat 268 usulan dengan 204 proposal didanai.
 
 #figure(
-  image("/images/rekap-p3m.png", width: 70%),
+  image("/images/rekap-p3m.jpg", width: 70%),
   caption: [Rekapitulasi pelaksanaan PKM di P3M Polinema],
 ) <fig-rekap-p3m>
 

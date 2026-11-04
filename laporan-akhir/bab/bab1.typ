@@ -8,7 +8,7 @@
 #laporan.mitra.nama-pendek, yang berlokasi di Jl. Kresno No. 21, Polehan, Kecamatan Blimbing, Kota Malang, merupakan lembaga pendidikan anak usia dini yang mengelola Kelompok Bermain dan Taman Kanak-Kanak "Rumah Bintang Kecil". Lembaga ini memiliki peran strategis dalam membangun fondasi kognitif, sosial-emosional, dan karakter peserta didik. Sebagai PAUD swasta, yayasan tidak hanya dituntut memberikan layanan pembelajaran yang berkualitas, tetapi juga wajib memiliki administrasi akademik yang akuntabel, terdokumentasi dengan baik, dan memenuhi standar akreditasi nasional @society2025.
 
 #figure(
-  image("/images/lokasi-mitra.png", width: 85%),
+  image("/images/lokasi-mitra.jpg", width: 85%),
   caption: [Lokasi mitra #laporan.mitra.nama-pendek],
 ) <fig-lokasi-mitra>
 

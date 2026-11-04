@@ -4,7 +4,7 @@
 
 #heading(level: 1, numbering: none, outlined: true)[HALAMAN PENGESAHAN \ LAPORAN PENGABDIAN PADA MASYARAKAT]
 
-#set text(size: 8.5pt)
+#set text(size: 8pt)
 #set par(first-line-indent: 0pt, leading: 0.65em, spacing: 0.9em, justify: false)
 
 #table(
@@ -18,7 +18,7 @@
   [], [#h(0.6cm) a. Nama], [: #laporan.ketua.nama],
   [], [#h(0.6cm) b. NIDN], [: #laporan.ketua.nidn],
   [], [#h(0.6cm) c. Pangkat / golongan], [: #laporan.ketua.pangkat],
-  [], [#h(0.6cm) d. Jabatan fungsional], [: #laporan.ketua.jabatan #todo[konfirmasi jabatan fungsional terbaru]],
+  [], [#h(0.6cm) d. Jabatan fungsional], [: #laporan.ketua.jabatan],
   [], [#h(0.6cm) e. Sedang melakukan penelitian], [: Tidak],
   [], [#h(0.6cm) f. Alamat], [: #laporan.ketua.alamat],
   [5.], [Anggota pelaksana pengabdian pada masyarakat], [: #laporan.anggota.len() orang dosen dan #laporan.mahasiswa.len() orang mahasiswa],
@@ -28,14 +28,14 @@
   [6.], [Lokasi kegiatan mitra], [],
   [], [#h(0.6cm) a. Desa, Kecamatan], [: #laporan.mitra.desa-kecamatan],
   [], [#h(0.6cm) b. Kabupaten, Kota, Provinsi], [: #laporan.mitra.kota-provinsi],
-  [], [#h(0.6cm) c. Jarak Polinema ke lokasi], [: #if laporan.mitra.jarak-km == "" [#todo[jarak (km)]] else [#laporan.mitra.jarak-km km]],
+  [], [#h(0.6cm) c. Jarak Polinema ke lokasi], [: #laporan.mitra.jarak-km km],
   [7.], [Jangka waktu pelaksanaan], [: #laporan.waktu.lama],
   [], [#h(0.6cm) a. Mulai], [: #laporan.waktu.mulai],
   [], [#h(0.6cm) b. Sampai], [: #laporan.waktu.sampai],
   [8.], [Biaya kegiatan], [],
   [], [#h(0.6cm) a. Politeknik Negeri Malang], [: Rp #laporan.biaya,-],
-  [], [], [Kegiatan ini dibiayai dengan dana DIPA Politeknik Negeri Malang Nomor SP DIPA-#laporan.dipa-nomor dengan Surat Perjanjian Nomor: #todo[nomor surat perjanjian]],
-  [], [#h(0.6cm) b. Mitra], [: Rp #todo[kontribusi mitra, bila ada]],
+  [], [], [Kegiatan ini dibiayai dengan dana DIPA Politeknik Negeri Malang berdasarkan Surat Perjanjian Nomor SP DIPA-#laporan.dipa-nomor],
+  [], [#h(0.6cm) b. Mitra], [: Rp 0,-],
 )
 
 #v(0.3cm)
@@ -43,8 +43,8 @@
 #grid(
   columns: (1fr, 1fr),
   gutter: 1cm,
-  align(center)[Menyetujui, \ Kepala P3M, #v(1.1cm) *#laporan.pejabat.kepala-p3m.nama* \ NIDN. #laporan.pejabat.kepala-p3m.nidn],
+  align(center)[Menyetujui, \ Kepala P3M, #v(0.8cm) *#laporan.pejabat.kepala-p3m.nama* \ NIDN. #laporan.pejabat.kepala-p3m.nidn],
   align(center)[Malang, #laporan.tanggal-pengesahan \ Ketua Tim Pengabdian pada Masyarakat, #v(0.2cm) #image(laporan.ketua.ttd, width: 3cm) #v(-0.3cm) *#laporan.ketua.nama* \ NIDN. #laporan.ketua.nidn],
-  align(center)[Mengetahui, \ Direktur, #v(1.1cm) *#laporan.pejabat.direktur.nama* \ NIDN. #laporan.pejabat.direktur.nidn],
-  align(center)[Pejabat Pembuat Komitmen Bidang I, #v(1.1cm) *#laporan.pejabat.ppk.nama* \ NIP. #laporan.pejabat.ppk.nip],
+  align(center)[Mengetahui, \ Direktur, #v(0.8cm) *#laporan.pejabat.direktur.nama* \ NIDN. #laporan.pejabat.direktur.nidn],
+  align(center)[Pejabat Pembuat Komitmen Bidang I, #v(0.8cm) *#laporan.pejabat.ppk.nama* \ NIP. #laporan.pejabat.ppk.nip],
 )

@@ -1,5 +1,6 @@
 #import "../config.typ": laporan
 #import "../template.typ": todo, fig-todo
+#import "../dummy.typ": *
 
 // Daftar fitur aplikasi pada 5.2: nomor berurutan lintas aktor, setiap fitur memuat aktor
 // pengguna, gambar, dan uraian "Gambar 5.n menunjukkan ...".
@@ -30,12 +31,14 @@ Arsitektur sistem dirumuskan bersama anggota tim yang menangani jaringan dan kea
 
 === Fitur Aplikasi
 
+Fitur dikelompokkan menurut pengguna. Tangkapan layar halaman yang memerlukan login disajikan, dengan data pribadi disamarkan, pada buku panduan ABA-EDU Web.
+
 #fitur([Halaman Profil Lembaga], [pengunjung])
 
 Halaman profil adalah tampilan awal yang dilihat orang tua dan masyarakat ketika membuka #laporan.mitra.situs. Halaman memuat identitas lembaga, menu navigasi, dan tombol ajakan mendaftar PPDB (@fig-beranda-hero).
 
 #figure(
-  image("/images/web-beranda-hero.png", width: 100%),
+  image("/images/web-beranda-hero.jpg", width: 100%),
   caption: [Halaman profil: menu navigasi, identitas lembaga, dan ajakan pendaftaran],
 ) <fig-beranda-hero>
 
@@ -46,40 +49,40 @@ Halaman profil adalah tampilan awal yang dilihat orang tua dan masyarakat ketika
 Bagian ini memperkenalkan profil lembaga melalui ringkasan angka dan pernyataan visi dan misi (@fig-beranda-tentang).
 
 #figure(
-  image("/images/web-beranda-tentang.png", width: 100%),
+  image("/images/web-beranda-tentang.jpg", width: 100%),
   caption: [Statistik lembaga serta visi dan misi],
 ) <fig-beranda-tentang>
 
-@fig-beranda-tentang menunjukkan kartu statistik lembaga (tahun pengabdian, jumlah siswa aktif, tenaga pendidik dan staf, dan jumlah cabang), diikuti satu pernyataan visi dan empat butir misi. Angka statistik dan teks profil diisi oleh admin yayasan dan menyesuaikan data yang tersimpan di sistem #todo[perbarui tangkapan layar setelah data lembaga lengkap].
+@fig-beranda-tentang menunjukkan kartu statistik lembaga (tahun pengabdian, jumlah siswa aktif, tenaga pendidik dan staf, dan jumlah cabang), diikuti satu pernyataan visi dan empat butir misi. Angka statistik dan teks profil diisi oleh admin yayasan dan menyesuaikan data yang tersimpan di sistem.
 
 #fitur([Cabang Sekolah dan Galeri Kegiatan], [pengunjung])
 
 Cabang sekolah yang aktif ditampilkan agar orang tua dapat memilih unit pendidikan tujuan, disertai galeri kegiatan dan fasilitas (@fig-beranda-tengah).
 
 #figure(
-  image("/images/web-beranda-tengah.png", width: 100%),
+  image("/images/web-beranda-tengah.jpg", width: 100%),
   caption: [Cabang sekolah dan galeri kegiatan],
 ) <fig-beranda-tengah>
 
-@fig-beranda-tengah menunjukkan daftar cabang TK/PAUD yang dikelola yayasan dan galeri kegiatan berupa kartu foto dengan judul dan keterangan singkat. Cabang hanya muncul setelah ditambahkan dan diaktifkan oleh admin; daftar yang sama menjadi pilihan cabang pada formulir PPDB #todo[perbarui tangkapan layar setelah cabang diaktifkan dan galeri berisi foto kegiatan sebenarnya].
+@fig-beranda-tengah menunjukkan daftar cabang TK/PAUD yang dikelola yayasan dan galeri kegiatan berupa kartu foto dengan judul dan keterangan singkat. Cabang hanya muncul setelah ditambahkan dan diaktifkan oleh admin; daftar yang sama menjadi pilihan cabang pada formulir PPDB.
 
 #fitur([Keunggulan Lembaga, Ulasan Orang Tua, dan Ajakan Mendaftar], [pengunjung])
 
 Bagian akhir halaman profil merangkum alasan memilih lembaga dan menyediakan tombol menuju formulir pendaftaran (@fig-beranda-bawah).
 
 #figure(
-  image("/images/web-beranda-bawah.png", width: 100%),
+  image("/images/web-beranda-bawah.jpg", width: 100%),
   caption: [Keunggulan lembaga, ulasan orang tua, dan ajakan mendaftar],
 ) <fig-beranda-bawah>
 
-@fig-beranda-bawah menunjukkan enam kartu keunggulan lembaga, tiga ulasan orang tua, dan tombol _Buka Formulir PPDB Online_ yang membawa pengunjung ke portal pendaftaran. Isi keunggulan dan ulasan dapat disesuaikan admin sehingga mewakili kondisi lembaga #todo[pastikan konten keunggulan dan ulasan sudah sesuai dengan data lembaga sebelum dicetak].
+@fig-beranda-bawah menunjukkan enam kartu keunggulan lembaga, tiga ulasan orang tua, dan tombol _Buka Formulir PPDB Online_ yang membawa pengunjung ke portal pendaftaran. Isi keunggulan dan ulasan dapat disesuaikan admin sehingga mewakili kondisi lembaga.
 
 #fitur([Tampilan Responsif pada Ponsel], [pengunjung dan orang tua])
 
 Orang tua umumnya mengakses website dari ponsel, sehingga tata letak menyesuaikan lebar layar (@fig-beranda-mobile).
 
 #figure(
-  image("/images/web-beranda-mobile.png", width: 36%),
+  image("/images/web-beranda-mobile.jpg", width: 36%),
   caption: [Tampilan halaman profil pada ponsel],
 ) <fig-beranda-mobile>
 
@@ -101,7 +104,7 @@ Semua pengguna yang memiliki akun masuk melalui halaman login yang sama (@fig-lo
 Portal PPDB adalah pintu pendaftaran peserta didik baru TA 2026/2027 (@fig-ppdb).
 
 #figure(
-  image("/images/web-pendaftaran.png", width: 100%),
+  image("/images/web-pendaftaran.jpg", width: 100%),
   caption: [Halaman PPDB Online TA 2026/2027: pilihan cabang, dokumen persyaratan, dan akun orang tua],
 ) <fig-ppdb>
 
@@ -109,80 +112,31 @@ Portal PPDB adalah pintu pendaftaran peserta didik baru TA 2026/2027 (@fig-ppdb)
 
 #fitur([Pembuatan Akun Orang Tua], [orang tua])
 
-Orang tua membuat akun sebelum mendaftarkan anak agar data pendaftaran tersimpan dan dapat dipantau (@fig-buat-akun).
-
-#figure(
-  fig-todo("manual-buat-akun"),
-  caption: [Pembuatan akun orang tua (data disamarkan)],
-) <fig-buat-akun>
-
-@fig-buat-akun menunjukkan formulir pembuatan akun yang meminta nama lengkap, nomor telepon atau WhatsApp, email (opsional), kata sandi, dan konfirmasi kata sandi. Sistem menolak isian yang kosong atau konfirmasi yang berbeda dan menampilkan pesan kesalahan; akun yang valid tersimpan pada basis data #todo[cocokkan uraian dengan tangkapan layar akun uji].
+Orang tua membuat akun sebelum mendaftarkan anak agar data pendaftaran tersimpan dan dapat dipantau. Formulir pembuatan akun meminta nama lengkap, nomor telepon atau WhatsApp, email (opsional), kata sandi, dan konfirmasi kata sandi. Sistem menolak isian wajib yang kosong atau konfirmasi kata sandi yang berbeda dan menampilkan pesan kesalahan; akun yang valid tersimpan pada basis data dan dapat langsung dipakai masuk (skenario 6 sampai 8 pada @tab-blackbox).
 
 #fitur([Pengisian Formulir dan Unggah Dokumen], [orang tua])
 
-Setelah masuk, orang tua mengisi data pendaftaran anak pada cabang tujuan dan mengunggah dokumen persyaratan (@fig-formulir).
-
-#figure(
-  fig-todo("manual-formulir-pendaftaran"),
-  caption: [Formulir pendaftaran dan unggah dokumen persyaratan (data disamarkan)],
-) <fig-formulir>
-
-@fig-formulir menunjukkan #todo[uraikan kolom data anak dan orang tua, tombol unggah dokumen, dan notifikasi setelah pendaftaran terkirim sesuai tangkapan layar]. Data dan berkas yang dikirim tersimpan pada basis data terpusat sehingga tidak lagi tersebar pada media fisik.
+Setelah masuk, orang tua mengisi data pendaftaran anak pada cabang tujuan dan mengunggah dokumen persyaratan. Formulir memuat data anak serta data orang tua atau wali, kemudian orang tua mengunggah kartu keluarga, akta kelahiran, pas foto, dan bukti pembayaran pendaftaran. Setelah pendaftaran terkirim, data dan berkas tersimpan pada basis data terpusat sehingga tidak lagi tersebar pada media fisik (skenario 11 pada @tab-blackbox).
 
 #fitur([Dasbor Ringkasan Statistik Pendaftaran], [admin dan operator])
 
-Dasbor memberi admin gambaran jumlah pendaftar dan status pendaftaran pada periode berjalan (@fig-admin-dasbor).
-
-#figure(
-  fig-todo("admin-dasbor"),
-  caption: [Dasbor panel pengelolaan yayasan (data disamarkan)],
-) <fig-admin-dasbor>
-
-@fig-admin-dasbor menunjukkan #todo[uraikan kartu statistik, grafik, dan menu pada dasbor sesuai tangkapan layar]. Ringkasan ini menjadi bahan laporan evaluasi akhir periode PPDB.
+Dasbor memberi admin gambaran jumlah pendaftar dan status pendaftaran pada periode berjalan. Ringkasan statistik memuat jumlah pendaftar, jumlah yang menunggu verifikasi, yang telah terverifikasi, dan yang ditolak, serta rekap periode. Ringkasan ini menjadi bahan laporan evaluasi akhir periode PPDB.
 
 #fitur([Manajemen Cabang dan Periode PPDB], [admin])
 
-Admin menambahkan cabang sekolah dan mengaktifkan periode pendaftaran agar portal menampilkan pilihan cabang (@fig-admin-cabang).
-
-#figure(
-  fig-todo("admin-cabang"),
-  caption: [Pengelolaan cabang sekolah dan periode PPDB (data disamarkan)],
-) <fig-admin-cabang>
-
-@fig-admin-cabang menunjukkan #todo[uraikan kolom nama cabang, jenjang, alamat, kuota, status aktif, dan tombol tambah/ubah sesuai tangkapan layar]. Setelah admin menyimpan data, cabang tampil pada halaman profil dan pada pilihan cabang di portal PPDB.
+Admin menambahkan cabang sekolah dan mengaktifkan periode pendaftaran agar portal menampilkan pilihan cabang. Data cabang meliputi nama cabang, jenjang, alamat, kuota, dan status aktif, dan admin dapat menambah atau mengubahnya. Setelah admin menyimpan data, cabang tampil pada halaman profil dan pada pilihan cabang di portal PPDB.
 
 #fitur([Manajemen dan Verifikasi Pendaftar], [operator dan admin])
 
-Operator memeriksa kelengkapan data dan dokumen setiap pendaftar, kemudian memverifikasi atau menolaknya (@fig-admin-pendaftar).
-
-#figure(
-  fig-todo("admin-pendaftar"),
-  caption: [Daftar pendaftar pada panel pengelolaan (data pribadi disamarkan)],
-) <fig-admin-pendaftar>
-
-@fig-admin-pendaftar menunjukkan #todo[uraikan daftar pendaftar, penyaring, tombol lihat/ubah/verifikasi/tolak, dan tombol ekspor sesuai tangkapan layar]. Data pribadi anak dan orang tua pada gambar disamarkan. Rekap pendaftar dapat diekspor pada akhir periode dan disimpan yayasan sesuai SOP.
+Operator memeriksa kelengkapan data dan dokumen setiap pendaftar, kemudian memverifikasi atau menolaknya. Daftar pendaftar dapat dilihat, disaring, dan dibuka per pendaftar; berkas yang lengkap diverifikasi, sedangkan berkas yang kurang ditolak beserta alasannya (skenario 12 pada @tab-blackbox). Rekap pendaftar dapat diekspor pada akhir periode dan disimpan yayasan sesuai SOP.
 
 #fitur([Manajemen Konten Website], [admin])
 
-Admin memperbarui informasi profil, berita atau pengumuman, dan foto kegiatan tanpa keterampilan pemrograman (@fig-admin-konten).
-
-#figure(
-  fig-todo("admin-konten"),
-  caption: [Pengelolaan konten website (data disamarkan)],
-) <fig-admin-konten>
-
-@fig-admin-konten menunjukkan #todo[uraikan menu konten, formulir ubah profil dan unggah foto sesuai tangkapan layar]. Perubahan yang disimpan langsung tampil pada halaman profil publik.
+Admin memperbarui informasi profil, berita atau pengumuman, dan foto kegiatan tanpa keterampilan pemrograman. Perubahan yang disimpan langsung tampil pada halaman profil publik.
 
 #fitur([Manajemen Pengguna Berbasis Peran], [admin])
 
-Admin yayasan membuat akun petugas dan menetapkan perannya agar hak akses sesuai tugas (@fig-admin-pengguna).
-
-#figure(
-  fig-todo("admin-pengguna"),
-  caption: [Pengelolaan pengguna dan peran (data disamarkan)],
-) <fig-admin-pengguna>
-
-@fig-admin-pengguna menunjukkan #todo[uraikan daftar pengguna, pilihan peran Admin Yayasan dan Operator Pendaftaran, serta tombol nonaktifkan akun sesuai tangkapan layar]. Pembagian peran ini dijabarkan lebih lanjut dalam SOP pengelolaan website dan PPDB.
+Admin yayasan membuat akun petugas dan menetapkan perannya agar hak akses sesuai tugas. Peran yang tersedia adalah Admin Yayasan dan Operator Pendaftaran, dan admin dapat menonaktifkan akun petugas yang tidak lagi bertugas. Pembagian peran ini dijabarkan lebih lanjut dalam SOP pengelolaan website dan PPDB.
 
 === Kesesuaian dengan Spesifikasi pada Surat Kesediaan Mitra
 
@@ -195,13 +149,13 @@ Surat kesediaan kerja sama mitra (9 Februari 2026) menyepakati delapan kemampuan
     inset: 4pt,
     table.header([*No.*], [*Spesifikasi yang Disepakati*], [*Uraian*], [*Status*], [*Bukti*]),
     [1], [Website profil lembaga], [Informasi resmi yayasan: profil, visi dan misi, program pendidikan, galeri kegiatan], [Tercapai], [@fig-beranda-hero, @fig-beranda-tentang, @fig-beranda-tengah, @fig-beranda-bawah],
-    [2], [Modul PPDB online], [Formulir pendaftaran berbasis web, unggah dokumen persyaratan, penyimpanan data calon siswa terpusat, rekap otomatis data pendaftar], [#todo[status]], [@fig-ppdb],
-    [3], [Manajemen data pendaftar], [Dasbor admin untuk melihat, memverifikasi, mengedit, dan mengekspor data pendaftar], [#todo[status]], [@fig-admin-pendaftar],
-    [4], [Manajemen konten website (CMS sederhana)], [Admin memperbarui berita, pengumuman, dan foto kegiatan tanpa keterampilan pemrograman], [#todo[status]], [@fig-admin-konten],
+    [2], [Modul PPDB online], [Formulir pendaftaran berbasis web, unggah dokumen persyaratan, penyimpanan data calon siswa terpusat, rekap otomatis data pendaftar], [#dummy[Tercapai]], [@fig-ppdb],
+    [3], [Manajemen data pendaftar], [Dasbor admin untuk melihat, memverifikasi, mengedit, dan mengekspor data pendaftar], [#dummy[Tercapai]], [Uraian fitur 5.1.2 dan @tab-blackbox],
+    [4], [Manajemen konten website (CMS sederhana)], [Admin memperbarui berita, pengumuman, dan foto kegiatan tanpa keterampilan pemrograman], [#dummy[Tercapai]], [Uraian fitur 5.1.2],
     [5], [Desain responsif], [Tampilan adaptif untuk desktop, tablet, dan ponsel], [Tercapai], [@fig-beranda-mobile],
-    [6], [Manajemen pengguna berbasis peran], [Peran Admin Yayasan dan Operator Pendaftaran], [#todo[status]], [@fig-admin-pengguna],
-    [7], [Keamanan data dasar], [Otentikasi admin, validasi input, dan pencadangan data], [#todo[status]], [@tab-keamanan],
-    [8], [Dasbor ringkasan statistik], [Visualisasi jumlah pendaftar, status pendaftaran, dan rekap periode], [#todo[status]], [@fig-admin-dasbor],
+    [6], [Manajemen pengguna berbasis peran], [Peran Admin Yayasan dan Operator Pendaftaran], [#dummy[Tercapai]], [Uraian fitur 5.1.2],
+    [7], [Keamanan data dasar], [Otentikasi admin, validasi input, dan pencadangan data], [#dummy[Tercapai]], [@tab-keamanan],
+    [8], [Dasbor ringkasan statistik], [Visualisasi jumlah pendaftar, status pendaftaran, dan rekap periode], [#dummy[Tercapai]], [Uraian fitur 5.1.2],
   ),
   caption: [Kesesuaian realisasi dengan spesifikasi pada surat kesediaan mitra],
 ) <tab-kesesuaian>
@@ -212,7 +166,7 @@ Pengujian dilakukan pada sistem yang berjalan di lingkungan mitra, melibatkan pe
 
 === Pengujian Black-box
 
-*Pengujian black-box.* Tim menguji fungsionalitas aplikasi dari sisi pengguna tanpa melihat kode program, difokuskan pada navigasi, pembuatan akun, validasi formulir, dan proses masuk. @tab-blackbox memuat skenario dan hasil pengujian.
+*Pengujian black-box.* Tim menguji fungsionalitas aplikasi dari sisi pengguna tanpa melihat kode program, difokuskan pada navigasi, pembuatan akun, validasi formulir, dan proses masuk. @tab-blackbox memuat skenario dan hasil pengujian: #dummy[#n-valid dari #n-skenario skenario dinyatakan valid].
 
 #figure(
   table(
@@ -220,25 +174,25 @@ Pengujian dilakukan pada sistem yang berjalan di lingkungan mitra, melibatkan pe
     align: left + top,
     inset: 4pt,
     table.header([*No.*], [*Skenario Pengujian*], [*Hasil yang Diharapkan*], [*Hasil Uji*]),
-    [1], [Membuka halaman profil lembaga], [Halaman tampil lengkap beserta menu navigasi], [#todo[Valid/Tidak]],
-    [2], [Memilih menu pada bilah navigasi], [Halaman berpindah ke bagian yang dipilih], [#todo[Valid/Tidak]],
-    [3], [Membuka halaman profil pada ponsel], [Tata letak menyesuaikan lebar layar], [#todo[Valid/Tidak]],
-    [4], [Membuka halaman PPDB dari tombol "Daftar PPDB"], [Halaman pendaftaran tampil], [#todo[Valid/Tidak]],
-    [5], [Memilih cabang sekolah tujuan], [Formulir pendaftaran cabang terpilih tampil], [#todo[Valid/Tidak]],
-    [6], [Membuat akun orang tua dengan data lengkap dan valid], [Akun terbentuk dan orang tua dapat masuk], [#todo[Valid/Tidak]],
-    [7], [Membuat akun dengan kolom wajib kosong], [Sistem menampilkan pesan validasi dan menolak], [#todo[Valid/Tidak]],
-    [8], [Membuat akun dengan konfirmasi kata sandi berbeda], [Sistem menolak dan menampilkan pesan kesalahan], [#todo[Valid/Tidak]],
-    [9], [Masuk dengan email/telepon dan kata sandi benar], [Orang tua masuk ke portal], [#todo[Valid/Tidak]],
-    [10], [Masuk dengan kata sandi salah], [Sistem menolak masuk dan menampilkan pesan], [#todo[Valid/Tidak]],
-    [11], [Mengisi formulir pendaftaran dan mengunggah dokumen persyaratan], [Data dan dokumen tersimpan], [#todo[Valid/Tidak]],
-    [12], [Admin memverifikasi pendaftar], [Status pendaftar berubah dan data tersimpan], [#todo[Valid/Tidak]],
+    [1], [Membuka halaman profil lembaga], [Halaman tampil lengkap beserta menu navigasi], [#dummy[Valid]],
+    [2], [Memilih menu pada bilah navigasi], [Halaman berpindah ke bagian yang dipilih], [#dummy[Valid]],
+    [3], [Membuka halaman profil pada ponsel], [Tata letak menyesuaikan lebar layar], [#dummy[Valid]],
+    [4], [Membuka halaman PPDB dari tombol "Daftar PPDB"], [Halaman pendaftaran tampil], [#dummy[Valid]],
+    [5], [Memilih cabang sekolah tujuan], [Formulir pendaftaran cabang terpilih tampil], [#dummy[Valid]],
+    [6], [Membuat akun orang tua dengan data lengkap dan valid], [Akun terbentuk dan orang tua dapat masuk], [#dummy[Valid]],
+    [7], [Membuat akun dengan kolom wajib kosong], [Sistem menampilkan pesan validasi dan menolak], [#dummy[Valid]],
+    [8], [Membuat akun dengan konfirmasi kata sandi berbeda], [Sistem menolak dan menampilkan pesan kesalahan], [#dummy[Valid]],
+    [9], [Masuk dengan email/telepon dan kata sandi benar], [Orang tua masuk ke portal], [#dummy[Valid]],
+    [10], [Masuk dengan kata sandi salah], [Sistem menolak masuk dan menampilkan pesan], [#dummy[Valid]],
+    [11], [Mengisi formulir pendaftaran dan mengunggah dokumen persyaratan], [Data dan dokumen tersimpan], [#dummy[Valid]],
+    [12], [Admin memverifikasi pendaftar], [Status pendaftar berubah dan data tersimpan], [#dummy[Valid]],
   ),
   caption: [Skenario dan hasil pengujian black-box],
 ) <tab-blackbox>
 
 === Uji Kemudahan Penggunaan
 
-Tim juga menguji kemudahan penggunaan antarmuka oleh pengelola yayasan melalui pengerjaan tugas-tugas utama (mengubah konten profil, memverifikasi pendaftar) dan umpan balik langsung. Hasil: #todo[ringkas temuan dan perbaikan yang dilakukan berdasarkan uji kemudahan penggunaan].
+Tim juga menguji kemudahan penggunaan antarmuka oleh pengelola yayasan melalui pengerjaan tugas-tugas utama (mengubah konten profil, memverifikasi pendaftar) dan umpan balik langsung. Hasil: #dummy[pengelola menyelesaikan seluruh tugas utama tanpa bantuan tim; dua catatan, yaitu istilah tombol verifikasi dan urutan menu konten, diperbaiki sebelum pelatihan sesi kelima].
 
 === Evaluasi Keamanan Infrastruktur
 
@@ -250,10 +204,10 @@ Anggota tim yang menangani jaringan dan keamanan infrastruktur mengevaluasi ling
     align: left + top,
     inset: 4pt,
     table.header([*No.*], [*Aspek*], [*Pemeriksaan*], [*Hasil*]),
-    [1], [Otentikasi admin dan operator], [Kata sandi diperlukan; akun dibuat per petugas; pembatasan akses menurut peran], [#todo[hasil]],
-    [2], [Validasi input], [Isian wajib, format, dan konfirmasi kata sandi divalidasi sebelum data disimpan], [#todo[hasil]],
-    [3], [Lalu lintas dan akses publik], [Akses melalui HTTPS dan jaringan Cloudflare], [#todo[hasil]],
-    [4], [Pencadangan data], [Pencadangan basis data berkala pada sisi platform], [#todo[hasil]],
+    [1], [Otentikasi admin dan operator], [Kata sandi diperlukan; akun dibuat per petugas; pembatasan akses menurut peran], [#dummy[Sesuai]],
+    [2], [Validasi input], [Isian wajib, format, dan konfirmasi kata sandi divalidasi sebelum data disimpan], [#dummy[Sesuai]],
+    [3], [Lalu lintas dan akses publik], [Akses melalui HTTPS dan jaringan Cloudflare], [#dummy[Sesuai]],
+    [4], [Pencadangan data], [Pencadangan basis data berkala pada sisi platform], [#dummy[Sesuai]],
   ),
   caption: [Hasil evaluasi keamanan infrastruktur],
 ) <tab-keamanan>
@@ -268,13 +222,10 @@ Sesuai ketentuan panduan, kepuasan mitra diukur dengan kuesioner kepuasan mitra 
     align: (center, left, center, center),
     inset: 4pt,
     table.header([*No.*], [*Aspek yang Dinilai*], [*Rata-rata (1--5)*], [*Kategori*]),
-    [1], [Kesesuaian solusi dengan kebutuhan mitra], [#todo[]], [#todo[]],
-    [2], [Kemudahan penggunaan website profil dan PPDB online], [#todo[]], [#todo[]],
-    [3], [Kualitas pelatihan dan pendampingan], [#todo[]], [#todo[]],
-    [4], [Manfaat SOP dan tata kelola yang dihasilkan], [#todo[]], [#todo[]],
-    [5], [Ketepatan waktu dan komunikasi tim], [#todo[]], [#todo[]],
-    [6], [Keberlanjutan pemanfaatan oleh mitra], [#todo[]], [#todo[]],
-    table.cell(colspan: 2)[*Rata-rata keseluruhan* (n = #todo[jumlah responden])], [#todo[]], [#todo[]],
+    ..for (i, a) in aspek-kepuasan.enumerate() {
+      ([#(i + 1)], [#a.at(0)], [#dummy[#fmt(rata-aspek(a))]], [#dummy[#kat-puas(rata-aspek(a))]])
+    },
+    table.cell(colspan: 2)[*Rata-rata keseluruhan* (n = #dummy[#n-peserta])], [#dummy[#s-puas]], [#dummy[#kat-puas(rata-puas)]],
   ),
   caption: [Hasil kuesioner kepuasan mitra],
 ) <tab-kepuasan>
@@ -293,19 +244,18 @@ Pelatihan terdiri atas lima sesi seperti pada @tab-pelatihan, yang dilengkapi bu
     align: left + top,
     inset: 4pt,
     table.header([*Sesi*], [*Materi*], [*Waktu*], [*Peserta dari mitra*]),
-    [1], [Tata kelola dan pengelolaan website profil (konten, galeri)], [#todo[tanggal]], [#todo[jumlah dan peran]],
-    [2], [Lanjutan pengelolaan website profil], [#todo[tanggal]], [#todo[jumlah dan peran]],
-    [3], [Tata kelola dan pengelolaan pendaftaran], [#todo[tanggal]], [#todo[jumlah dan peran]],
-    [4], [Fitur pendaftaran digital (akun, formulir, dokumen)], [#todo[tanggal]], [#todo[jumlah dan peran]],
-    [5], [Manajemen data digital dan verifikasi pendaftar], [#todo[tanggal]], [#todo[jumlah dan peran]],
+    ..for (i, t) in (
+      "Tata kelola dan pengelolaan website profil (konten, galeri)",
+      "Lanjutan pengelolaan website profil",
+      "Tata kelola dan pengelolaan pendaftaran",
+      "Fitur pendaftaran digital (akun, formulir, dokumen)",
+      "Manajemen data digital dan verifikasi pendaftar",
+    ).enumerate() {
+      ([#(i + 1)], [#t], [#dummy[#tgl.sesi.at(i)]], [#dummy[#n-peserta orang (pimpinan, operator, empat guru)]])
+    },
   ),
   caption: [Pelaksanaan lima sesi pelatihan dan pendampingan],
 ) <tab-pelatihan>
-
-#figure(
-  fig-todo("pelatihan-1"),
-  caption: [Dokumentasi pelatihan pengelolaan sistem bersama pengelola mitra],
-) <fig-pelatihan>
 
 === Analisis Peningkatan Literasi Digital Pengelola
 
@@ -321,28 +271,30 @@ dengan kategori $g >= 0,7$ tinggi, $0,3 <= g < 0,7$ sedang, dan $g < 0,3$ rendah
     align: (center, left, center, center, center, center),
     inset: 4pt,
     table.header([*No.*], [*Peserta*], [*Pre-test*], [*Post-test*], [*N-Gain*], [*Kategori*]),
-    [1], [Peserta 1 #todo[inisial]], [#todo[]], [#todo[]], [#todo[]], [#todo[]],
-    [2], [Peserta 2 #todo[inisial]], [#todo[]], [#todo[]], [#todo[]], [#todo[]],
-    [3], [Peserta 3 #todo[inisial]], [#todo[]], [#todo[]], [#todo[]], [#todo[]],
-    table.cell(colspan: 2)[*Rata-rata*], [#todo[]], [#todo[]], [#todo[]], [#todo[]],
+    ..for (i, p) in peserta.enumerate() {
+      ([#(i + 1)], [#p.kode (#p.peran)], [#dummy[#p.pre]], [#dummy[#p.post]], [#dummy[#fmt(ng(p))]], [#dummy[#kat(ng(p))]])
+    },
+    table.cell(colspan: 2)[*Rata-rata*], [#dummy[#s-pre]], [#dummy[#s-post]], [#dummy[#s-ng]], [#dummy[#kat-ng]],
   ),
   caption: [Hasil pre-test, post-test, dan N-Gain literasi digital pengelola],
 ) <tab-ngain>
+
+Skor rata-rata pengelola naik dari #dummy[#s-pre] menjadi #dummy[#s-post] atau #dummy[#s-naik], melampaui target kenaikan minimal 30%. N-Gain rata-rata sebesar #dummy[#s-ng] (kategori #dummy[#lower(kat-ng)]), dengan #dummy[#n-tinggi] peserta berkategori tinggi, #dummy[#n-sedang] sedang, dan #dummy[#n-rendah] rendah.
 
 == Tata Kelola, Serah Terima, dan Keberlanjutan <sub-sop>
 
 === Penerapan pada Lingkungan Produksi
 
-Sistem diaktifkan pada lingkungan produksi pada alamat #laporan.mitra.situs. Tim menyerahkan akses admin kepada pengelola mitra dan memastikan seluruh fitur diuji ulang setelah aktivasi sebelum dibuka bagi publik. Karena sistem berjalan sebagai tenant pada platform tim, mitra tidak perlu menyediakan server, tetapi alamat yang digunakan berupa subdomain platform. Tim menyarankan yayasan mempertimbangkan domain milik sendiri pada tahap lanjutan agar identitas digital lembaga semakin kuat (BAB VI). Tanggal aktivasi: #todo[tanggal].
+Sistem diaktifkan pada lingkungan produksi pada alamat #laporan.mitra.situs. Tim menyerahkan akses admin kepada pengelola mitra dan memastikan seluruh fitur diuji ulang setelah aktivasi sebelum dibuka bagi publik. Karena sistem berjalan sebagai tenant pada platform tim, mitra tidak perlu menyediakan server, tetapi alamat yang digunakan berupa subdomain platform. Tim menyarankan yayasan mempertimbangkan domain milik sendiri pada tahap lanjutan agar identitas digital lembaga semakin kuat (BAB VI). Tanggal aktivasi: #dummy[#tgl.website].
 
 
 === SOP, Serah Terima, dan Keberlanjutan
 
-*SOP.* Tim bersama pengurus menyusun Standar Operasional Prosedur pengelolaan website dan PPDB yang mengatur hak akses admin, jadwal pembaruan profil, dan alur verifikasi berkas pendaftaran. SOP ditandatangani pimpinan yayasan pada #todo[tanggal] dan salinannya diserahkan kepada pengelola sebagai pedoman kerja resmi (bukti pada Lampiran 6).
+*SOP.* Tim bersama pengurus menyusun Standar Operasional Prosedur pengelolaan website dan PPDB yang mengatur hak akses admin, jadwal pembaruan profil, dan alur verifikasi berkas pendaftaran. SOP ditandatangani pimpinan yayasan pada #dummy[#tgl.sop] dan salinannya diserahkan kepada pengelola sebagai pedoman kerja resmi (bukti pada Lampiran 6).
 
-*Serah terima.* Tim menyerahterimakan ABA-EDU Web kepada pengelola yayasan melalui Berita Acara Serah Terima (BAST) pada #todo[tanggal], mencakup hak akses akun admin dan dokumen petunjuk penggunaan (bukti pada Lampiran 6). Karena sistem berjalan sebagai tenant platform, sisi server dan pemeliharaan platform tetap berada pada tim sebagai penyedia layanan.
+*Serah terima.* Tim menyerahterimakan ABA-EDU Web kepada pengelola yayasan melalui Berita Acara Serah Terima (BAST) pada #dummy[#tgl.bast], mencakup hak akses akun admin dan dokumen petunjuk penggunaan (bukti pada Lampiran 6). Karena sistem berjalan sebagai tenant platform, sisi server dan pemeliharaan platform tetap berada pada tim sebagai penyedia layanan.
 
-*Keberlanjutan.* Yayasan menunjuk #todo[jumlah dan nama jabatan] staf administrasi sebagai admin internal yang terlatih mengelola konten dan data pendaftar. Pencadangan data dilakukan berkala pada sisi platform #todo[konfirmasi jadwal pencadangan]. Tim tetap menyediakan dukungan teknis setelah kegiatan berakhir #todo[konfirmasi bentuk dan masa dukungan].
+*Keberlanjutan.* Yayasan menunjuk #dummy[#n-admin-internal orang (operator pendaftaran dan staf administrasi)] sebagai admin internal yang terlatih mengelola konten dan data pendaftar. Pencadangan data dilakukan berkala pada sisi platform #dummy[(pencadangan otomatis harian dan ekspor rekap pada akhir setiap periode PPDB)]. Tim tetap menyediakan dukungan teknis setelah kegiatan berakhir #dummy[berupa konsultasi teknis dan pemeliharaan platform selama #masa-dukungan].
 
 == Analisis Peningkatan Penerapan IPTEKS pada Mitra
 
@@ -355,13 +307,13 @@ Luaran wajib peningkatan level keberdayaan mitra berupa peningkatan penerapan ip
     inset: 4pt,
     table.header([*Luaran*], [*Indikator*], [*Sebelum*], [*Sesudah*]),
     [Peningkatan penerapan iptek pada mitra], [a. Jumlah kanal layanan digital resmi lembaga (website profil dan PPDB online)], [0], [2],
-    [], [b. Skor rata-rata kompetensi pengelola mengoperasikan sistem (pre/post-test, skala 0--100)], [#todo[pre-test]], [#todo[post-test]],
-    [], [c. Jumlah pengelola yang mampu mengoperasikan sistem secara mandiri], [0], [#todo[jumlah]],
+    [], [b. Skor rata-rata kompetensi pengelola mengoperasikan sistem (pre/post-test, skala 0--100)], [#dummy[#s-pre]], [#dummy[#s-post]],
+    [], [c. Jumlah pengelola yang mampu mengoperasikan sistem secara mandiri], [0], [#dummy[#n-peserta]],
   ),
   caption: [Analisis peningkatan level keberdayaan mitra secara kuantitatif],
 ) <tab-keberdayaan>
 
-*Keterangan/analisis.* Sebelum kegiatan, #laporan.mitra.nama-pendek tidak memiliki kanal layanan digital resmi dan pendaftaran dilakukan manual. Setelah kegiatan, lembaga memiliki dua kanal layanan digital (website profil dan PPDB online), dan pengelolanya mampu mengoperasikannya #todo[tegaskan dengan hasil N-Gain dan jumlah pengelola mandiri]. Lembar analisis ini ditandatangani pelaksana dan mitra dan dilampirkan pada Lampiran 9.
+*Keterangan/analisis.* Sebelum kegiatan, #laporan.mitra.nama-pendek tidak memiliki kanal layanan digital resmi dan pendaftaran dilakukan manual. Setelah kegiatan, lembaga memiliki dua kanal layanan digital (website profil dan PPDB online), dan pengelolanya mampu mengoperasikannya #dummy[(skor rata-rata naik dari #s-pre menjadi #s-post, N-Gain #s-ng kategori #lower(kat-ng), dan #n-peserta pengelola mampu bekerja mandiri)]. Lembar analisis ini ditandatangani pelaksana dan mitra dan dilampirkan pada Lampiran 9.
 
 == Pencapaian Indikator Keberhasilan
 
@@ -374,12 +326,12 @@ Setelah seluruh fitur diterapkan, diuji, dan dipakai pengelola, capaian program 
     inset: 4pt,
     table.header([*No.*], [*Permasalahan Mitra*], [*Indikator Keberhasilan*], [*Realisasi*], [*Status*]),
     [1], [Belum ada website profil resmi], [Website aktif dan memuat informasi lembaga], [Website aktif di #laporan.mitra.situs memuat profil, visi, misi, galeri, keunggulan lembaga (@fig-beranda-hero, @fig-beranda-tengah)], [Tercapai],
-    [2], [Belum ada PPDB online terintegrasi], [100% data pendaftar tersimpan terstruktur], [Modul PPDB Online TA 2026/2027 aktif dengan akun orang tua, daftar dokumen persyaratan, dan pemilihan cabang tujuan (@fig-ppdb). Jumlah pendaftar yang tersimpan: #todo[jumlah]], [#todo[status]],
-    [3], [Dokumentasi tidak terpusat], [Dokumen persyaratan pendaftar tersimpan dan mudah diakses], [Data dan dokumen pendaftar tersimpan di basis data terpusat (@fig-admin-pendaftar) #todo[verifikasi dengan tangkapan layar admin]], [#todo[status]],
-    [4], [Efisiensi administrasi rendah], [Seluruh tahap pendaftaran berjalan melalui sistem], [Alur pembuatan akun, pengisian data, pengunggahan dokumen, dan verifikasi berjalan pada sistem (@tab-blackbox)], [#todo[status]],
-    [5], [Literasi digital rendah], [Skor post-test naik ≥30% (N-Gain)], [Lima sesi pelatihan; skor rata-rata pre-test #todo[nilai], post-test #todo[nilai], N-Gain #todo[nilai] (@tab-ngain)], [#todo[status]],
-    [6], [Belum ada pedoman tata kelola], [SOP tersedia dan digunakan], [SOP pengelolaan website dan PPDB disahkan pimpinan yayasan #todo[tanggal pengesahan] (@sub-sop)], [#todo[status]],
-    [7], [Belum ada evaluasi berbasis data], [Minimal satu laporan evaluasi internal], [Laporan evaluasi akhir program disusun dan dibahas bersama mitra #todo[tanggal rapat refleksi]], [#todo[status]],
+    [2], [Belum ada PPDB online terintegrasi], [100% data pendaftar tersimpan terstruktur], [Modul PPDB Online TA 2026/2027 aktif dengan akun orang tua, daftar dokumen persyaratan, dan pemilihan cabang tujuan (@fig-ppdb). Jumlah pendaftar uji yang tersimpan: #dummy[#n-pendaftar-uji]], [#dummy[Tercapai]],
+    [3], [Dokumentasi tidak terpusat], [Dokumen persyaratan pendaftar tersimpan dan mudah diakses], [Data dan dokumen pendaftar tersimpan di basis data terpusat (@tab-blackbox)], [#dummy[Tercapai]],
+    [4], [Efisiensi administrasi rendah], [Seluruh tahap pendaftaran berjalan melalui sistem], [Alur pembuatan akun, pengisian data, pengunggahan dokumen, dan verifikasi berjalan pada sistem (@tab-blackbox)], [#dummy[Tercapai]],
+    [5], [Literasi digital rendah], [Skor post-test naik ≥30% (N-Gain)], [Lima sesi pelatihan; skor rata-rata pre-test #dummy[#s-pre], post-test #dummy[#s-post], N-Gain #dummy[#s-ng] (@tab-ngain)], [#dummy[Tercapai]],
+    [6], [Belum ada pedoman tata kelola], [SOP tersedia dan digunakan], [SOP pengelolaan website dan PPDB disahkan pimpinan yayasan pada #dummy[#tgl.sop] (@sub-sop)], [#dummy[Tercapai]],
+    [7], [Belum ada evaluasi berbasis data], [Minimal satu laporan evaluasi internal], [Laporan evaluasi akhir program disusun dan dibahas bersama mitra pada #dummy[#tgl.refleksi]], [#dummy[Tercapai]],
   ),
   caption: [Realisasi capaian terhadap indikator keberhasilan],
 ) <tab-capaian>
@@ -396,12 +348,12 @@ Status luaran wajib dan tambahan pada akhir kegiatan ditunjukkan pada @tab-reali
     table.header([*No.*], [*Jenis Luaran*], [*Target*], [*Status Akhir*]),
     table.cell(colspan: 4, fill: luma(235))[*Luaran Wajib*],
     [1.], [Analisis penerapan iptek pada mitra (@tab-keberdayaan)], [Ada], [Ada],
-    [2.], [Artikel ilmiah pada Jurnal Pengabdian kepada Masyarakat Unindra (Sinta 4)], [accepted / published], [#todo[submitted / accepted / published, beserta URL]],
-    [3.], [Publikasi media massa (target: malanghub.com atau laman polinema.ac.id)], [Published], [#todo[published, beserta URL]],
-    [4.], [Video kegiatan di YouTube Polinema/P3M], [Ada], [#todo[URL video]],
+    [2.], [Artikel ilmiah pada Jurnal Pengabdian kepada Masyarakat Unindra (Sinta 4)], [accepted / published], [Naskah artikel disusun dan siap diajukan; belum disubmit (Lampiran 6)],
+    [3.], [Publikasi media massa (target: malanghub.com atau laman polinema.ac.id)], [Published], [Naskah rilis disiapkan; belum terbit (Lampiran 6)],
+    [4.], [Video kegiatan di YouTube Polinema/P3M], [Ada], [Naskah dan storyboard disiapkan; belum diunggah (Lampiran 6)],
     table.cell(colspan: 4, fill: luma(235))[*Luaran Tambahan*],
     [1.], [Teknologi tepat guna/produk ABA-EDU Web], [Ada], [Ada (#laporan.mitra.situs)],
-    [2.], [Hak Cipta program komputer ABA-EDU Web], [Registered / Granted], [#todo[registered / granted, beserta nomor]],
+    [2.], [Hak Cipta program komputer ABA-EDU Web], [Registered / Granted], [Dalam proses pendaftaran; formulir permohonan disiapkan (Lampiran 6)],
   ),
   caption: [Realisasi capaian target luaran],
 ) <tab-realisasi-luaran>
@@ -417,24 +369,24 @@ Anggaran kegiatan sebesar Rp #laporan.biaya,- disusun sesuai komposisi pada pand
     inset: 4pt,
     table.header([*No.*], [*Uraian*], [*Rencana (Rp)*], [*Realisasi (Rp)*]),
     table.cell(colspan: 4, fill: luma(235))[*1. Teknologi dan inovasi (54,4%)*],
-    [], [Sewa hosting dan domain 1 tahun], [1.500.000], [#todo[]],
-    [], [Pengembangan teknologi tepat guna ABA-EDU Web (front end dan back end)], [1.400.000], [#todo[]],
-    [], [Validasi kompatibilitas purwarupa (pengujian utilitas)], [750.000], [#todo[]],
-    [], [Validasi conformance testing], [700.000], [#todo[]],
-    table.cell(colspan: 2)[_Subtotal_], [_4.350.000_], [#todo[]],
+    [], [Sewa hosting dan domain 1 tahun], [1.500.000], [#dummy[1.500.000]],
+    [], [Pengembangan teknologi tepat guna ABA-EDU Web (front end dan back end)], [1.400.000], [#dummy[1.400.000]],
+    [], [Validasi kompatibilitas purwarupa (pengujian utilitas)], [750.000], [#dummy[750.000]],
+    [], [Validasi conformance testing], [700.000], [#dummy[700.000]],
+    table.cell(colspan: 2)[_Subtotal_], [_4.350.000_], [_#dummy[4.350.000]_],
     table.cell(colspan: 4, fill: luma(235))[*2. Pelatihan (12,5%)*],
-    [], [Konsumsi peserta pelatihan sesi 1--5 (10 orang × Rp 20.000 × 5 sesi)], [1.000.000], [#todo[]],
+    [], [Konsumsi peserta pelatihan sesi 1--5 (10 orang × Rp 20.000 × 5 sesi)], [1.000.000], [#dummy[1.000.000]],
     table.cell(colspan: 4, fill: luma(235))[*3. Perjalanan (14,4%)*],
-    [], [Perjalanan dinas observasi dan wawancara permasalahan (7 × Rp 50.000)], [350.000], [#todo[]],
-    [], [Perjalanan dinas pelatihan dan pendampingan pemanfaatan ABA-EDU Web (8 × Rp 50.000)], [400.000], [#todo[]],
-    [], [Perjalanan dinas evaluasi, pengendalian, dan peningkatan kegiatan (8 × Rp 50.000)], [400.000], [#todo[]],
-    table.cell(colspan: 2)[_Subtotal_], [_1.150.000_], [#todo[]],
+    [], [Perjalanan dinas observasi dan wawancara permasalahan (7 × Rp 50.000)], [350.000], [#dummy[350.000]],
+    [], [Perjalanan dinas pelatihan dan pendampingan pemanfaatan ABA-EDU Web (8 × Rp 50.000)], [400.000], [#dummy[400.000]],
+    [], [Perjalanan dinas evaluasi, pengendalian, dan peningkatan kegiatan (8 × Rp 50.000)], [400.000], [#dummy[400.000]],
+    table.cell(colspan: 2)[_Subtotal_], [_1.150.000_], [_#dummy[1.150.000]_],
     table.cell(colspan: 4, fill: luma(235))[*4. Lain-lain (18,8%)*],
-    [], [Biaya publikasi ilmiah (Jurnal Pengabdian kepada Masyarakat Unindra, Sinta 4)], [1.000.000], [#todo[]],
-    [], [Dokumentasi kegiatan (video)], [100.000], [#todo[]],
-    [], [Pendaftaran Hak Cipta program komputer ABA-EDU Web], [400.000], [#todo[]],
-    table.cell(colspan: 2)[_Subtotal_], [_1.500.000_], [#todo[]],
-    table.cell(colspan: 2)[*Jumlah*], [*8.000.000*], [#todo[]],
+    [], [Biaya publikasi ilmiah (Jurnal Pengabdian kepada Masyarakat Unindra, Sinta 4)], [1.000.000], [#dummy[1.000.000]],
+    [], [Dokumentasi kegiatan (video)], [100.000], [#dummy[100.000]],
+    [], [Pendaftaran Hak Cipta program komputer ABA-EDU Web], [400.000], [#dummy[400.000]],
+    table.cell(colspan: 2)[_Subtotal_], [_1.500.000_], [_#dummy[1.500.000]_],
+    table.cell(colspan: 2)[*Jumlah*], [*8.000.000*], [*#dummy[8.000.000]*],
   ),
   caption: [Rencana dan realisasi anggaran],
 ) <tab-anggaran>

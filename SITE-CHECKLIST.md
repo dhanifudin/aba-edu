@@ -8,16 +8,16 @@ Laporan BAB V ditulis seolah situs sudah operasional. Saat dicek, halaman publik
 - [ ] Tombol "Masuk ke Portal Langsung" dan "Daftar Akun Baru" pada `/daftar` tidak berfungsi (`javascript:void(0)`).
 - [ ] Heading kosong di header; `/galeri` dan `/berita` 404 (hapus tautan bila ada).
 - [ ] Setelah diperbaiki: `make screenshots`, lalu `make laporan`.
-- [ ] Tangkapan layar di balik login (samarkan data pribadi anak/orang tua, tulis "data disamarkan"): `images/manual-buat-akun.png`, `images/manual-formulir-pendaftaran.png`, `images/admin-dasbor.png`, `images/admin-cabang.png`, `images/admin-pendaftar.png`, `images/admin-konten.png`, `images/admin-pengguna.png` (BAB V 5.1.2 Fitur Aplikasi, Gambar 5.8--5.14), serta `images/pelatihan-1.png`, `images/bukti-media.png`, `images/bukti-sop-bast.png`, `images/dokumentasi-1.png`. Ganti `fig-todo("...")` di `bab5.typ` / `lampiran/6-bukti-luaran.typ` dengan `image("/images/....png", width: 100%)`, lalu lengkapi uraian "Gambar 5.n menunjukkan ..." yang bertanda TODO.
 
 ## 2. Berkas scan (salin ke `laporan-akhir/scan/`, nama persis)
-`a-pengesahan.pdf` (draf: `make pengesahan`), `pernyataan-keaslian.pdf` (draf: `make pernyataan`), `kesediaan-mitra.pdf`, `pernyataan-ketua.pdf`, `sptjb.pdf`. Lalu `make scan-index laporan`.
+Sudah terpasang: `pernyataan-keaslian.pdf` dan `sptjb.pdf` (pindaian bertanda tangan, 13 Okt 2026).
+Masih sementara/kosong: `a-pengesahan.pdf` (sementara halaman pengesahan usulan; draf laporan: `make pengesahan`), `kesediaan-mitra.pdf` (sementara dari proposal, resolusi rendah), `pernyataan-ketua.pdf` (placeholder). Lalu `make scan-index laporan`.
 
 ## 3. Data yang harus diisi (cari `TODO` di PDF, atau `grep -rn "todo\[" laporan-akhir`)
 - Nomor surat perjanjian (nomor SP DIPA 139.03.2.693474/2026 sudah diisi dari pengesahan proposal), jarak ke mitra (`mitra.jarak-km`, rute peta = 9,2 km), jabatan fungsional Dian (Lektor vs Asisten Ahli).
 - Tanggal & peserta 5 sesi pelatihan; skor pre/post-test dan N-Gain (Tabel 5.6); jumlah pendaftar uji; hasil black-box (Tabel 5.2).
 - Tanggal SOP, BAST, rapat refleksi; admin internal; jadwal backup; bentuk dukungan pasca-kegiatan.
-- Status luaran (artikel, media, video, Hak Cipta) + URL/nomor; realisasi anggaran per komponen.
+- Realisasi anggaran asli per komponen (angka dummy sama dengan rencana).
 - Bukti kesepakatan penyesuaian lingkup dengan mitra (BAB II 2.1).
 - `references.bib`: lengkapi penulis/jurnal entri `mulawarman2026`.
 
@@ -49,7 +49,7 @@ Catatan dari `docs/proposal.pdf`:
 
 ## 6. Selisih antara halaman pengesahan proposal (SIM P2M, `docs/proposal.pdf` hlm. 3) dan laporan
 Dibaca dari scan beresolusi rendah; pastikan mana yang benar sebelum laporan dicetak:
-- Jangka waktu: proposal 31 Maret 2026 -- 31 Oktober 2026; laporan kemajuan dan laporan ini 1 April -- 15 November 2026.
+- Jangka waktu: laporan ini kini 1 April -- 31 Oktober 2026 (7 bulan; tanggal akhir sesuai halaman pengesahan proposal); proposal tertulis 31 Maret -- 31 Oktober 2026, laporan kemajuan 1 April -- 15 November 2026.
 - Jarak Polinema ke lokasi: proposal "8 KM" (angka kurang jelas); peta rute 9,2 km.
 - Program strategis: proposal "Revitalisasi infrastruktur sosial dan pariwisata"; laporan ini "Rekayasa Keteknikan".
 - NIDN Erfan Rohadi: sampul proposal 0404079101; pengesahan terbaca "0023017200" (kabur). Laporan memakai 0404079101.
@@ -63,3 +63,27 @@ Dibuat dari templat JPPM (`artikel/template-jppm.docx`, diunduh dari Google Docs
 - **Angka yang disorot kuning adalah angka dasar (baseline) ilustratif, bukan hasil pengukuran**: jumlah peserta (6), pre/post-test, N-Gain, kategori, 12/12 skenario black-box, kepuasan mitra per aspek (rata-rata 4,43), status fitur admin. Ganti seluruhnya dengan data nyata sebelum dikirim, lalu hitung ulang rata-rata, kenaikan 58,7%, dan N-Gain pada abstrak (Inggris dan Indonesia), Tabel 3--5, dan Kesimpulan.
 - Penanda `ISI: ...` (disorot): nama jurnal pada 4 rujukan (ERA Society, Putera dkk., Wahyuni dkk.) dan penulis/jurnal Universitas Mulawarman.
 - Templat bernama JPPM, sedangkan laporan dan proposal menyebut Jurnal Pengabdian kepada Masyarakat Unindra (Sinta 4) sebagai target; laporan belum diubah.
+
+## 9. Data DUMMY (simulasi hasil) -- wajib diganti sebelum diserahkan
+Seluruh angka hasil dan tanggal pelaksanaan berikut adalah **dummy**, tampil **berlatar kuning** di PDF laporan dan supplement, dan didefinisikan sekali di `laporan-akhir/dummy.typ` (matikan sorotan dengan `tampilkan-dummy: false` di `laporan-akhir/config.typ`). Nilai sama dengan naskah artikel (`artikel/artikel-jppm.docx`, juga berlatar kuning).
+- Peserta pelatihan 6 orang (P1--P6); pre-test 45/50/55/50/60/55, post-test 80/85/85/80/90/80; rata-rata 52,5 menjadi 83,3 (naik 58,7%); N-Gain rata-rata 0,65 (sedang; 2 tinggi, 4 sedang, 0 rendah).
+- Black-box 12 dari 12 skenario valid; evaluasi keamanan "Sesuai"; 20 pendaftar uji; 3 akun petugas; 2 admin internal; dukungan 6 bulan; verifikasi maks. 2 hari kerja.
+- Kepuasan mitra (n = 6): 4,50 / 4,42 / 4,58 / 4,33 / 4,33 / 4,42, rata-rata 4,43 (sangat puas); status 8 fitur spesifikasi mitra "Tercapai".
+- Realisasi anggaran = rencana per uraian (Rp 8.000.000).
+- Tanggal: koordinasi 8 April; website aktif 20 Mei; PPDB aktif dan diuji 24 Juni; repositori 8 Juli; digitalisasi 22 Juli; pelatihan 5 dan 19 Agustus, 2, 16, dan 30 September; SOP disahkan 7 Oktober; rapat refleksi 9 Oktober; BAST 12 Oktober 2026.
+- Nyata (bukan dummy): jarak 9,2 km (rute peta), kontribusi mitra Rp 0 (halaman pengesahan proposal).
+- Tetap TODO (bukan angka/tanggal): URL dan status artikel/media/video/Hak Cipta, nomor SOP, nomor surat perjanjian, tingkat TKT, tangkapan layar dan uraian fitur admin, kutipan narasumber, nama menu manual book.
+- `supplement/ringkasan-pkm.typ` sengaja tetap berkata "kegiatan masih berlangsung" (permintaan sebelumnya), jadi tidak memuat angka dummy.
+
+## 10. Status luaran dan placeholder (diperbarui)
+- Tidak ada lagi penanda TODO di laporan akhir maupun supplement. Status luaran ditulis apa adanya (dalam proses): naskah artikel disusun dan belum disubmit; naskah rilis disiapkan dan belum terbit; naskah dan storyboard video disiapkan; Hak Cipta dalam proses pendaftaran (formulir permohonan). Setelah luaran benar-benar terbit/terdaftar, perbarui Tabel 5.9 (BAB V 5.7), BAB VI, Ringkasan, dan Lampiran 6, lalu tambahkan URL/nomor aslinya.
+- Tangkapan layar halaman admin dan foto kegiatan tidak lagi diwajibkan di laporan; deskripsi fitur ditulis dari spesifikasi mitra. Bila ingin menambahkannya, buat gambar di `images/` dan tambahkan `#figure(image(...))` pada BAB V 5.1.2.
+- BAB III 3.2 (Rencana dan Realisasi Kegiatan) dihapus; BAB III kini 3.1 Pelaksanaan Solusi dan 3.2 Partisipasi Mitra.
+- Dummy yang menyentuh dokumen ini: TKT 7 pada Dokumen Prototipe, tanggal rapat koordinasi awal (BAB II), tanggal permohonan Hak Cipta 13 Oktober dan tanggal pertama diumumkan (formulir HKI). Alamat rumah dan KTP pencipta pada formulir HKI diisi/ditempel manual (garis titik-titik dan kotak KTP).
+- Nomor SOP pada supplement SOP berupa garis isian `.............../SOP/ABS/X/2026` untuk diisi yayasan saat SOP ditandatangani.
+- Siaran pers tidak memuat kutipan langsung; tambahkan setelah wawancara bila diperlukan.
+
+## 11. Ukuran berkas
+`build/laporan-akhir.pdf` harus tidak lebih dari 7 MB (sekarang sekitar 5,8 MB). Gambar besar (tangkapan layar, diagram metode, foto lokasi) dipakai dalam versi JPEG di `images/*.jpg` (kualitas 86); `scripts/screenshots.sh` membuat ulang JPEG dari PNG. Bila menambah pindaian atau gambar baru dan ukuran melewati batas, kompres dengan Ghostscript (`-dPDFSETTINGS=/ebook`, lihat `laporan-akhir/scan/README.md`) sebelum disematkan.
+
+- Lampiran 9 (lembar keberdayaan / penerapan iptek) mengikuti format `docs/penerapan-iptek-kuisioner.docx` (Lampiran 70); sumber: `supplement/lembar-keberdayaan.typ`.

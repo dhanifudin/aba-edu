@@ -1,5 +1,6 @@
 #import "../config.typ": laporan
 #import "../template.typ": todo
+#import "../dummy.typ": *
 
 = TARGET DAN LUARAN
 
@@ -14,7 +15,7 @@ Untuk menjawab permasalahan mitra secara komprehensif, kegiatan ini menawarkan s
 + *Pelatihan dan pendampingan literasi digital guru dan manajemen.* Melatih pengelola mengoperasikan website profil dan modul pendaftaran, diukur dengan pre-test dan post-test.
 + *Pendampingan implementasi dan penyusunan SOP.* Mendampingi implementasi secara teknis dan manajerial serta menyusun Standar Operasional Prosedur pengelolaan website dan PPDB sebagai pedoman resmi.
 
-Dalam pelaksanaannya, ABA-EDU Web dijalankan di atas platform Kiddy School ERP (halokes.com) yang telah menyediakan modul pendaftaran, rapor, jurnal guru dan pembelajaran, serta pemantauan tumbuh kembang. Bersama pengelola mitra, tim menyepakati penyesuaian lingkup: solusi 3 dan 4 diwujudkan pada data dan administrasi pendaftaran peserta didik, sedangkan modul rapor digital, pembelajaran, dan dasbor monitoring yang telah tersedia pada platform disiapkan sebagai tahap adopsi berikutnya (lihat BAB VI) #todo[konfirmasi kesepakatan penyesuaian lingkup dengan mitra, lengkap dengan bukti/berita acara].
+Dalam pelaksanaannya, ABA-EDU Web dijalankan di atas platform Kiddy School ERP (halokes.com) yang telah menyediakan modul pendaftaran, rapor, jurnal guru dan pembelajaran, serta pemantauan tumbuh kembang. Bersama pengelola mitra, tim menyepakati penyesuaian lingkup pada rapat koordinasi awal (#dummy[#tgl.koordinasi]): solusi 3 dan 4 diwujudkan pada data dan administrasi pendaftaran peserta didik, sedangkan modul rapor digital, pembelajaran, dan dasbor monitoring yang telah tersedia pada platform disiapkan sebagai tahap adopsi berikutnya (lihat BAB VI).
 
 == Target Luaran
 

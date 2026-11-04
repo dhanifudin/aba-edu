@@ -1,6 +1,6 @@
 // Dokumen Prototype/ Model/ Kebijakan -- format Lampiran 69 docs/panduan.pdf
 // (Template Dokumen Prototipe/ Teknologi Tepat Guna/ Model) untuk luaran IPTEKSB ABA-EDU Web.
-#import "common.typ": laporan, todo, doc, letterhead
+#import "common.typ": *
 
 #show: doc
 #set text(size: 10.5pt)
@@ -25,7 +25,7 @@
   ],
   lbl[Jurusan / Program Studi], [Jurusan Teknologi Informasi / Teknik Informatika, Politeknik Negeri Malang],
   lbl[Judul prototype/ Model/ Kebijakan], [Prototype: ABA-EDU Web, website profil dan sistem pendaftaran peserta didik baru (PPDB) online untuk #laporan.mitra.nama-pendek],
-  lbl[TKT], [#todo[tentukan TKT sesuai pengukuran TKT perangkat lunak (Lampiran 2 panduan)]],
+  lbl[TKT], [#dummy[TKT 7 (demonstrasi prototipe sistem dalam lingkungan operasional)]],
   lbl[Fungsi],
   [
     ABA-EDU Web mendigitalkan layanan informasi dan pendaftaran lembaga PAUD. Website profil menampilkan identitas, visi dan misi, program, galeri kegiatan, dan keunggulan lembaga secara responsif. Modul PPDB online memungkinkan orang tua membuat akun, memilih cabang sekolah tujuan, mengisi formulir, dan mengunggah dokumen persyaratan, sedangkan pengelola yayasan memverifikasi dan merekap pendaftar pada basis data terpusat.
@@ -37,7 +37,7 @@
     - Platform multi-lembaga Kiddy School ERP (halokes.com); ABA-EDU Web berjalan sebagai tenant #raw("/y/ABS") pada subdomain #laporan.mitra.situs.
     - Kerangka kerja Laravel (PHP), antarmuka Bootstrap 5, diakses melalui jaringan Cloudflare; desain responsif.
     - Delapan kemampuan sesuai surat kesediaan mitra: website profil; modul PPDB online (formulir, unggah dokumen, penyimpanan terpusat, rekap otomatis); manajemen data pendaftar (lihat, verifikasi, ubah, ekspor); manajemen konten website (berita, pengumuman, foto kegiatan); desain responsif; manajemen pengguna berbasis peran (Admin Yayasan, Operator Pendaftaran); keamanan data dasar (otentikasi admin, validasi input, pencadangan data); dasbor ringkasan statistik pendaftaran.
-    - Status tiap kemampuan: lihat BAB V laporan akhir, Tabel Kesesuaian Spesifikasi #todo[konfirmasi kemampuan yang aktif].
+    - Status tiap kemampuan: lihat BAB V laporan akhir, Tabel Kesesuaian Spesifikasi.
   ],
 )
 
@@ -52,7 +52,7 @@
   [
     #lbl[Judul KI:] ABA-EDU Web (program komputer) \
     #v(0.2cm)
-    Status : #strike[Belum didaftarkan]/Terdaftar/Granted #todo[pilih status dan nomor pencatatan] \
+    Status : Belum didaftarkan (permohonan dalam proses)/#strike[Terdaftar]/#strike[Granted] \
     Jenis : Hak Cipta/#strike[Paten]/#strike[Paten Sederhana]
   ],
 )
@@ -67,12 +67,12 @@
   columns: (1fr, 1fr),
   column-gutter: 0.5cm,
   figure(
-    image("/images/web-beranda-atas.png", width: 100%),
+    image("/images/web-beranda-atas.jpg", width: 100%),
     caption: [Halaman profil lembaga.],
     numbering: none,
   ),
   figure(
-    image("/images/web-pendaftaran.png", width: 100%),
+    image("/images/web-pendaftaran.jpg", width: 100%),
     caption: [Portal PPDB Online TA 2026/2027.],
     numbering: none,
   ),

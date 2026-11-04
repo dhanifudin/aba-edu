@@ -2,8 +2,8 @@
 // ABA-EDU Web. Tata letak disalin dari docs/form-hki.docx (A4, margin 1 cm, Times New
 // Roman 10 pt). Pencipta = dosen tim pelaksana saja (ketua + anggota dari
 // laporan-akhir/config.typ), tanpa mahasiswa. Alamat rumah, tanda tangan, dan pindaian KTP
-// tiap pencipta belum tersedia sehingga muncul sebagai TODO.
-#import "common.typ": laporan, todo, doc
+// tiap pencipta diisi/ditempel manual saat dicetak (garis titik-titik dan kotak KTP).
+#import "common.typ": *
 
 #show: doc
 #set page(margin: 1cm)
@@ -16,11 +16,11 @@
 
 #let jenis-ciptaan = "Program Komputer"
 #let judul-ciptaan = "ABA-EDU Web: Website Profil dan Sistem Pendaftaran Peserta Didik Baru Online untuk Lembaga PAUD"
-#let tanggal-surat = todo("tanggal surat")
-#let tanggal-umum = todo("tanggal pertama kali diumumkan")
+#let tanggal-surat = dummy[13 Oktober 2026]
+#let tanggal-umum = dummy[#tgl.website]
 
 // Alamat rumah pencipta tidak tersedia pada dokumen sumber: isi sebelum dicetak.
-#let alamat(p) = todo("alamat rumah " + polos(p.nama))
+#let alamat(p) = [.............................................................]
 #let hp(p) = p.hp
 
 #let kepala = laporan.pejabat.kepala-p3m.nama
@@ -271,7 +271,7 @@ Dengan ini menyatakan bahwa :
 #v(1.5cm)
 #for p in pencipta [
   #rect(width: 8.4cm, height: 5.4cm, stroke: (dash: "dashed"), inset: 0.4cm)[
-    #todo("scan KTP " + polos(p.nama))
+    #text(size: 9pt)[Tempelkan fotokopi/pindaian KTP \ #polos(p.nama)]
   ]
   #v(0.3cm)
 ]

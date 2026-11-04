@@ -36,7 +36,7 @@ ABA-EDU Web adalah aplikasi web berbasis Laravel yang berjalan pada platform Kid
 #lbl[FOTO TTG:]
 #v(0.2cm)
 #align(center)[
-  #image("/images/web-beranda-hero.png", width: 78%)
+  #image("/images/web-beranda-hero.jpg", width: 78%)
   Halaman profil ABA-EDU Web
 ]
 
@@ -44,6 +44,12 @@ ABA-EDU Web adalah aplikasi web berbasis Laravel yang berjalan pada platform Kid
 
 #lbl[FOTO PENGABDIAN MASYARAKAT:]
 #v(0.2cm)
-#block(width: 100%, height: 7cm, stroke: (paint: red, dash: "dashed"), inset: 8pt, align(center + horizon, todo[sisipkan foto pelatihan/pendampingan di #laporan.mitra.nama-pendek (images/pelatihan-1.png)]))
+#grid(
+  columns: (1.5fr, 0.7fr),
+  column-gutter: 0.6cm,
+  align: top + center,
+  [#image("/images/web-pendaftaran.jpg", width: 100%) \ #text(size: 9pt)[Portal PPDB Online TA 2026/2027]],
+  [#image("/images/web-beranda-mobile-atas.jpg", width: 100%) \ #text(size: 9pt)[Tampilan pada ponsel]],
+)
 #v(0.3cm)
-#block(width: 100%, height: 7cm, stroke: (paint: red, dash: "dashed"), inset: 8pt, align(center + horizon, todo[sisipkan foto serah terima sistem/penandatanganan SOP (images/bukti-sop-bast.png)]))
+Gambar menunjukkan hasil kegiatan yang telah beroperasi pada #laporan.mitra.situs.

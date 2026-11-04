@@ -1,12 +1,13 @@
 #import "../config.typ": laporan
 #import "../template.typ": todo
+#import "../dummy.typ": *
 
 = METODE PELAKSANAAN
 
 Metode pelaksanaan dirancang untuk mengatasi permasalahan #laporan.mitra.nama-pendek terkait belum tersedianya website profil, sistem pendaftaran online, repositori data peserta didik, dan literasi digital pengelola. Pendekatan yang digunakan bersifat partisipatif berbasis kebutuhan (need-based participatory approach): guru, kepala sekolah, dan manajemen mitra terlibat aktif pada setiap tahap, mulai dari identifikasi kebutuhan hingga monitoring, evaluasi, dan keberlanjutan. Tahapan metode ditunjukkan pada @fig-metode.
 
 #figure(
-  image("/images/metode-pelaksanaan.png", width: 100%),
+  image("/images/metode-pelaksanaan.jpg", width: 100%),
   caption: [Metode pelaksanaan pengabdian kepada masyarakat],
 ) <fig-metode>
 
@@ -41,28 +42,6 @@ Pelaksanaan solusi disusun berbasis pendekatan substitusi IPTEKS terpadu yang me
 *Tahap 7. Pendampingan Implementasi untuk Kesiapan Akreditasi.* Tim melakukan supervisi teknis dan manajerial, meninjau kelengkapan data, menyusun Standar Operasional Prosedur (SOP) tata kelola digital bersama pengurus, dan mengevaluasi tingkat adopsi sistem. _Luaran:_ SOP yang disahkan dan sistem yang dimanfaatkan dalam kegiatan administrasi.
 
 *Tahap 8. Evaluasi dan Keberlanjutan Program.* Tim mengevaluasi capaian program, menyusun strategi pemeliharaan dan pengembangan sistem, menyerahterimakan sistem kepada mitra, dan menetapkan admin internal sebagai pengelola berkelanjutan. _Luaran:_ transformasi digital yang berlanjut sebagai bagian dari tata kelola yayasan.
-
-== Rencana dan Realisasi Kegiatan
-
-@tab-rencana-realisasi membandingkan rencana kegiatan dengan realisasinya. Seluruh tahap dilaksanakan berurutan dengan sebagian tahap berjalan paralel sesuai kesiapan mitra.
-
-#figure(
-  table(
-    columns: (0.7cm, 3cm, 4.6cm, 4.7cm, 2.6cm),
-    align: left + top,
-    inset: 4pt,
-    table.header([*No.*], [*Tahap Kegiatan*], [*Rencana Aktivitas Utama*], [*Realisasi*], [*Waktu*]),
-    [1], [Perencanaan dan konsolidasi], [Koordinasi awal, analisis kesiapan infrastruktur, penetapan admin sistem], [Koordinasi dengan pimpinan yayasan dan penetapan admin internal], [#todo[tanggal]],
-    [2], [Website profil resmi], [Pengumpulan konten, desain UI/UX, pembuatan dan aktivasi website], [Website aktif pada #laporan.mitra.situs], [#todo[tanggal]],
-    [3], [PPDB online terintegrasi], [Perancangan formulir, integrasi basis data, uji coba], [Modul PPDB TA 2026/2027 aktif dan diuji], [#todo[tanggal]],
-    [4], [Repositori data pendaftar], [Penataan struktur data dan migrasi data awal], [Struktur data pendaftar dan dokumen persyaratan tersimpan di sistem], [#todo[tanggal]],
-    [5], [Digitalisasi administrasi], [Alur input, unggah dokumen, dan verifikasi berbasis sistem], [Alur pendaftaran berbasis sistem dioperasikan oleh admin mitra], [#todo[tanggal]],
-    [6], [Pelatihan dan pendampingan], [Lima sesi pelatihan, pre-test dan post-test], [Lima sesi pelatihan terlaksana, pre/post-test dianalisis dengan N-Gain], [#todo[tanggal]],
-    [7], [Pendampingan implementasi dan SOP], [Supervisi, penyusunan dan pengesahan SOP, evaluasi adopsi], [SOP disahkan pimpinan yayasan], [#todo[tanggal]],
-    [8], [Evaluasi dan keberlanjutan], [Evaluasi capaian, serah terima, penunjukan admin internal, laporan akhir], [Serah terima sistem dan penyusunan laporan akhir], [#todo[tanggal]],
-  ),
-  caption: [Rencana dan realisasi kegiatan],
-) <tab-rencana-realisasi>
 
 == Partisipasi Mitra
 

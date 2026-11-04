@@ -32,3 +32,9 @@ magick images/web-beranda.png -crop 1366x760+0+0 +repage images/web-beranda-hero
 magick images/web-beranda-mobile.png -fuzz 1% -trim +repage -crop 390x2600+0+0 +repage images/web-beranda-mobile.png
 magick images/web-beranda.png -crop 1366x850+0+600 +repage images/web-beranda-tentang.png   # statistik, visi dan misi
 magick images/web-login.png -crop 560x470+800+230 +repage images/web-login-form.png          # formulir masuk
+magick images/web-beranda-mobile.png -crop 390x860+0+0 +repage images/web-beranda-mobile-atas.png   # bagian atas tampilan ponsel
+
+# Versi JPEG (lebih kecil) dipakai laporan agar PDF akhir tidak melebihi 7 MB.
+for f in web-beranda-atas web-beranda-tengah web-beranda-bawah web-beranda-hero web-beranda-tentang web-beranda-mobile web-beranda-mobile-atas web-pendaftaran; do
+  magick "images/$f.png" -background white -alpha remove -alpha off -sampling-factor 4:4:4 -quality 86 "images/$f.jpg"
+done

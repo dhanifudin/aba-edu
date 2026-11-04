@@ -1,6 +1,6 @@
 // (a) Naskah berita rilis -- Lampiran 78 panduan (publikasi media massa).
 // (b) Naskah dan storyboard video kegiatan -- Lampiran 73 panduan (maks. 5 menit).
-#import "common.typ": laporan, todo, doc, letterhead
+#import "common.typ": *
 
 #show: doc
 #set text(size: 10.5pt)
@@ -25,11 +25,11 @@
 
   Selama ini yayasan belum memiliki website resmi dan masih menerima pendaftaran siswa baru secara manual. Melalui program ini, tim membangun dan mengaktifkan ABA-EDU Web, yaitu website profil lembaga dan portal pendaftaran peserta didik baru (PPDB) online yang dapat diakses pada #laporan.mitra.situs.
 
-  Tim juga melatih guru dan pengelola yayasan dalam lima sesi praktik langsung dan menyusun Standar Operasional Prosedur pengelolaan website dan PPDB. "#todo[kutipan ketua tim: tujuan dan harapan kegiatan]," ujar #laporan.ketua.nama. Pimpinan yayasan, #laporan.mitra.pimpinan, menyampaikan, "#todo[kutipan pimpinan yayasan: manfaat yang dirasakan]."
+  Tim juga melatih guru dan pengelola yayasan dalam lima sesi praktik langsung dan menyusun Standar Operasional Prosedur pengelolaan website dan PPDB. Kegiatan ini bertujuan membuat layanan yayasan lebih terbuka dan tertib serta dapat dikelola mandiri oleh pengelolanya.
 
-  Hasil pelatihan menunjukkan peningkatan kemampuan pengelola dengan N-Gain #todo[nilai]. Dengan sistem ini, orang tua dapat mengenal sekolah dan mendaftar dari ponsel, sedangkan yayasan memiliki data pendaftar yang tertib sebagai dasar dokumentasi akreditasi. Ke depan, yayasan berencana mengadopsi modul rapor digital dan pembelajaran pada platform yang sama.
+  Hasil pelatihan menunjukkan peningkatan kemampuan pengelola dengan N-Gain #dummy[#s-ng]. Dengan sistem ini, orang tua dapat mengenal sekolah dan mendaftar dari ponsel, sedangkan yayasan memiliki data pendaftar yang tertib sebagai dasar dokumentasi akreditasi. Ke depan, yayasan berencana mengadopsi modul rapor digital dan pembelajaran pada platform yang sama.
 
-  #text(size: 9pt)[Foto: #todo[foto kegiatan dan keterangan foto]. Narahubung: #laporan.ketua.nama, #laporan.ketua.email.]
+  #text(size: 9pt)[Foto: dokumentasi pelatihan dan serah terima dari tim dokumentasi kegiatan. Narahubung: #laporan.ketua.nama, #laporan.ketua.email.]
 ]
 
 = B. Naskah dan Storyboard Video Kegiatan
@@ -59,12 +59,12 @@
   [1], [Pembuka], [Logo Polinema, kartu pembuka (judul, tim dan NIDN, mitra, tahun)], [Teks layar sesuai kartu pembuka], [0:15],
   [2], [Latar belakang], [Suasana PAUD, kegiatan administrasi manual (tanpa menampilkan wajah anak yang tidak mendapat persetujuan)], [Narasi kalimat 1--2], [0:30],
   [3], [Pengembangan], [Tim berdiskusi dengan pengurus; layar komputer saat website profil dan portal PPDB dioperasikan], [Narasi kalimat 3], [0:40],
-  [4], [Pelatihan], [Sesi praktik langsung guru/pengelola mengelola konten dan memverifikasi pendaftar], [Narasi kalimat 4; teks layar: N-Gain #todo[nilai]], [0:50],
+  [4], [Pelatihan], [Sesi praktik langsung guru/pengelola mengelola konten dan memverifikasi pendaftar], [Narasi kalimat 4; teks layar: N-Gain #dummy[#s-ng]], [0:50],
   [5], [Hasil], [Tampilan website di ponsel; orang tua mencoba mendaftar; rapat penandatanganan SOP/serah terima], [Narasi kalimat 5], [0:40],
-  [6], [Testimoni mitra], [Pimpinan yayasan menyampaikan manfaat kegiatan (wawancara singkat)], [Suara pimpinan: #todo[testimoni]], [0:40],
-  [7], [Penutup], [Foto bersama tim dan mitra (bila ada); tautan berita], [Teks layar: berita di www.polinema.ac.id #todo[URL berita]; tagar #raw("#polinema #polinemaprima")], [0:25],
+  [6], [Testimoni mitra], [Pimpinan yayasan menyampaikan manfaat kegiatan (wawancara singkat)], [Testimoni disampaikan langsung oleh pimpinan yayasan dengan kata-katanya sendiri], [0:40],
+  [7], [Penutup], [Foto bersama tim dan mitra (bila ada); tautan berita], [Teks layar: tautan berita pada laman www.polinema.ac.id (bila rilis belum tersedia, cukup www.polinema.ac.id); tagar #raw("#polinema #polinemaprima")], [0:25],
   table.cell(colspan: 4, align: right)[*Total*], [*±3:40*],
 )
 
 #v(0.2cm)
-*Teknis:* resolusi 1280x720 atau lebih, landscape; musik latar tanpa hak cipta; takarir bahasa Indonesia; tautan YouTube dicatat pada Lampiran 6 laporan akhir: #todo[URL].
+*Teknis:* resolusi 1280x720 atau lebih, landscape; musik latar tanpa hak cipta; takarir bahasa Indonesia; tautan YouTube dicatat pada Lampiran 6 laporan akhir setelah video diunggah.

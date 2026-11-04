@@ -1,6 +1,6 @@
 // SOP Pengelolaan Website dan PPDB ABA-EDU Web -- untuk disahkan pimpinan yayasan.
 // Dokumen milik mitra; kop berupa teks (tanpa logo) agar dapat dipindahkan ke kop surat yayasan.
-#import "common.typ": laporan, todo, doc
+#import "common.typ": *
 
 #show: doc
 #set text(size: 10.5pt)
@@ -23,7 +23,7 @@
   inset: 5pt,
   align: left + horizon,
   [*Judul SOP*], table.cell(colspan: 3)[*Pengelolaan Website Profil dan PPDB Online ABA-EDU Web*],
-  [Nomor SOP], [#todo[nomor SOP]], [Tanggal berlaku], [#todo[tanggal]],
+  [Nomor SOP], [.............../SOP/ABS/X/2026], [Tanggal berlaku], [#dummy[#tgl.sop]],
   [Revisi], [0], [Disusun oleh], [Tim PKM Polinema bersama pengurus yayasan],
 )
 
@@ -47,7 +47,7 @@ Berlaku bagi Admin Yayasan dan Operator Pendaftaran dalam pengelolaan akun, kont
   [*Admin Yayasan*], [Mengelola akun pengguna dan hak akses; memperbarui konten profil; membuka dan menutup periode serta cabang PPDB; memantau rekap pendaftar; melaporkan kendala kepada tim pendukung.],
   [*Operator Pendaftaran*], [Memeriksa kelengkapan data dan dokumen pendaftar; memverifikasi atau menolak berkas disertai alasan; menghubungi orang tua bila ada kekurangan berkas.],
   [*Pimpinan Yayasan*], [Menetapkan Admin dan Operator; menyetujui jadwal PPDB; meninjau laporan evaluasi.],
-  [*Tim pendukung (Polinema)*], [Memberi dukungan teknis platform dan bimbingan penggunaan sesuai kesepakatan #todo[masa dukungan].],
+  [*Tim pendukung (Polinema)*], [Memberi dukungan teknis platform dan bimbingan penggunaan sesuai kesepakatan selama #dummy[#masa-dukungan].],
 )
 
 = Prosedur
@@ -70,11 +70,11 @@ Berlaku bagi Admin Yayasan dan Operator Pendaftaran dalam pengelolaan akun, kont
 == Verifikasi berkas pendaftar
 + Operator memeriksa data anak, data orang tua, kartu keluarga, akta kelahiran, pas foto, dan bukti pembayaran.
 + Berkas yang lengkap diverifikasi; berkas yang kurang atau tidak jelas ditolak dengan catatan alasan.
-+ Operator menyelesaikan verifikasi paling lambat #todo[jumlah] hari kerja sejak pendaftaran diterima.
++ Operator menyelesaikan verifikasi paling lambat #dummy[#batas-verifikasi] sejak pendaftaran diterima.
 + Rekap pendaftar diekspor pada akhir periode dan disimpan oleh yayasan.
 
 == Pencadangan dan keamanan data
-+ Pencadangan basis data dilakukan berkala pada sisi platform #todo[konfirmasi jadwal dan penanggung jawab].
++ Pencadangan basis data dilakukan berkala pada sisi platform #dummy[(otomatis setiap hari oleh tim platform)].
 + Admin mengekspor rekap pendaftar setiap akhir periode PPDB dan menyimpannya pada penyimpanan yayasan.
 + Data pribadi anak dan orang tua hanya diakses petugas berwenang dan tidak dikirim melalui kanal publik.
 + Kebocoran atau penyalahgunaan data dilaporkan kepada Pimpinan dan tim pendukung dalam 1 x 24 jam.
@@ -93,5 +93,5 @@ Buku panduan ABA-EDU Web; Berita Acara Serah Terima; kuesioner kepuasan mitra.
   columns: (1fr, 1fr),
   gutter: 0.8cm,
   align(center)[Disusun oleh, \ Ketua Tim PKM Polinema #v(1.8cm) *#laporan.ketua.nama* \ NIDN. #laporan.ketua.nidn],
-  align(center)[Malang, #todo[tanggal] \ Disahkan oleh, \ #laporan.mitra.jabatan-pimpinan #v(1.8cm) *#laporan.mitra.pimpinan* \ #laporan.mitra.nama-pendek],
+  align(center)[Malang, #dummy[#tgl.sop] \ Disahkan oleh, \ #laporan.mitra.jabatan-pimpinan #v(1.8cm) *#laporan.mitra.pimpinan* \ #laporan.mitra.nama-pendek],
 )

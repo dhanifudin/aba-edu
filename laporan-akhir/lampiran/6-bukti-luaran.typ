@@ -1,35 +1,43 @@
 #import "../config.typ": laporan
-#import "../template.typ": todo, fig-todo
+#import "../template.typ": fit-page
+#import "../dummy.typ": *
 
 = ARTIKEL ILMIAH DAN BUKTI LUARAN <lampiran-6>
 
+Lampiran ini memuat bukti luaran yang telah tersedia pada saat laporan disusun. Luaran wajib dan tambahan yang proses publikasinya belum selesai ditunjukkan dengan naskah atau dokumen persiapannya, dan statusnya dinyatakan apa adanya.
+
 == Artikel Ilmiah
 
-Artikel ilmiah hasil kegiatan ini disusun untuk Jurnal Pengabdian kepada Masyarakat Unindra (Sinta 4). Judul: #todo[judul artikel]. Status: #todo[submitted / accepted / published]. URL: #todo[URL artikel atau surat penerimaan]. Naskah ditunjukkan pada halaman berikut #todo[sisipkan naskah/PDF artikel dengan #raw("#image(\"...\", page: n)")].
+Naskah artikel ilmiah hasil kegiatan telah disusun mengikuti templat jurnal pengabdian kepada masyarakat yang dituju dan siap diajukan; artikel belum disubmit. Naskah ditunjukkan pada halaman berikut (angka hasil pengukuran pada naskah masih berupa angka dasar yang disorot).
 
-== Publikasi Media Massa
+#for p in range(1, 7) [
+  #pagebreak()
+  #fit-page("/artikel/artikel-jppm-preview.pdf", p)
+]
 
-Berita kegiatan diterbitkan pada #todo[nama media, mis. malanghub.com atau polinema.ac.id] dengan URL #todo[URL berita] pada #todo[tanggal]. Berita memuat nama Polinema sebagai penyandang dana, judul dan skema kegiatan, nama mitra, serta tahun pelaksanaan sesuai ketentuan Lampiran 78 panduan.
+== Publikasi Media Massa dan Video Kegiatan
 
-#fig-todo("bukti-media")
+Naskah berita rilis telah disiapkan sesuai ketentuan publikasi media massa hasil pengabdian dan belum diterbitkan. Video kegiatan (maksimal 5 menit) telah dirancang dalam bentuk naskah narasi dan storyboard, dan belum diproduksi serta diunggah. Naskah rilis dan storyboard ditunjukkan pada halaman berikut.
 
-== Video Kegiatan
-
-Video dokumentasi kegiatan (maksimal 5 menit, sesuai ketentuan Lampiran 73 panduan) diunggah pada kanal YouTube Polinema/P3M: #todo[URL video].
+#for p in range(1, 3) [
+  #pagebreak()
+  #fit-page("/build/supplement-rilis-video.pdf", p)
+]
 
 == Hak Cipta
 
-Hak Cipta program komputer "ABA-EDU Web" didaftarkan melalui Sentra KI Polinema. Status: #todo[registered / granted]. Nomor pencatatan: #todo[nomor]. Bukti: #todo[bukti pendaftaran atau surat pencatatan ciptaan].
+Pendaftaran Hak Cipta program komputer ABA-EDU Web sedang dalam proses. Formulir permohonan pendaftaran ciptaan untuk Sentra KI Polinema telah disiapkan, dan halaman pertamanya ditunjukkan berikut; surat pencatatan ciptaan akan diterbitkan setelah permohonan diproses.
+
+#pagebreak()
+#fit-page("/build/supplement-form-hki.pdf", 1)
 
 == Dokumen Tata Kelola dan Serah Terima
 
-Standar Operasional Prosedur pengelolaan website dan PPDB yang disahkan pimpinan yayasan serta Berita Acara Serah Terima (BAST) ditunjukkan berikut ini #todo[sisipkan scan SOP dan BAST yang telah ditandatangani; draf dapat dicetak dari build/supplement-sop.pdf dan build/supplement-bast.pdf]. Lembar analisis peningkatan level keberdayaan mitra (format Lampiran 70) terdapat pada Lampiran 9.
+Standar Operasional Prosedur pengelolaan website dan PPDB disahkan pimpinan yayasan pada #dummy[#tgl.sop], dan Berita Acara Serah Terima ABA-EDU Web ditandatangani pada #dummy[#tgl.bast]. Dokumennya ditunjukkan pada halaman berikut. Lembar analisis peningkatan level keberdayaan mitra (format Lampiran 70) terdapat pada Lampiran 9.
 
-#fig-todo("bukti-sop-bast")
-
-== Dokumentasi Kegiatan
-
-#figure(
-  fig-todo("dokumentasi-1"),
-  caption: [Dokumentasi pelaksanaan kegiatan di #laporan.mitra.nama-pendek],
-)
+#for p in range(1, 3) [
+  #pagebreak()
+  #fit-page("/build/supplement-sop.pdf", p)
+]
+#pagebreak()
+#fit-page("/build/supplement-bast.pdf", 1)

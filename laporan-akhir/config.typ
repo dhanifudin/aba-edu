@@ -4,12 +4,13 @@
 #let laporan = (
   judul: "Transformasi Digital Layanan Pendidikan Anak Usia Dini melalui Pendampingan dan Implementasi ABA-EDU Web di Yayasan Aboe Bakar Soemijati",
   jenis: "Reguler Kompetisi",
+  tampilkan-dummy: true, // false = nilai dummy tidak disorot kuning (lihat laporan-akhir/dummy.typ)
   tahun: "2026",
   skema: "Pengabdian kepada Masyarakat DIPA Swadana Reguler Kompetisi",
   dipa-nomor: "139.03.2.693474/2026", // dibaca dari halaman pengesahan proposal (SIM P2M); nomor surat perjanjian masih TODO
-  tanggal-pengesahan: "November 2026",
-  bulan-tahun-laporan: "November 2026",
-  waktu: (mulai: "1 April 2026", sampai: "15 November 2026", lama: "8 bulan"),
+  tanggal-pengesahan: "Oktober 2026",
+  bulan-tahun-laporan: "Oktober 2026",
+  waktu: (mulai: "1 April 2026", sampai: "31 Oktober 2026", lama: "7 bulan"),
   program-strategis: "Rekayasa Keteknikan",
   rumpun-ilmu: "Teknik Informatika",
   biaya: "8.000.000",
@@ -20,7 +21,7 @@
     alamat: "Jl. Kresno No. 21, Polehan, Kec. Blimbing, Kota Malang",
     desa-kecamatan: "Kel. Polehan, Kec. Blimbing",
     kota-provinsi: "Kota Malang, Jawa Timur",
-    jarak-km: "", // isi jarak Polinema ke lokasi mitra (km); peta rute di Lampiran 2 menunjukkan 9,2 km
+    jarak-km: "9,2", // rute Polinema ke lokasi mitra (peta di Lampiran 2)
     situs: "https://abs.halokes.com",
     pimpinan: "Qurrotu A'yunul Chasanah", // TODO: verifikasi ejaan pada surat kesediaan mitra
     jabatan-pimpinan: "Pimpinan Yayasan",

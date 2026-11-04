@@ -82,7 +82,7 @@ ABA-EDU Web adalah aplikasi web untuk lembaga pendidikan anak usia dini yang men
 Buka peramban dan ketik #laporan.mitra.situs. Sistem membawa Anda ke halaman profil yayasan. Menu pada bagian atas halaman memuat Beranda, Tentang Kami, Cabang TK/PAUD, Galeri Kegiatan, Keunggulan, dan Testimoni, serta tombol *Daftar PPDB Online* dan *Login*.
 
 #figure(
-  image("/images/web-beranda-atas.png", width: 100%),
+  image("/images/web-beranda-atas.jpg", width: 100%),
   caption: [Bagian atas halaman profil: menu, ajakan pendaftaran, dan statistik lembaga.],
 )
 
@@ -90,7 +90,7 @@ Buka peramban dan ketik #laporan.mitra.situs. Sistem membawa Anda ke halaman pro
 Gulir ke bawah untuk membaca visi dan misi, daftar cabang sekolah, galeri kegiatan dan fasilitas, keunggulan lembaga, serta ulasan orang tua. Bagian *Cabang Sekolah* menampilkan unit pendidikan yang aktif dan menjadi pilihan saat pendaftaran.
 
 #figure(
-  image("/images/web-beranda-tengah.png", width: 100%),
+  image("/images/web-beranda-tengah.jpg", width: 100%),
   caption: [Bagian tengah halaman profil: cabang sekolah, galeri kegiatan, dan keunggulan.],
 )
 
@@ -98,7 +98,7 @@ Gulir ke bawah untuk membaca visi dan misi, daftar cabang sekolah, galeri kegiat
 Tampilan menyesuaikan lebar layar, sehingga seluruh informasi dan menu dapat dibaca pada ponsel.
 
 #align(center)[#figure(
-  image("/images/web-beranda-mobile.png", width: 38%),
+  image("/images/web-beranda-mobile.jpg", width: 38%),
   caption: [Tampilan halaman profil pada ponsel.],
 )]
 
@@ -108,7 +108,7 @@ Tampilan menyesuaikan lebar layar, sehingga seluruh informasi dan menu dapat dib
 Tekan tombol *Daftar PPDB Online* pada halaman profil. Portal menampilkan pilihan cabang sekolah tujuan dan daftar dokumen yang perlu disiapkan.
 
 #figure(
-  image("/images/web-pendaftaran.png", width: 100%),
+  image("/images/web-pendaftaran.jpg", width: 100%),
   caption: [Portal PPDB Online TA 2026/2027.],
 )
 
@@ -119,43 +119,38 @@ Tekan tombol *Daftar PPDB Online* pada halaman profil. Portal menampilkan piliha
 
 #tip[Gunakan kata sandi minimal 8 karakter dan jangan membagikannya. Nomor telepon dipakai pengelola untuk menghubungi Anda.]
 
-#ph("manual-buat-akun", tinggi: 5cm)
 
 == Masuk ke portal
 Pilih tab *Masuk Portal*, isi email atau nomor telepon dan kata sandi, lalu tekan *Masuk ke Portal Sekarang*. Centang *Ingat Saya* hanya pada perangkat pribadi.
 
 == Mendaftarkan anak
 + Pilih cabang sekolah tujuan.
-+ Lengkapi formulir pendaftaran: data anak dan data orang tua/wali #todo[sesuaikan dengan kolom formulir yang tampil di sistem].
++ Lengkapi formulir pendaftaran: data anak dan data orang tua/wali.
 + Unggah dokumen persyaratan: kartu keluarga dan akta kelahiran, pas foto anak (3x4, setengah badan), dan bukti pembayaran pendaftaran (struk atau transfer bank).
 + Periksa kembali, lalu kirim pendaftaran. Pantau status pendaftaran dari portal.
 
-#ph("manual-formulir-pendaftaran", tinggi: 6cm)
 
 = Panel Pengelolaan (untuk Admin dan Operator)
 
-#tip[Bab ini memerlukan tangkapan layar dari akun admin. Isi langkah sesuai tampilan sistem yang berjalan.]
+#tip[Bab ini ditujukan bagi petugas yayasan. Nama menu dapat sedikit berbeda menurut versi platform yang berjalan.]
 
 == Masuk sebagai petugas
 Buka halaman login, masukkan email dan kata sandi akun petugas. Setiap petugas memakai akun sendiri sesuai SOP.
 
-#ph("admin-dasbor", tinggi: 6cm)
 
 == Mengelola konten profil
-Admin memperbarui profil lembaga, visi dan misi, galeri, dan informasi kontak melalui menu pengelolaan profil #todo[nama menu]. Simpan perubahan, lalu periksa tampilan pada halaman publik dan pada ponsel.
+Admin memperbarui profil lembaga, visi dan misi, galeri, dan informasi kontak melalui menu pengelolaan profil Simpan perubahan, lalu periksa tampilan pada halaman publik dan pada ponsel.
 
 == Mengelola cabang sekolah dan periode PPDB
-Admin menambahkan cabang sekolah (nama, jenjang, alamat, kuota) dan mengaktifkan periode pendaftaran agar portal menampilkan pilihan cabang #todo[nama menu dan langkah].
+Admin menambahkan cabang sekolah (nama, jenjang, alamat, kuota) dan mengaktifkan periode pendaftaran agar portal menampilkan pilihan cabang.
 
-#ph("admin-cabang", tinggi: 5cm)
 
 == Memverifikasi pendaftar
-+ Buka daftar pendaftar #todo[nama menu].
++ Buka daftar pendaftar
 + Pilih pendaftar, periksa data dan dokumen.
 + Verifikasi bila lengkap, atau tolak dengan catatan alasan bila kurang.
 + Ekspor rekap pendaftar pada akhir periode dan simpan sesuai SOP.
 
-#ph("admin-pendaftar", tinggi: 6cm)
 
 = Keamanan dan Data Pribadi
 

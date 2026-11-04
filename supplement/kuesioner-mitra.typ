@@ -1,6 +1,6 @@
 // Kuesioner Kepuasan Mitra -- diwajibkan bagi pelaksana PKM (panduan 2.4.9); panduan tidak
 // memberi format baku sehingga instrumen ini disusun mengikuti enam aspek pada BAB V laporan akhir.
-#import "common.typ": laporan, todo, doc, letterhead
+#import "common.typ": *
 
 #show: doc
 #set text(size: 10.5pt)
@@ -105,7 +105,7 @@ Kuesioner ini mengukur kepuasan mitra terhadap pelaksanaan kegiatan. Jawaban Bap
 
 #v(0.2cm)
 
-Jumlah responden: #todo[jumlah] orang. Nilai tiap aspek adalah rata-rata dua pernyataan dari seluruh responden. Kategori: 1,00--1,80 sangat tidak puas; 1,81--2,60 tidak puas; 2,61--3,40 cukup; 3,41--4,20 puas; 4,21--5,00 sangat puas.
+Jumlah responden: #dummy[#n-peserta] orang. Nilai tiap aspek adalah rata-rata dua pernyataan dari seluruh responden. Kategori: 1,00--1,80 sangat tidak puas; 1,81--2,60 tidak puas; 2,61--3,40 cukup; 3,41--4,20 puas; 4,21--5,00 sangat puas.
 
 #table(
   columns: (0.8cm, 1fr, 2.6cm, 3cm),
@@ -113,11 +113,8 @@ Jumlah responden: #todo[jumlah] orang. Nilai tiap aspek adalah rata-rata dua per
   inset: 5pt,
   align: (center, left, center, center),
   [*No.*], [*Aspek*], [*Rata-rata*], [*Kategori*],
-  [1], [Kesesuaian solusi dengan kebutuhan mitra], [#todo[]], [#todo[]],
-  [2], [Kemudahan penggunaan website profil dan PPDB online], [#todo[]], [#todo[]],
-  [3], [Kualitas pelatihan dan pendampingan], [#todo[]], [#todo[]],
-  [4], [Manfaat SOP dan tata kelola], [#todo[]], [#todo[]],
-  [5], [Ketepatan waktu dan komunikasi tim], [#todo[]], [#todo[]],
-  [6], [Keberlanjutan pemanfaatan], [#todo[]], [#todo[]],
-  table.cell(colspan: 2)[*Rata-rata keseluruhan*], [#todo[]], [#todo[]],
+  ..for (i, a) in aspek-kepuasan.enumerate() {
+    ([#(i + 1)], [#a.at(0)], [#dummy[#fmt(rata-aspek(a))]], [#dummy[#kat-puas(rata-aspek(a))]])
+  },
+  table.cell(colspan: 2)[*Rata-rata keseluruhan*], [#dummy[#s-puas]], [#dummy[#kat-puas(rata-puas)]],
 )
