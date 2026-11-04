@@ -4,10 +4,11 @@
 #let laporan = (
   judul: "Transformasi Digital Layanan Pendidikan Anak Usia Dini melalui Pendampingan dan Implementasi ABA-EDU Web di Yayasan Aboe Bakar Soemijati",
   jenis: "Reguler Kompetisi",
-  tampilkan-dummy: true, // false = nilai dummy tidak disorot kuning (lihat laporan-akhir/dummy.typ)
+  tampilkan-dummy: false, // false = nilai dummy tidak disorot kuning (lihat laporan-akhir/dummy.typ)
   tahun: "2026",
   skema: "Pengabdian kepada Masyarakat DIPA Swadana Reguler Kompetisi",
-  dipa-nomor: "139.03.2.693474/2026", // dibaca dari halaman pengesahan proposal (SIM P2M); nomor surat perjanjian masih TODO
+  dipa-nomor: "139.03.2.693474/2026", // dari halaman pengesahan bertanda tangan (SIM P2M)
+  perjanjian-nomor: "6733/PL2.6/HK/2026", // Surat Perjanjian pada halaman pengesahan bertanda tangan
   tanggal-pengesahan: "Oktober 2026",
   bulan-tahun-laporan: "Oktober 2026",
   waktu: (mulai: "1 April 2026", sampai: "31 Oktober 2026", lama: "7 bulan"),

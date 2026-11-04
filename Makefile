@@ -53,7 +53,8 @@ kuesioner: $(BUILD_DIR)/supplement-kuesioner-mitra.pdf
 rilis-video: $(BUILD_DIR)/supplement-rilis-video.pdf
 
 laporan: $(EMBEDDED_PDFS) scan-index | $(BUILD_DIR)
-	typst compile --root . $(LAPORAN_SRC) $(LAPORAN_PDF)
+	typst compile --root . $(LAPORAN_SRC) $(BUILD_DIR)/laporan-akhir-raw.pdf
+	gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.7 -dPDFSETTINGS=/ebook -dNOPAUSE -dQUIET -dBATCH -sOutputFile=$(LAPORAN_PDF) $(BUILD_DIR)/laporan-akhir-raw.pdf
 	@echo "PDF built successfully: $(LAPORAN_PDF)"
 
 laporan-watch: scan-index

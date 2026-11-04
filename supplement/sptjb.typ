@@ -28,7 +28,7 @@ Yang bertanda tangan di bawah ini:
 
 #v(0.15cm)
 
-Berdasarkan Surat Perjanjian/Kontrak Nomor SP DIPA-#laporan.dipa-nomor mendapatkan Anggaran Pengabdian sebesar Rp. #laporan.biaya,-, dengan judul "#laporan.judul".
+Berdasarkan Nomor SP DIPA-#laporan.dipa-nomor dengan Surat Perjanjian Nomor #laporan.perjanjian-nomor mendapatkan Anggaran Pengabdian sebesar Rp. #laporan.biaya,-, dengan judul "#laporan.judul".
 
 #v(0.2cm)
 

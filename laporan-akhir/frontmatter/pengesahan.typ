@@ -34,7 +34,7 @@
   [], [#h(0.6cm) b. Sampai], [: #laporan.waktu.sampai],
   [8.], [Biaya kegiatan], [],
   [], [#h(0.6cm) a. Politeknik Negeri Malang], [: Rp #laporan.biaya,-],
-  [], [], [Kegiatan ini dibiayai dengan dana DIPA Politeknik Negeri Malang berdasarkan Surat Perjanjian Nomor SP DIPA-#laporan.dipa-nomor],
+  [], [], [Kegiatan ini dibiayai dengan dana DIPA Politeknik Negeri Malang berdasarkan Nomor SP DIPA-#laporan.dipa-nomor dengan Surat Perjanjian Nomor #laporan.perjanjian-nomor],
   [], [#h(0.6cm) b. Mitra], [: Rp 0,-],
 )
 
