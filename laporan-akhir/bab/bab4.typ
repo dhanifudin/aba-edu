@@ -58,4 +58,60 @@ Tim pelaksana terdiri atas enam dosen lintas bidang dan enam mahasiswa aktif Pol
 
 == Kelayakan Mitra
 
-#laporan.mitra.nama-pendek layak menjadi mitra kegiatan ini berdasarkan beberapa hal. Pertama, yayasan mengelola satuan pendidikan anak usia dini yang aktif menyelenggarakan layanan pendidikan dan memiliki kebutuhan nyata atas kanal informasi digital, pendaftaran online, dan administrasi yang tertib untuk menghadapi akreditasi. Kedua, lokasi mitra di Kecamatan Blimbing, Kota Malang berjarak dekat dari Polinema (rute pada Lampiran 2) sehingga pendampingan langsung dapat dilakukan secara intensif dan efisien. Ketiga, mitra menyediakan data, ruang pelatihan, perangkat komputer, akses internet, dan menunjuk admin internal, serta menyatakan kesediaan bekerja sama melalui surat kesediaan kerja sama (Lampiran 3). Keempat, pimpinan yayasan menunjukkan komitmen kebijakan untuk mengadopsi SOP dan menjadikan sistem sebagai basis dokumentasi akreditasi. Mitra tidak diganti selama program berlangsung.
+=== Profil dan Karakteristik Mitra
+
+#laporan.mitra.nama-pendek mengelola satuan pendidikan anak usia dini di #laporan.mitra.alamat, yaitu KB dan TK Rumah Bintang Kecil. Profil TK pada data pokok pendidikan nasional @kemendikdasmen2026 dirangkum pada @tab-profil-mitra. Kegiatan belajar berlangsung pagi hari lima hari sepekan dengan pola harian yang teratur: pembukaan, inti pembelajaran, istirahat, inti pembelajaran kedua, dan penutup pada pukul 07.30 sampai 10.30 (@fig-req-jadwal). Pola ini membuat pencatatan harian, seperti presensi dan jurnal, menjadi kebutuhan rutin guru. Lokasi mitra berjarak #laporan.mitra.jarak-km km dari Polinema (Lampiran 2) sehingga pendampingan langsung dapat dilakukan intensif.
+
+#figure(
+  table(
+    columns: (4.4cm, 9.4cm),
+    align: left + top,
+    inset: 4pt,
+    table.header([*Data*], [*Keterangan*]),
+    [Nama dan NPSN], [TK Rumah Bintang Kecil, NPSN 70050030],
+    [Status dan penyelenggaraan], [Swasta, di bawah Yayasan Aboe Bakar Soemijati; pagi, lima hari sepekan],
+    [Akreditasi], [B (SK 561/BAN-PDM/SK/2025, berlaku sampai 31 Desember 2030)],
+    [Peserta didik], [62 anak: kelompok A 30 anak (19 laki-laki, 11 perempuan) dan kelompok B 32 anak (16 laki-laki, 16 perempuan)],
+    [Rombongan belajar], [4 rombel (kelompok A 2 rombel, kelompok B 2 rombel)],
+    [Pendidik dan tenaga kependidikan], [5 orang (1 laki-laki, 4 perempuan), termasuk 4 guru; belum ada yang bersertifikasi pendidik],
+    [Ruang kelas], [2 ruang, 1 rusak ringan dan 1 rusak sedang],
+    [Infrastruktur], [Listrik PLN 1.300 VA, akses internet nirkabel (wireless) bersama; luas tanah 311 m#super[2]],
+    [Situs web], [Belum tercatat pada data pokok pendidikan],
+  ),
+  caption: [Profil TK Rumah Bintang Kecil menurut data pokok pendidikan semester 2026/2027 Gasal],
+) <tab-profil-mitra>
+
+=== Kondisi Pencatatan Eksisting dan Dampaknya
+
+Sebelum program (data pokok pendidikan belum mencatat situs web sekolah), pendaftaran peserta didik dan pelaporan perkembangan anak dilakukan secara manual. Perkembangan anak dilaporkan melalui buku laporan kemajuan belajar cetak (@fig-req-rapor) dan data pendaftar tersimpan pada media yang terpisah. Kondisi ini berdampak pada empat hal.
+
++ *Waktu.* Mencari kembali data pendaftar atau riwayat rapor anak membutuhkan pemeriksaan arsip satu per satu.
++ *Akurasi.* Data yang disalin berulang pada beberapa dokumen rawan salah ketik dan perbedaan antardokumen.
++ *Kesiapan akreditasi.* Bukti administrasi sulit dikumpulkan dan tidak tersusun sebagai repositori.
++ *Kualitas keputusan.* Pimpinan tidak memiliki ringkasan data siswa, kehadiran, dan kuota yang dapat dilihat cepat.
+
+=== Kebutuhan Teknologi
+
+Berdasarkan kondisi tersebut, ditambah tersedianya jaringan internet nirkabel bersama dan jumlah guru yang terbatas (empat orang untuk empat rombel), mitra membutuhkan sistem berbasis web yang dapat diakses dari perangkat yang sudah ada tanpa instalasi khusus, sederhana bagi guru yang belum terbiasa dengan teknologi, dan menyimpan data secara terpusat dengan hak akses sesuai peran. Rincian kebutuhan fungsional dan nonfungsional dimuat pada subbab Analisis Kebutuhan (BAB III).
+
+=== Kelayakan Penerapan
+
+@tab-kelayakan merangkum kelayakan penerapan ABA-EDU Web pada mitra.
+
+#figure(
+  table(
+    columns: (2.6cm, 11.2cm),
+    align: left + top,
+    inset: 4pt,
+    table.header([*Aspek*], [*Dasar Kelayakan*]),
+    [Teknis], [Sekolah telah memiliki listrik PLN dan akses internet nirkabel @kemendikdasmen2026. Sistem berbasis web berjalan pada platform yang sudah tersedia dan diakses melalui peramban pada laptop atau ponsel; tidak ada pengadaan perangkat lunak khusus.],
+    [Operasional], [Alur kerja mitra (pendaftaran, presensi, jurnal, rapor) sudah jelas dan dipertahankan; sistem mendigitalkan alur tersebut, bukan menggantinya.],
+    [Sumber daya manusia], [Tenaga yang tersedia berjumlah lima orang termasuk empat guru, sehingga antarmuka dibuat sederhana. Mitra menunjuk admin internal, dan hak akses dibagi menurut peran (guru, kepala sekolah, admin); pelatihan praktik langsung disiapkan untuk pengguna.],
+    [Ekonomi], [Mitra tidak menanggung biaya pengembangan (kontribusi mitra Rp 0); biaya program bersumber dari dana DIPA Polinema.],
+  ),
+  caption: [Kelayakan penerapan ABA-EDU Web pada mitra],
+) <tab-kelayakan>
+
+=== Kesiapan dan Komitmen Mitra
+
+#laporan.mitra.nama-pendek layak menjadi mitra karena memiliki kebutuhan nyata atas kanal informasi digital, pendaftaran online, dan administrasi yang tertib untuk menghadapi akreditasi. Mitra menyediakan data, ruang pelatihan, perangkat komputer, dan akses internet, menunjuk admin internal, serta menyatakan kesediaan bekerja sama melalui surat kesediaan kerja sama (Lampiran 3). Pimpinan yayasan berkomitmen mengadopsi SOP dan menjadikan sistem sebagai basis dokumentasi akreditasi. Mitra tidak diganti selama program berlangsung.

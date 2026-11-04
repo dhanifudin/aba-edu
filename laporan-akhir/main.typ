@@ -14,6 +14,9 @@
 #include "frontmatter/pengesahan-scan.typ"
 #pagebreak()
 
+#include "frontmatter/identitas.typ"
+#pagebreak()
+
 #include "frontmatter/ringkasan.typ"
 #pagebreak()
 

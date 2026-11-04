@@ -5,7 +5,7 @@
 
 == Analisis Situasi
 
-#laporan.mitra.nama-pendek, yang berlokasi di Jl. Kresno No. 21, Polehan, Kecamatan Blimbing, Kota Malang, merupakan lembaga pendidikan anak usia dini yang mengelola Kelompok Bermain dan Taman Kanak-Kanak "Rumah Bintang Kecil". Lembaga ini memiliki peran strategis dalam membangun fondasi kognitif, sosial-emosional, dan karakter peserta didik. Sebagai PAUD swasta, yayasan tidak hanya dituntut memberikan layanan pembelajaran yang berkualitas, tetapi juga wajib memiliki administrasi akademik yang akuntabel, terdokumentasi dengan baik, dan memenuhi standar akreditasi nasional @society2025.
+#laporan.mitra.nama-pendek, yang berlokasi di Jl. Kresno No. 21, Polehan, Kecamatan Blimbing, Kota Malang, merupakan lembaga pendidikan anak usia dini yang mengelola Kelompok Bermain dan Taman Kanak-Kanak "Rumah Bintang Kecil". Menurut data pokok pendidikan semester 2026/2027 Gasal, TK Rumah Bintang Kecil berstatus swasta dengan penyelenggaraan pagi lima hari, melayani 62 peserta didik dalam empat rombongan belajar, dan didampingi empat guru @kemendikdasmen2026. Lembaga ini memiliki peran strategis dalam membangun fondasi kognitif, sosial-emosional, dan karakter peserta didik. Sebagai PAUD swasta, yayasan tidak hanya dituntut memberikan layanan pembelajaran yang berkualitas, tetapi juga wajib memiliki administrasi akademik yang akuntabel, terdokumentasi dengan baik, dan memenuhi standar akreditasi nasional @society2025.
 
 #figure(
   image("/images/lokasi-mitra.jpg", width: 85%),

@@ -11,7 +11,7 @@ Laporan BAB V ditulis seolah situs sudah operasional. Saat dicek, halaman publik
 
 ## 2. Berkas scan (salin ke `laporan-akhir/scan/`, nama persis)
 Sudah terpasang: `pernyataan-keaslian.pdf` dan `sptjb.pdf` (pindaian bertanda tangan, 13 Okt 2026).
-Masih sementara/kosong: `a-pengesahan.pdf` (sementara halaman pengesahan usulan; draf laporan: `make pengesahan`), `kesediaan-mitra.pdf` (sementara dari proposal, resolusi rendah), `pernyataan-ketua.pdf` (placeholder). Lalu `make scan-index laporan`.
+Masih sementara/kosong: `kesediaan-mitra.pdf` (sementara dari proposal, resolusi rendah), `pernyataan-ketua.pdf` (placeholder). Lalu `make scan-index laporan`.
 
 ## 3. Data yang harus diisi (cari `TODO` di PDF, atau `grep -rn "todo\[" laporan-akhir`)
 - Nomor surat perjanjian (nomor SP DIPA 139.03.2.693474/2026 sudah diisi dari pengesahan proposal), jarak ke mitra (`mitra.jarak-km`, rute peta = 9,2 km), jabatan fungsional Dian (Lektor vs Asisten Ahli).
@@ -88,3 +88,14 @@ Seluruh angka hasil dan tanggal pelaksanaan berikut adalah **dummy**, tampil **b
 `build/laporan-akhir.pdf` harus tidak lebih dari 7 MB (sekarang sekitar 5,8 MB). Gambar besar (tangkapan layar, diagram metode, foto lokasi) dipakai dalam versi JPEG di `images/*.jpg` (kualitas 86); `scripts/screenshots.sh` membuat ulang JPEG dari PNG. Bila menambah pindaian atau gambar baru dan ukuran melewati batas, kompres dengan Ghostscript (`-dPDFSETTINGS=/ebook`, lihat `laporan-akhir/scan/README.md`) sebelum disematkan.
 
 - Lampiran 9 (lembar keberdayaan / penerapan iptek) mengikuti format `docs/penerapan-iptek-kuisioner.docx` (Lampiran 70); sumber: `supplement/lembar-keberdayaan.typ`.
+
+## 7. Analisis kebutuhan dan tangkapan layar (BAB III dan BAB V)
+
+- BAB III subbab 3.1 "Analisis Kebutuhan" bersumber dari 5 foto di folder Drive penggalian kebutuhan (`docs/requirements/`, tidak dilacak git): 3 foto diskusi di kelas, sampul buku rapor cetak (nama dan nomor induk disamarkan), dan jadwal pelajaran TK-A. Versi siap-laporan ada di `images/req-*.jpg`.
+- Tanggal foto 4 November 2026 (setelah masa pelaksanaan 31 Oktober); teks laporan sengaja tidak menyebut tanggal. Konfirmasi tanggal dan peserta kegiatan bila akan dicantumkan.
+- Kebutuhan KF-01 sampai KF-14 dan KNF-01 sampai KNF-05 disintesis dari foto, permasalahan mitra, dan fitur sistem; periksa kembali dengan notulen asli bila ada.
+- BAB V 5.1.2 memuat tangkapan layar admin dan wali murid (`images/manual-a-*.jpg`, `manual-w-*.jpg`, akun demonstrasi). Isi BAB I sampai BAB VI kini sekitar 56 halaman (syarat minimal 40).
+- Data profil TK (BAB I dan 4.4.1, Tabel 4.2) bersumber dari data pokok pendidikan Kemendikdasmen (Sekolah Kita, diakses 4 Nov 2026; dalam daftar pustaka sebagai `kemendikdasmen2026`). NPSN TK 70050030 menggantikan nilai lama pada `config.typ`; NPSN KB belum diverifikasi.
+- TK sudah terakreditasi B (SK 561/BAN-PDM/SK/2025, berlaku sampai 2030). Narasi laporan tentang "kesiapan akreditasi" sebaiknya dibaca sebagai pemeliharaan dan persiapan akreditasi berikutnya; periksa konsistensi kalimat di BAB I, 2, dan 3.
+- Data pokok mencatat kurikulum 2013 (semester 2025 Gasal), sedangkan template rapor sistem memakai Kurikulum Merdeka PAUD/TK; belum disebut di laporan.
+- Daftar peserta penggalian kebutuhan (7 guru dan pengelola: 3 TK, 4 KB) dari pengguna; tanpa tanggal kegiatan. Perhatikan: pelatihan pada `dummy.typ` memakai 6 peserta dan kuesioner kepuasan n = 6, sedangkan data pokok mencatat 4 guru TK; sesuaikan bila jumlah sebenarnya berbeda.

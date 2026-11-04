@@ -23,9 +23,9 @@
     kota-provinsi: "Kota Malang, Jawa Timur",
     jarak-km: "9,2", // rute Polinema ke lokasi mitra (peta di Lampiran 2)
     situs: "https://abs.halokes.com",
-    pimpinan: "Qurrotu A'yunul Chasanah", // TODO: verifikasi ejaan pada surat kesediaan mitra
+    pimpinan: "Qurrotu A'yunul Chasanah",
     jabatan-pimpinan: "Pimpinan Yayasan",
-    npsn: "KB 70030031 / TK 70030030", // TODO: verifikasi (terbaca dari kop surat mitra beresolusi rendah)
+    npsn: "70050030 (TK Rumah Bintang Kecil)", // sumber: profil sekolah Kemendikdasmen, diakses 4 Nov 2026; NPSN KB belum diverifikasi
   ),
 
   ketua: (

@@ -11,3 +11,5 @@ graphify-out/
 .DS_Store
 *.swp
 .env*
+docs/requirements/
+docs/laporan-pkm.pdf

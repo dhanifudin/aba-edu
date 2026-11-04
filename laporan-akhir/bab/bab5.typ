@@ -15,7 +15,7 @@
 
 = HASIL YANG DICAPAI
 
-Tim merealisasikan program pengabdian di #laporan.mitra.nama-pendek secara terstruktur sesuai tahapan pelaksanaan solusi pada BAB III. Platform ABA-EDU Web beroperasi di #laporan.mitra.situs sebagai website profil lembaga dan portal PPDB online, pengelola mitra dilatih mengoperasikannya, dan tata kelola pengelolaan sistem dituangkan dalam SOP. Bab ini memaparkan status teknologi tepat guna yang diterapkan, pengujian pada mitra, pelatihan dan pendampingan, tata kelola dan keberlanjutan, analisis peningkatan penerapan IPTEKS, pencapaian indikator keberhasilan, status luaran, dan realisasi anggaran.
+Tim merealisasikan program pengabdian di #laporan.mitra.nama-pendek secara terstruktur sesuai tahapan pelaksanaan solusi pada BAB III. Platform ABA-EDU Web beroperasi di #laporan.mitra.situs sebagai website profil lembaga dan portal PPDB online, pengelola mitra dilatih mengoperasikannya, dan tata kelola pengelolaan sistem dituangkan dalam SOP. Fitur yang dibangun ditelusuri pada kebutuhan fungsional dan nonfungsional hasil analisis kebutuhan di BAB III (KF-01 sampai KF-14 dan KNF-01 sampai KNF-05). Bab ini memaparkan status teknologi tepat guna yang diterapkan, pengujian pada mitra, pelatihan dan pendampingan, tata kelola dan keberlanjutan, analisis peningkatan penerapan IPTEKS, pencapaian indikator keberhasilan, status luaran, dan realisasi anggaran.
 
 == Status Teknologi Tepat Guna
 
@@ -31,7 +31,7 @@ Arsitektur sistem dirumuskan bersama anggota tim yang menangani jaringan dan kea
 
 === Fitur Aplikasi
 
-Fitur dikelompokkan menurut pengguna. Tangkapan layar halaman yang memerlukan login disajikan, dengan data pribadi disamarkan, pada buku panduan modul PPDB dan modul rapor ABA-EDU Web.
+Fitur dikelompokkan menurut pengguna. Tangkapan layar halaman yang memerlukan login memakai akun demonstrasi sehingga nama dan data siswa pada gambar adalah data contoh; langkah penggunaannya dijabarkan pada buku panduan modul PPDB dan modul rapor ABA-EDU Web.
 
 #fitur([Halaman Profil Lembaga], [pengunjung])
 
@@ -116,31 +116,185 @@ Orang tua membuat akun sebelum mendaftarkan anak agar data pendaftaran tersimpan
 
 #fitur([Pengisian Formulir dan Unggah Dokumen], [orang tua])
 
-Orang tua memilih cabang (TK atau PAUD), tahun ajaran, dan program kelas, kemudian mengisi formulir pendaftaran dalam empat bagian: data pribadi calon siswa, alamat dengan penentuan lokasi rumah pada peta, data ayah dan ibu, serta data fisik anak (tinggi badan, berat badan, lingkar kepala). Orang tua mengunggah pas foto anak, kartu keluarga, akta kelahiran, dan bukti pembayaran pendaftaran (maksimum 2 MB per berkas). Setelah dikirim, data dan berkas tersimpan pada basis data terpusat sehingga tidak lagi tersebar pada media fisik (skenario 11 pada @tab-blackbox).
+Orang tua memilih cabang (TK atau PAUD) pada halaman pendaftaran (@fig-w-daftar), kemudian memilih tahun ajaran dan program kelas, dan mengisi formulir pendaftaran dalam empat bagian: data pribadi calon siswa, alamat dengan penentuan lokasi rumah pada peta, data ayah dan ibu, serta data fisik anak (tinggi badan, berat badan, lingkar kepala) (@fig-w-formulir). Orang tua mengunggah pas foto anak, kartu keluarga, akta kelahiran, dan bukti pembayaran pendaftaran (maksimum 2 MB per berkas). Setelah dikirim, data dan berkas tersimpan pada basis data terpusat sehingga tidak lagi tersebar pada media fisik (skenario 11 pada @tab-blackbox). Fitur ini memenuhi KF-03 dan KNF-04.
 
-#fitur([Portal Wali Murid], [orang tua])
+#figure(
+  image("/images/manual-w-daftar.jpg", width: 70%),
+  caption: [Pilihan cabang sekolah dan dokumen yang perlu disiapkan],
+) <fig-w-daftar>
 
-Setelah masuk, orang tua memperoleh dasbor wali murid yang memuat daftar anak, pengumuman sekolah, dan menu Rapor Anak, Laporan Fisik, Materi Pelajaran, Jurnal Harian Anak, serta Tautkan Anak (NISN). Orang tua memantau rapor, riwayat pertumbuhan fisik, materi, dan jurnal harian anak, dan dapat menambahkan anak lain ke akunnya.
+#figure(
+  image("/images/manual-w-formulir.jpg", width: 70%),
+  caption: [Formulir pendaftaran siswa baru (bagian atas)],
+) <fig-w-formulir>
+
+#fitur([Dasbor Wali Murid], [orang tua])
+
+Setelah masuk, orang tua memperoleh dasbor wali murid (@fig-w-beranda) yang memuat daftar anak, pengumuman sekolah, dan menu Rapor Anak, Laporan Fisik, Materi Pelajaran, Jurnal Harian Anak, serta Tautkan Anak (NISN). Orang tua yang memiliki lebih dari satu anak memilih anak pada menu kanan atas dan dapat menautkan anak lain ke akunnya (KF-13).
+
+#figure(
+  image("/images/manual-w-beranda.jpg", width: 90%),
+  caption: [Dasbor wali murid dengan daftar anak dan pengumuman sekolah],
+) <fig-w-beranda>
+
+#fitur([Rapor Anak], [orang tua])
+
+Menu Rapor Anak (@fig-w-rapor) menampilkan laporan perkembangan anak pada semester yang dipilih. Laporan memuat capaian pembelajaran per elemen, misalnya nilai agama dan budi pekerti serta jati diri, disertai narasi dari guru. Dengan fitur ini orang tua tidak perlu menunggu buku rapor cetak untuk mengetahui perkembangan anak (KF-13).
+
+#figure(
+  image("/images/manual-w-rapor.jpg", width: 90%),
+  caption: [Rapor anak pada portal wali murid],
+) <fig-w-rapor>
+
+#fitur([Laporan Fisik dan Jurnal Harian Anak], [orang tua])
+
+Laporan Fisik memuat riwayat tanggal pengukuran, tinggi badan, berat badan, dan lingkar kepala anak. Jurnal Harian Anak memuat tanggal, topik, catatan kegiatan, dan foto dokumentasi bila ada (@fig-w-fisik dan @fig-w-jurnal). Kedua laporan bersumber dari data yang diisi guru sehingga orang tua melihat informasi yang sama dengan yang dicatat sekolah.
+
+#grid(columns: (1fr, 1fr), gutter: 8pt,
+  [#figure(image("/images/manual-w-fisik.jpg", width: 100%), caption: [Laporan fisik anak]) <fig-w-fisik>],
+  [#figure(image("/images/manual-w-jurnal.jpg", width: 100%), caption: [Jurnal harian anak]) <fig-w-jurnal>],
+)
+
+#fitur([Materi Pelajaran], [orang tua])
+
+Menu Materi Pelajaran (@fig-w-materi) menampilkan materi yang diunggah guru untuk kelas anak beserta mata pelajaran dan tanggalnya; tombol Buka Detail Materi menampilkan isinya. Hanya materi yang telah disetujui kepala sekolah yang tampil di sini (KF-09).
+
+#figure(
+  image("/images/manual-w-materi.jpg", width: 90%),
+  caption: [Materi pelajaran pada portal wali murid],
+) <fig-w-materi>
 
 #fitur([Dasbor Admin Yayasan], [admin])
 
-Dasbor admin menampilkan jumlah siswa aktif, jumlah rombongan belajar, status akses pengisian rapor, antrean persetujuan materi, distribusi siswa per kelas, dan pengumuman sekolah terbaru. Menu samping mengelompokkan fitur menjadi Data Akademik (Pengaturan Sekolah, Data Kelas, Data Siswa), Kegiatan dan Presensi, serta E-Rapor dan Arsip.
+Dasbor admin (@fig-a-dashboard) menampilkan jumlah siswa aktif, jumlah rombongan belajar, status akses pengisian rapor, antrean persetujuan materi, distribusi siswa per kelas, dan pengumuman sekolah terbaru. Menu samping mengelompokkan fitur menjadi Data Akademik (Pengaturan Sekolah, Data Kelas, Data Siswa), Kegiatan dan Presensi, serta E-Rapor dan Arsip. Pemilih tahun ajaran dan semester berada di kanan atas.
+
+#figure(
+  image("/images/manual-a-dashboard.jpg", width: 90%),
+  caption: [Dasbor admin yayasan],
+) <fig-a-dashboard>
 
 #fitur([Pengaturan Pendaftaran dan Kuota], [admin])
 
-Pada menu Pengaturan Sekolah, admin menetapkan kuota siswa per kelompok (TK Pagi, TK Siang, PAUD) dan batas pendaftaran inden hingga tiga tahun ajaran ke depan. Admin juga mengatur tahun ajaran dan semester aktif, penugasan wali kelas, dan hak akses menu. Data kelas (rombongan belajar) dikelola pada menu Data Kelas.
+Pada menu Pengaturan Sekolah (@fig-a-pengaturan), admin menetapkan kuota siswa per kelompok (TK Pagi, TK Siang, PAUD) dan batas pendaftaran inden hingga tiga tahun ajaran ke depan. Admin juga mengatur tahun ajaran dan semester aktif, penugasan wali kelas, dan hak akses menu (KF-05).
+
+#figure(
+  image("/images/manual-a-pengaturan.jpg", width: 90%),
+  caption: [Pengaturan Sekolah: kuota pendaftaran dan penugasan wali kelas],
+) <fig-a-pengaturan>
+
+#fitur([Manajemen Kelas dan Data Siswa], [admin])
+
+Menu Data Kelas (@fig-a-kelas) menampilkan rombongan belajar beserta tingkat dan jumlah siswa terdaftar, dan admin dapat menambah, mengubah, atau menghapus kelas. Menu Data Siswa (@fig-a-data-siswa) menampilkan daftar peserta didik, status kelas atau pendaftaran, dan akun orang tua, dengan pencarian berdasarkan nama, NIK, atau NISN. Tombol Lihat Detail membuka profil, Set Kelas menempatkan siswa pada kelas, dan Tambah Siswa membuka formulir pendaftaran.
+
+#figure(
+  image("/images/manual-a-kelas.jpg", width: 90%),
+  caption: [Manajemen kelas dan rombongan belajar],
+) <fig-a-kelas>
+
+#figure(
+  image("/images/manual-a-data-siswa.jpg", width: 90%),
+  caption: [Data siswa],
+) <fig-a-data-siswa>
 
 #fitur([Verifikasi Calon Siswa], [admin])
 
-Pada menu Data Siswa, admin menyaring daftar dengan pilihan _Calon Siswa (Menunggu Verifikasi)_ dan dapat membuka profil lengkap setiap calon, termasuk data orang tua dan bukti pembayaran. Calon yang berkasnya lengkap diverifikasi dengan tombol _Verifikasi & Terima_ lalu diaktifkan sebagai siswa dan ditempatkan pada kelas (skenario 12 pada @tab-blackbox). Daftar siswa dapat dicari berdasarkan nama, NIK, atau NISN.
+Pada menu Data Siswa, admin menyaring daftar dengan pilihan _Calon Siswa (Menunggu Verifikasi)_ (@fig-a-calon-siswa) dan dapat membuka profil lengkap setiap calon, termasuk data orang tua dan bukti pembayaran (@fig-a-detail-calon). Calon yang berkasnya lengkap diverifikasi dengan tombol _Verifikasi & Terima_ lalu diaktifkan sebagai siswa dan ditempatkan pada kelas (skenario 12 pada @tab-blackbox). Bila berkas kurang, admin menghubungi orang tua melalui nomor HP atau WhatsApp pada profil sebelum menerima calon (KF-04).
+
+#grid(columns: (1fr, 1fr), gutter: 8pt,
+  [#figure(image("/images/manual-a-calon-siswa.jpg", width: 100%), caption: [Daftar calon siswa]) <fig-a-calon-siswa>],
+  [#figure(image("/images/manual-a-detail-calon.jpg", width: 100%), caption: [Profil calon siswa]) <fig-a-detail-calon>],
+)
 
 #fitur([Pengumuman dan Pengelolaan Konten], [admin])
 
-Admin menerbitkan pengumuman sekolah (judul, tanggal kegiatan, dan isi pesan) yang tampil pada dasbor admin dan portal wali murid dan berpindah ke arsip setelah tanggal kegiatan lewat. Pembaruan konten halaman profil lembaga dilakukan melalui pendampingan tim bersama pengelola yayasan.
+Admin menerbitkan pengumuman sekolah (judul, tanggal kegiatan, dan isi pesan) melalui menu Pengumuman Sekolah (@fig-a-pengumuman). Pengumuman tampil pada dasbor admin dan portal wali murid dan berpindah ke arsip setelah tanggal kegiatan lewat (KF-12). Pembaruan konten halaman profil lembaga dilakukan melalui pendampingan tim bersama pengelola yayasan.
+
+#figure(
+  image("/images/manual-a-pengumuman.jpg", width: 90%),
+  caption: [Pengumuman sekolah],
+) <fig-a-pengumuman>
+
+#fitur([Presensi Harian dan Rekap Presensi], [guru dan admin])
+
+Guru membuka menu Presensi Harian, memilih kelas dan tanggal, lalu menandai setiap siswa pada Daftar Kehadiran Siswa sebagai Hadir, Sakit, Izin, atau Alfa (@fig-a-presensi). Menu Rekap Presensi (@fig-a-rekap) menyaring kehadiran berdasarkan kelas, nama atau NIK siswa, dan rentang tanggal, dan tombol Cetak Rekap Semua Siswa mencetak rekap. Guru hanya melihat kelas yang diampunya, sedangkan admin dapat memilih semua kelas (KF-06).
+
+#figure(
+  image("/images/manual-a-presensi.jpg", width: 90%),
+  caption: [Presensi harian],
+) <fig-a-presensi>
+
+#figure(
+  image("/images/manual-a-rekap.jpg", width: 90%),
+  caption: [Rekap presensi],
+) <fig-a-rekap>
+
+#fitur([Jurnal Harian], [guru])
+
+Menu Jurnal Harian (@fig-a-jurnal) menampilkan jumlah topik hari ini serta topik per kelompok (A dan B). Guru membuat topik jurnal pada tanggal dan kelompok tertentu, lalu mengisi catatan perkembangan setiap anak. Tombol Rekap Jurnal dan Unduh ZIP mengunduh rekap. Pembagian per kelompok dan per tanggal sesuai dengan pola kegiatan harian pada jadwal pelajaran mitra (KF-07).
+
+#figure(
+  image("/images/manual-a-jurnal.jpg", width: 90%),
+  caption: [Jurnal harian],
+) <fig-a-jurnal>
+
+#fitur([Persetujuan Materi Pelajaran], [guru dan kepala sekolah])
+
+Guru mengunggah materi, kemudian kepala sekolah menyetujuinya pada menu Persetujuan Materi (@fig-a-persetujuan). Daftar dapat disaring berdasarkan status Menunggu, Disetujui, atau Ditolak, dengan keterangan judul, mata pelajaran, guru pengunggah, kelas, dan tanggal kirim. Materi yang disetujui tampil pada portal wali murid sehingga sekolah mengendalikan mutu materi yang dilihat orang tua (KF-09).
+
+#figure(
+  image("/images/manual-a-persetujuan.jpg", width: 90%),
+  caption: [Persetujuan materi pelajaran],
+) <fig-a-persetujuan>
+
+#fitur([Perkembangan Fisik], [guru])
+
+Pada menu Perkembangan Fisik (@fig-a-fisik), guru memilih kelas, mencari siswa, lalu membuka Laporan dan Grafik untuk melihat dan memasukkan riwayat berat badan, tinggi badan, dan lingkar kepala beserta grafik pertumbuhan. Data ini juga tampil pada Laporan Fisik di portal wali murid (KF-08).
+
+#figure(
+  image("/images/manual-a-fisik.jpg", width: 90%),
+  caption: [Perkembangan fisik siswa],
+) <fig-a-fisik>
+
+#fitur([Pengisian E-Rapor], [guru dan admin])
+
+Pada menu Isi Rapor (@fig-a-isi-rapor), guru atau admin memilih semester dan rombongan belajar, lalu memilih peserta didik. Formulir mengikuti template Kurikulum Merdeka PAUD/TK (Standar) dan memuat penilaian autentik, narasi capaian belajar, muatan lokal, dan dokumentasi kegiatan. Rapor hanya dapat diisi ketika Akses Pengisian Rapor berstatus Terbuka; admin mengubah status melalui dasbor atau Pengaturan Sekolah. Format ini menggantikan buku laporan kemajuan belajar cetak yang digunakan mitra (KF-10).
+
+#figure(
+  image("/images/manual-a-isi-rapor.jpg", width: 90%),
+  caption: [Formulir pengisian e-rapor],
+) <fig-a-isi-rapor>
+
+#fitur([Cetak, Arsip, dan Template Rapor], [admin])
+
+Menu Cetak Rapor (@fig-a-cetak) menyaring kelas atau mencari siswa, lalu tombol Cetak PDF membuka rapor resmi dalam bentuk PDF. Rapor yang sudah ditandatangani dipindai dan diunggah pada menu Arsip Rapor (@fig-a-arsip), yang dapat disaring menurut kelas, semester, dan status Sudah Diunggah atau Belum Diunggah. Menu Template Rapor (@fig-a-template) menampilkan template aktif; admin dapat menambah template atau mengubah indikator isian. Rangkaian ini menjadikan rapor tersimpan terpusat dan siap diperiksa saat akreditasi (KF-10).
+
+#figure(
+  image("/images/manual-a-cetak.jpg", width: 90%),
+  caption: [Cetak rapor],
+) <fig-a-cetak>
+
+#figure(
+  image("/images/manual-a-arsip.jpg", width: 90%),
+  caption: [Arsip rapor],
+) <fig-a-arsip>
+
+#figure(
+  image("/images/manual-a-template.jpg", width: 90%),
+  caption: [Template rapor],
+) <fig-a-template>
+
+#fitur([Kenaikan Kelas], [admin])
+
+Pada akhir tahun ajaran, admin membuka menu Kenaikan Kelas (@fig-a-kenaikan), memilih kelas asal, menampilkan siswa, lalu memindahkan siswa ke tingkat berikutnya atau menetapkan kelulusan melalui aksi massal (KF-11).
+
+#figure(
+  image("/images/manual-a-kenaikan.jpg", width: 90%),
+  caption: [Kenaikan kelas],
+) <fig-a-kenaikan>
 
 #fitur([Pengguna dan Hak Akses Berbasis Peran], [admin])
 
-Sistem membedakan peran Wali Murid, Guru, Admin, Kepala Sekolah, dan Super Admin yayasan; tiap peran melihat menu yang sesuai tugasnya, dan admin mengatur hak akses menu pada Pengaturan Sekolah. Pembagian peran ini dijabarkan lebih lanjut dalam SOP pengelolaan website dan PPDB.
+Sistem membedakan peran Wali Murid, Guru, Admin, Kepala Sekolah, dan Super Admin yayasan; tiap peran melihat menu yang sesuai tugasnya, dan admin mengatur hak akses menu pada Pengaturan Sekolah (KF-14). Pembagian peran ini dijabarkan lebih lanjut dalam SOP pengelolaan website dan PPDB.
 
 === Kesesuaian dengan Spesifikasi pada Surat Kesediaan Mitra
 
@@ -300,6 +454,8 @@ Sistem diaktifkan pada lingkungan produksi pada alamat #laporan.mitra.situs. Tim
 
 *Keberlanjutan.* Yayasan menunjuk #dummy[#n-admin-internal orang (operator pendaftaran dan staf administrasi)] sebagai admin internal yang terlatih mengelola konten dan data pendaftar. Pencadangan data dilakukan berkala pada sisi platform #dummy[(pencadangan otomatis harian dan ekspor rekap pada akhir setiap periode PPDB)]. Tim tetap menyediakan dukungan teknis setelah kegiatan berakhir #dummy[berupa konsultasi teknis dan pemeliharaan platform selama #masa-dukungan].
 
+*Pemeliharaan manfaat.* Manfaat sistem bertahan bila data diperbarui secara konsisten. Pengelola perlu memperbarui konten profil dan membuka periode PPDB secara teratur, memeriksa kelengkapan berkas calon siswa sesuai SOP, mengisi presensi, jurnal, dan rapor tepat waktu, serta melatih lebih dari satu orang agar pengetahuan tidak bergantung pada satu operator. Buku panduan modul PPDB dan modul rapor disediakan sebagai rujukan ketika terjadi pergantian petugas, dan evaluasi berkala bersama tim dilakukan pada setiap awal tahun ajaran.
+
 == Analisis Peningkatan Penerapan IPTEKS pada Mitra
 
 Luaran wajib peningkatan level keberdayaan mitra berupa peningkatan penerapan iptek dianalisis secara kuantitatif sesuai format Lampiran 70 panduan, minimal dengan dua indikator, pada @tab-keberdayaan.
@@ -318,6 +474,29 @@ Luaran wajib peningkatan level keberdayaan mitra berupa peningkatan penerapan ip
 ) <tab-keberdayaan>
 
 *Keterangan/analisis.* Sebelum kegiatan, #laporan.mitra.nama-pendek tidak memiliki kanal layanan digital resmi dan pendaftaran dilakukan manual. Setelah kegiatan, lembaga memiliki dua kanal layanan digital (website profil dan PPDB online), dan pengelolanya mampu mengoperasikannya #dummy[(skor rata-rata naik dari #s-pre menjadi #s-post, N-Gain #s-ng kategori #lower(kat-ng), dan #n-peserta pengelola mampu bekerja mandiri)]. Lembar analisis ini ditandatangani pelaksana dan mitra dan dilampirkan pada Lampiran 9.
+
+== Dampak Implementasi terhadap Proses Bisnis Mitra
+
+Penerapan ABA-EDU Web mengubah cara mitra mengelola informasi, terutama pada pendaftaran, administrasi kelas, dan pelaporan. @tab-dampak membandingkan kondisi sebelum dan sesudah program.
+
+#figure(
+  table(
+    columns: (3.2cm, 5.3cm, 5.3cm),
+    align: left + top,
+    inset: 4pt,
+    table.header([*Proses*], [*Sebelum Program*], [*Sesudah Program*]),
+    [Informasi lembaga], [Tidak ada kanal digital resmi], [Website profil publik pada #laporan.mitra.situs],
+    [Pendaftaran peserta didik], [Manual; data tersebar pada media terpisah], [Online; formulir dan berkas tersimpan pada basis data terpusat, diverifikasi admin],
+    [Presensi dan jurnal harian], [Dicatat terpisah oleh guru], [Dicatat per kelas dan tanggal pada sistem, dengan rekap yang dapat dicetak],
+    [Laporan perkembangan anak], [Buku rapor cetak], [Rapor digital yang dapat dilihat orang tua dan diarsipkan],
+    [Hak akses dan tata kelola], [Tidak ada pembagian peran], [Peran wali murid, guru, kepala sekolah, dan admin dengan SOP],
+  ),
+  caption: [Perubahan proses bisnis mitra sebelum dan sesudah program],
+) <tab-dampak>
+
+Pada pendaftaran, orang tua tidak lagi bergantung pada pengisian formulir kertas karena data dan berkas dikirim sekali dan langsung dapat diperiksa admin (@tab-blackbox). Pada administrasi kelas, guru mencatat kehadiran dan kegiatan pada satu sistem sehingga rekap tersedia tanpa penghitungan ulang, dan orang tua dapat melihat rapor, laporan fisik, dan jurnal anak dari ponsel. Pada tata kelola, SOP dan pembagian peran membuat tanggung jawab pengelolaan data jelas.
+
+Penerimaan pengguna ditunjukkan oleh hasil kuesioner kepuasan mitra (@tab-kepuasan) dan peningkatan kompetensi pengelola pada pelatihan (@tab-keberdayaan). Jumlah responden dan peserta masih terbatas, sehingga hasilnya dibaca sebagai indikasi awal; pengukuran usability baku seperti System Usability Scale dapat dilakukan pada periode PPDB berikutnya.
 
 == Pencapaian Indikator Keberhasilan
 
