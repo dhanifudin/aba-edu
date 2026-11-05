@@ -53,8 +53,8 @@ Demikian Berita Acara Serah Terima ini dibuat dengan sebenarnya, ditandatangani 
 
 #block(breakable: false)[#grid(
   columns: (1fr, 1fr, 1fr),
-  gutter: 0.4cm,
-  align(center)[Yang menerima, \ PIHAK KEDUA #v(0.2cm) #text(size: 9pt, fill: luma(120))[(meterai Rp 10.000)] #v(0.1cm) #image(laporan.mitra.ttd, width: 1.5cm) #v(0.05cm) *#laporan.mitra.pimpinan* \ #laporan.mitra.jabatan-pimpinan],
-  align(center)[Mengetahui, \ Kepala P3M Polinema #v(1.55cm) *#laporan.pejabat.kepala-p3m.nama* \ NIDN. #laporan.pejabat.kepala-p3m.nidn],
-  align(center)[Yang menyerahkan, \ PIHAK PERTAMA #v(0.2cm) #text(size: 9pt, fill: luma(120))[(meterai Rp 10.000)] #v(0.1cm) #image(laporan.ketua.ttd, width: 2.4cm) #v(-0.3cm) *#laporan.ketua.nama* \ NIP. #laporan.ketua.nip],
+  gutter: 0.2cm,
+  ttd-col([Yang menerima, \ PIHAK KEDUA \ #text(size: 8pt, fill: luma(120))[(meterai Rp 10.000)]], laporan.mitra.pimpinan, ttd: laporan.mitra.ttd, w: 2.1cm, id: laporan.mitra.jabatan-pimpinan, size: 9pt),
+  ttd-col([Mengetahui, \ Kepala P3M Polinema \ #hide[.]], laporan.pejabat.kepala-p3m.nama, id: [NIDN. #laporan.pejabat.kepala-p3m.nidn], size: 9pt),
+  ttd-col([Yang menyerahkan, \ PIHAK PERTAMA \ #text(size: 8pt, fill: luma(120))[(meterai Rp 10.000)]], laporan.ketua.nama, ttd: laporan.ketua.ttd, w: 3cm, id: [NIP. #laporan.ketua.nip], size: 9pt),
 )]

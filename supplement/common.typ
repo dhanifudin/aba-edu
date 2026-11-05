@@ -42,3 +42,15 @@
   v(0.4cm)
 }
 #import "../laporan-akhir/dummy.typ": dummy, fmt, rp, peserta, n-peserta, ng, kat, rata-pre, rata-post, rata-ng, kenaikan, n-tinggi, n-sedang, n-rendah, s-pre, s-post, s-ng, s-naik, kat-ng, aspek-kepuasan, kat-puas, rata-aspek, rata-puas, s-puas, n-skenario, n-valid, n-pendaftar-uji, n-akun, n-admin-internal, masa-dukungan, batas-verifikasi, tgl
+
+// Kolom tanda tangan: baris peran (`top`), kotak tinggi tetap `h` berisi gambar tanda tangan
+// yang rata bawah (kosong bila `ttd: none`), lalu nama dan identitas. Semua kolom pada satu
+// baris memakai `h` yang sama sehingga nama berada pada satu garis dasar.
+#let ttd-col(top, nama, ttd: none, w: 3cm, id: none, h: 1.9cm, size: 10pt) = align(center)[
+  #set text(size: size)
+  #set par(justify: false, first-line-indent: 0pt)
+  #top
+  #box(width: 100%, height: h, align(center + bottom, if ttd != none { image(ttd, width: w) }))
+  #box(text(weight: "bold")[#nama])
+  #if id != none [ \ #id ]
+]

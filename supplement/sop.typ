@@ -92,6 +92,6 @@ Buku panduan ABA-EDU Web (modul PPDB); Berita Acara Serah Terima; kuesioner kepu
 #grid(
   columns: (1fr, 1fr),
   gutter: 0.8cm,
-  align(center)[Disusun oleh, \ Ketua Tim PKM Polinema #v(0.2cm) #image(laporan.ketua.ttd, width: 3cm) #v(-0.3cm) *#laporan.ketua.nama* \ NIDN. #laporan.ketua.nidn],
-  align(center)[Malang, #dummy[#tgl.sop] \ Disahkan oleh, \ #laporan.mitra.jabatan-pimpinan #v(0.2cm) #image(laporan.mitra.ttd, width: 2cm) #v(0.05cm) *#laporan.mitra.pimpinan* \ #laporan.mitra.nama-pendek],
+  ttd-col([#hide[.] \ Disusun oleh, \ Ketua Tim PKM Polinema], laporan.ketua.nama, ttd: laporan.ketua.ttd, w: 3cm, id: [NIDN. #laporan.ketua.nidn]),
+  ttd-col([Malang, #dummy[#tgl.sop] \ Disahkan oleh, \ #laporan.mitra.jabatan-pimpinan], laporan.mitra.pimpinan, ttd: laporan.mitra.ttd, w: 2.1cm, id: laporan.mitra.nama-pendek),
 )

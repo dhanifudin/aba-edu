@@ -91,12 +91,7 @@ Kuesioner ini mengukur kepuasan mitra terhadap pelaksanaan kegiatan. Jawaban Bap
 
 #align(right)[
   #box(width: 7cm)[
-    #align(center)[
-      #laporan.mitra.nama-pendek, \
-      #laporan.mitra.jabatan-pimpinan/pengelola #v(0.2cm)
-      #image(laporan.mitra.ttd, width: 2cm) #v(0.05cm)
-      *#laporan.mitra.pimpinan*
-    ]
+    #ttd-col([#laporan.mitra.nama-pendek, \ #laporan.mitra.jabatan-pimpinan/pengelola], laporan.mitra.pimpinan, ttd: laporan.mitra.ttd, w: 2.1cm)
   ]
 ]
 

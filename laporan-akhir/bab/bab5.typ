@@ -372,18 +372,23 @@ Luaran wajib peningkatan level keberdayaan mitra berupa peningkatan penerapan ip
     align: left + top,
     inset: 4pt,
     table.header([*Luaran*], [*Indikator*], [*Sebelum*], [*Sesudah*]),
-    [Peningkatan penerapan iptek pada mitra], [a. Jumlah kanal layanan digital resmi lembaga (website profil dan PPDB online)], [0], [2],
-    [], [b. Skor rata-rata kompetensi pengelola mengoperasikan sistem (pre/post-test, skala 0--100)], [#dummy[#s-pre]], [#dummy[#s-post]],
-    [], [c. Jumlah pengelola yang mampu mengoperasikan sistem secara mandiri], [0], [#dummy[#n-peserta]],
+    table.cell(rowspan: 2)[Peningkatan daya saing mitra], [a. Jam layanan informasi dan pendaftaran bagi calon siswa per hari], [3 jam (jam belajar 07.30--10.30)], [24 jam (website dan PPDB online)],
+    [b. Jumlah cabang (TK dan PAUD) yang dapat dilihat dan dipilih secara online], [0], [2],
+    table.cell(rowspan: 2)[Peningkatan penerapan iptek pada mitra], [a. Jumlah kanal layanan digital resmi lembaga (website profil dan PPDB online)], [0], [2],
+    [b. Jumlah modul sistem yang aktif dan digunakan pengelola (profil lembaga dan PPDB)], [0], [2],
+    table.cell(rowspan: 2)[Perbaikan tata nilai masyarakat], [a. Jumlah proses pendaftaran yang dilakukan secara digital (pendaftaran dan unggah berkas, verifikasi, aktivasi siswa, penempatan kelas)], [0], [4],
+    [b. Jumlah akun individual berbasis peran sesuai SOP], [0], [#dummy[#n-akun]],
+    table.cell(rowspan: 2)[Peningkatan ketrampilan masyarakat], [a. Skor rata-rata kompetensi pengelola mengoperasikan sistem (pre/post-test, skala 0--100)], [#dummy[#s-pre]], [#dummy[#s-post]],
+    [b. Jumlah pengelola yang mampu mengoperasikan sistem secara mandiri], [0], [#dummy[#n-peserta]],
   ),
   caption: [Analisis peningkatan level keberdayaan mitra secara kuantitatif],
 ) <tab-keberdayaan>
 
-*Keterangan/analisis.* Sebelum kegiatan, #laporan.mitra.nama-pendek tidak memiliki kanal layanan digital resmi dan pendaftaran dilakukan manual. Setelah kegiatan, lembaga memiliki dua kanal layanan digital (website profil dan PPDB online), dan pengelolanya mampu mengoperasikannya #dummy[(skor rata-rata naik dari #s-pre menjadi #s-post, N-Gain #s-ng kategori #lower(kat-ng), dan #n-peserta pengelola mampu bekerja mandiri)]. Lembar analisis ini ditandatangani pelaksana dan mitra dan dilampirkan pada Lampiran 9.
+*Keterangan/analisis.* Sebelum kegiatan, #laporan.mitra.nama-pendek tidak memiliki kanal layanan digital resmi dan pendaftaran dilakukan manual. Setelah kegiatan, lembaga memiliki dua kanal layanan digital (website profil dan PPDB online) yang melayani calon siswa sepanjang hari pada dua cabang, empat proses pendaftaran dilakukan secara digital, dan pengelolanya mampu mengoperasikannya #dummy[(skor rata-rata naik dari #s-pre menjadi #s-post, N-Gain #s-ng kategori #lower(kat-ng), dan #n-peserta pengelola mampu bekerja mandiri)]. Lembar analisis ini ditandatangani pelaksana dan mitra dan dilampirkan pada Lampiran 9.
 
 == Dampak Implementasi terhadap Proses Bisnis Mitra
 
-Penerapan ABA-EDU Web mengubah cara mitra mengelola informasi, terutama pada pendaftaran, administrasi kelas, dan pelaporan. @tab-dampak membandingkan kondisi sebelum dan sesudah program.
+Penerapan ABA-EDU Web mengubah cara mitra mengelola informasi, terutama pada pendaftaran dan pengelolaan data peserta didik. @tab-dampak membandingkan kondisi sebelum dan sesudah program.
 
 #figure(
   table(
