@@ -26,6 +26,7 @@
     situs: "https://abs.halokes.com",
     pimpinan: "Qurrotu A'yunul Chasanah",
     jabatan-pimpinan: "Pimpinan Yayasan",
+    ttd: "/images/signature-qurrotu.png", // dari docs/qurrotu.jpg
     npsn: "KB 70050031 / TK 70050030", // kop surat kesediaan mitra dan profil sekolah Kemendikdasmen
   ),
 

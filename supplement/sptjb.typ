@@ -70,7 +70,9 @@ Demikian surat pernyataan ini dibuat dengan sebenarnya.
 
     #v(0.3cm)
     #text(size: 9pt, fill: luma(120))[(meterai Rp 10.000)]
-    #v(1.1cm)
+    #v(0.1cm)
+    #image(laporan.ketua.ttd, width: 3cm)
+    #v(0.1cm)
 
     #laporan.ketua.nama \
     NIDN. #laporan.ketua.nidn

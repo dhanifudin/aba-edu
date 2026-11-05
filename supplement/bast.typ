@@ -51,10 +51,10 @@ Demikian Berita Acara Serah Terima ini dibuat dengan sebenarnya, ditandatangani 
 
 #v(0.4cm)
 
-#grid(
+#block(breakable: false)[#grid(
   columns: (1fr, 1fr, 1fr),
   gutter: 0.4cm,
-  align(center)[Yang menerima, \ PIHAK KEDUA #v(0.2cm) #text(size: 9pt, fill: luma(120))[(meterai Rp 10.000)] #v(0.9cm) *#laporan.mitra.pimpinan* \ #laporan.mitra.jabatan-pimpinan],
+  align(center)[Yang menerima, \ PIHAK KEDUA #v(0.2cm) #text(size: 9pt, fill: luma(120))[(meterai Rp 10.000)] #v(0.1cm) #image(laporan.mitra.ttd, width: 1.5cm) #v(0.05cm) *#laporan.mitra.pimpinan* \ #laporan.mitra.jabatan-pimpinan],
   align(center)[Mengetahui, \ Kepala P3M Polinema #v(1.55cm) *#laporan.pejabat.kepala-p3m.nama* \ NIDN. #laporan.pejabat.kepala-p3m.nidn],
-  align(center)[Yang menyerahkan, \ PIHAK PERTAMA #v(0.2cm) #text(size: 9pt, fill: luma(120))[(meterai Rp 10.000)] #v(0.9cm) *#laporan.ketua.nama* \ NIP. #laporan.ketua.nip],
-)
+  align(center)[Yang menyerahkan, \ PIHAK PERTAMA #v(0.2cm) #text(size: 9pt, fill: luma(120))[(meterai Rp 10.000)] #v(0.1cm) #image(laporan.ketua.ttd, width: 2.4cm) #v(-0.3cm) *#laporan.ketua.nama* \ NIP. #laporan.ketua.nip],
+)]

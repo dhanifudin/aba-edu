@@ -168,7 +168,7 @@
   [], [], [Malang, #tanggal-surat],
   [Pemegang Hak Cipta], [], [Pencipta],
   [#v(1.6em)], [], [#v(1.6em) #materai-slot],
-  [#v(1.6em) (#kepala)], [], [#v(1.6em) (#polos(ketua.nama))],
+  [#v(1.6em) (#kepala)], [], [#image(laporan.ketua.ttd, width: 2.6cm) #v(-0.8em) (#polos(ketua.nama))],
 )
 
 #pagebreak()

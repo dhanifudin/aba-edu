@@ -44,7 +44,9 @@ Demikian pernyataan ini dibuat dengan sesungguhnya dan dengan sebenar-benarnya.
 
     #v(0.2cm)
     #box(width: 2.6cm, height: 1.8cm, stroke: (paint: luma(200), dash: "dashed"), align(center + horizon, text(size: 7pt, fill: luma(150))[Meterai \ Rp 10.000]))
-    #v(0.2cm)
+    #v(0.1cm)
+    #image(laporan.ketua.ttd, width: 3cm)
+    #v(0.1cm)
 
     #laporan.ketua.nama \
     NIP. #laporan.ketua.nip

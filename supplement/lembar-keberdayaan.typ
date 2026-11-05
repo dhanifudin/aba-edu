@@ -65,7 +65,7 @@ Skema: #laporan.skema, tahun #laporan.tahun
   align(center)[
     Mitra Pengabdian Masyarakat, \
     #laporan.mitra.jabatan-pimpinan
-    #v(1.9cm)
+    #v(0.2cm) #image(laporan.mitra.ttd, width: 2cm) #v(0.05cm)
     *#laporan.mitra.pimpinan* \ #laporan.mitra.nama-pendek
   ],
   align(center)[
