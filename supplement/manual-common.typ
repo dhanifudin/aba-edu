@@ -1,4 +1,4 @@
-// Gaya dan sampul bersama untuk buku panduan ABA-EDU Web (modul PPDB dan modul Rapor).
+// Gaya dan sampul bersama untuk buku panduan ABA-EDU Web (modul PPDB).
 // Sampul digambar dengan bentuk vektor Typst (tanpa logo) mengikuti fungsi aplikasi.
 #import "common.typ": laporan
 
@@ -43,19 +43,6 @@
     place(top + left, dx: dx, dy: 2.4cm + dy - 1.0cm, rect(width: 0.9cm, height: 0.9cm, fill: accent-soft, stroke: 1pt + accent))
   }
   place(top + right, dy: 1.4cm, circle(radius: 0.75cm, fill: green, stroke: 2pt + white, align(center + horizon, text(size: 18pt, weight: "bold", fill: white)[✓])))
-})
-
-// Modul Rapor: lembar rapor dengan baris nilai dan grafik tumbuh kembang.
-#let motif-rapor() = box(width: 6cm, height: 5cm, {
-  place(bottom + left, dx: 0.4cm, rect(width: 4.3cm, height: 4.8cm, fill: white, radius: 4pt))
-  place(top + left, dx: 0.9cm, dy: 0.5cm, rect(width: 2.2cm, height: 0.28cm, fill: accent, radius: 2pt))
-  for i in range(3) {
-    place(top + left, dx: 0.9cm, dy: 1.1cm + i * 0.42cm, rect(width: 3.3cm - i * 0.5cm, height: 0.16cm, fill: rgb("#cbd5e1"), radius: 2pt))
-  }
-  for (i, h) in (0.7cm, 1.2cm, 0.95cm, 1.7cm).enumerate() {
-    place(bottom + left, dx: 0.9cm + i * 0.8cm, dy: -0.45cm, rect(width: 0.55cm, height: h, fill: if i == 3 { green } else { accent }, radius: (top: 2pt)))
-  }
-  place(top + right, dy: 0.4cm, circle(radius: 0.8cm, fill: amber, stroke: 2pt + white, align(center + horizon, text(size: 16pt, weight: "bold", fill: accent-dark)[A])))
 })
 
 #let langkah(items) = grid(

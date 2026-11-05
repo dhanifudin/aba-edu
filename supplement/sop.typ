@@ -71,7 +71,7 @@ Berlaku bagi Admin Yayasan dan Operator Pendaftaran dalam pengelolaan akun, peng
 + Operator memeriksa data anak, data orang tua, kartu keluarga, akta kelahiran, pas foto, dan bukti pembayaran.
 + Berkas yang lengkap diverifikasi dengan tombol Verifikasi & Terima; bila berkas kurang atau tidak jelas, operator menghubungi orang tua sebelum menerima calon siswa.
 + Operator menyelesaikan verifikasi paling lambat #dummy[#batas-verifikasi] sejak pendaftaran diterima.
-+ Daftar siswa dan rekap presensi dicetak pada akhir periode dan disimpan oleh yayasan.
++ Daftar siswa dan rekap data pendaftar dicetak pada akhir periode dan disimpan oleh yayasan.
 
 == Pencadangan dan keamanan data
 + Pencadangan basis data dilakukan berkala pada sisi platform #dummy[(otomatis setiap hari oleh tim platform)].
@@ -85,7 +85,7 @@ Berlaku bagi Admin Yayasan dan Operator Pendaftaran dalam pengelolaan akun, peng
 + SOP ditinjau setidaknya setahun sekali.
 
 = Dokumen Terkait
-Buku panduan ABA-EDU Web (modul PPDB dan modul rapor); Berita Acara Serah Terima; kuesioner kepuasan mitra.
+Buku panduan ABA-EDU Web (modul PPDB); Berita Acara Serah Terima; kuesioner kepuasan mitra.
 
 #v(0.6cm)
 

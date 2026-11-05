@@ -33,7 +33,7 @@ ABA-EDU Web adalah aplikasi web untuk lembaga pendidikan anak usia dini yang men
   [Super Admin yayasan], [Mengatur akses dan data lembaga pada tingkat yayasan.],
 )
 
-#tip[Rapor, presensi, jurnal harian, materi, dan pemantauan tumbuh kembang dibahas pada *Buku Panduan ABA-EDU Web · Modul E-Rapor dan Kegiatan Pembelajaran*.]
+#tip[Buku ini membahas lingkup program, yaitu halaman profil lembaga, pendaftaran online, dan pengelolaan data pendaftar. Modul lain pada platform tidak termasuk lingkup program ini.]
 
 == Kebutuhan perangkat
 - Peramban (browser) versi terbaru: Chrome, Firefox, Edge, atau Safari.
@@ -87,7 +87,7 @@ Tekan tombol *Daftar PPDB Online* pada halaman profil. Portal menampilkan piliha
 Pilih tab *Masuk Portal*, isi email atau nomor telepon dan kata sandi, lalu tekan *Login*. Centang *Ingat Saya* hanya pada perangkat pribadi. Bila lupa kata sandi, gunakan tautan *Lupa Password* pada halaman login.
 
 == Dasbor Wali Murid
-Setelah masuk, orang tua melihat dasbor yang memuat *Daftar Anak Anda* dan pengumuman sekolah. Tombol *+ Tambah Anak* membuka kembali halaman pendaftaran. Menu rapor, laporan fisik, materi, dan jurnal harian anak dijelaskan pada buku panduan modul rapor.
+Setelah masuk, orang tua melihat dasbor yang memuat *Daftar Anak Anda* dan pengumuman sekolah. Tombol *+ Tambah Anak* membuka kembali halaman pendaftaran. Menu lain pada dasbor tidak termasuk lingkup program ini.
 
 #figure(
   image("/images/manual-w-beranda.jpg", width: 90%),
@@ -120,10 +120,10 @@ Pada halaman pendaftaran, pilih cabang tujuan dengan tombol *Isi Form* (contoh: 
 #tip[Bab ini ditujukan bagi petugas yayasan. Gambar memakai akun demonstrasi sehingga nama dan data siswa adalah data contoh.]
 
 == Masuk sebagai admin
-Buka halaman login, masukkan email dan kata sandi akun admin. Setiap petugas memakai akun sendiri sesuai SOP. Menu samping mengelompokkan fitur menjadi *Data Akademik*, *Kegiatan & Presensi*, serta *E-Rapor & Arsip*; bagian pertama dibahas pada bab ini, dua lainnya pada buku panduan modul rapor. Pilihan tahun ajaran dan semester ada di kanan atas.
+Buka halaman login, masukkan email dan kata sandi akun admin. Setiap petugas memakai akun sendiri sesuai SOP. Fitur yang dibahas pada bab ini berada pada kelompok menu *Data Akademik* (Pengaturan Sekolah, Data Kelas, Data Siswa) dan *Pengumuman Sekolah*; menu lain tidak termasuk lingkup program. Pilihan tahun ajaran dan semester ada di kanan atas.
 
 == Membaca dasbor
-Dasbor menampilkan total siswa aktif, rombongan belajar, status akses pengisian rapor, antrean persetujuan materi, distribusi siswa per kelas, dan pengumuman sekolah terbaru. Kartu rapor dan materi dijelaskan pada buku panduan modul rapor.
+Dasbor menampilkan total siswa aktif, rombongan belajar, distribusi siswa per kelas, dan pengumuman sekolah terbaru.
 
 #figure(
   image("/images/manual-a-dashboard.jpg", width: 90%),
@@ -131,7 +131,7 @@ Dasbor menampilkan total siswa aktif, rombongan belajar, status akses pengisian 
 )
 
 == Mengatur kuota dan pengaturan sekolah
-Buka *Pengaturan Sekolah*. Pada *Pengaturan Pendaftaran & Kuota*, isi kuota TK Pagi, TK Siang, dan PAUD serta pilih batas pendaftaran inden (1 sampai 3 tahun ke depan), lalu tekan *Simpan Pengaturan Pendaftaran*. Halaman yang sama memuat penugasan wali kelas, pengaturan tahun ajaran dan semester, dan hak akses menu (kontrol akses rapor dibahas pada buku panduan modul rapor).
+Buka *Pengaturan Sekolah*. Pada *Pengaturan Pendaftaran & Kuota*, isi kuota TK Pagi, TK Siang, dan PAUD serta pilih batas pendaftaran inden (1 sampai 3 tahun ke depan), lalu tekan *Simpan Pengaturan Pendaftaran*. Halaman yang sama memuat penugasan wali kelas, pengaturan tahun ajaran dan semester, dan hak akses menu.
 
 #figure(
   image("/images/manual-a-pengaturan.jpg", width: 90%),

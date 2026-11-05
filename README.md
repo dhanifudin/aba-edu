@@ -11,7 +11,7 @@ Laporan akhir (Typst) pengabdian kepada masyarakat **Transformasi Digital Layana
 | Folder | Isi |
 |---|---|
 | `laporan-akhir/` | Laporan akhir (`main.typ`, `config.typ`, `dummy.typ`, `bab/`, `frontmatter/`, `lampiran/`, `scan/`) |
-| `supplement/` | Dokumen pendukung: SPTJB, pernyataan keaslian, ringkasan, form HKI/TTG, lembar keberdayaan, buku panduan modul PPDB dan modul rapor, SOP, BAST, rilis |
+| `supplement/` | Dokumen pendukung: SPTJB, pernyataan keaslian, ringkasan, form HKI/TTG, lembar keberdayaan, buku panduan modul PPDB, SOP, BAST, rilis |
 | `artikel/` | Naskah artikel jurnal (docx) dan pratinjaunya |
 | `docs/` | Panduan, formulir sumber, dan pindaian bertanda tangan |
 | `images/` | Gambar laporan (tangkapan layar situs, peta, logo) |
