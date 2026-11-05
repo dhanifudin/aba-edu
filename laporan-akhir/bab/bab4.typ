@@ -60,7 +60,7 @@ Tim pelaksana terdiri atas enam dosen lintas bidang dan enam mahasiswa aktif Pol
 
 === Profil dan Karakteristik Mitra
 
-#laporan.mitra.nama-pendek mengelola satuan pendidikan anak usia dini di #laporan.mitra.alamat, yaitu KB dan TK Rumah Bintang Kecil. Profil TK pada data pokok pendidikan nasional @kemendikdasmen2026 dirangkum pada @tab-profil-mitra. Kegiatan belajar berlangsung pagi hari lima hari sepekan dengan pola harian yang teratur: pembukaan, inti pembelajaran, istirahat, inti pembelajaran kedua, dan penutup pada pukul 07.30 sampai 10.30 (@fig-req-jadwal). Pola ini membuat pencatatan harian, seperti presensi dan jurnal, menjadi kebutuhan rutin guru. Lokasi mitra berjarak #laporan.mitra.jarak-km km dari Polinema (Lampiran 2) sehingga pendampingan langsung dapat dilakukan intensif.
+#laporan.mitra.nama-pendek mengelola satuan pendidikan anak usia dini di #laporan.mitra.alamat, yaitu KB dan TK Rumah Bintang Kecil. Profil TK pada data pokok pendidikan nasional @kemendikdasmen2026 dirangkum pada @tab-profil-mitra. Kegiatan belajar berlangsung pagi hari lima hari sepekan dengan pola harian yang teratur: pembukaan, inti pembelajaran, istirahat, inti pembelajaran kedua, dan penutup pada pukul 07.30 sampai 10.30 (@fig-req-jadwal). Lokasi mitra berjarak #laporan.mitra.jarak-km km dari Polinema (Lampiran 2) sehingga pendampingan langsung dapat dilakukan intensif.
 
 #figure(
   table(
@@ -81,14 +81,19 @@ Tim pelaksana terdiri atas enam dosen lintas bidang dan enam mahasiswa aktif Pol
   caption: [Profil TK Rumah Bintang Kecil menurut data pokok pendidikan semester 2026/2027 Gasal],
 ) <tab-profil-mitra>
 
+#figure(
+  image("/images/req-jadwal.jpg", width: 42%),
+  caption: [Jadwal pelajaran kelompok TK-A di ruang kelas mitra],
+) <fig-req-jadwal>
+
 === Kondisi Pencatatan Eksisting dan Dampaknya
 
-Sebelum program (data pokok pendidikan belum mencatat situs web sekolah), pendaftaran peserta didik dan pelaporan perkembangan anak dilakukan secara manual. Perkembangan anak dilaporkan melalui buku laporan kemajuan belajar cetak (@fig-req-rapor) dan data pendaftar tersimpan pada media yang terpisah. Kondisi ini berdampak pada empat hal.
+Sebelum program (data pokok pendidikan belum mencatat situs web sekolah), pendaftaran peserta didik dilakukan secara manual dan data pendaftar tersimpan pada media yang terpisah. Kondisi ini berdampak pada empat hal.
 
-+ *Waktu.* Mencari kembali data pendaftar atau riwayat rapor anak membutuhkan pemeriksaan arsip satu per satu.
++ *Waktu.* Mencari kembali data pendaftar atau riwayat peserta didik membutuhkan pemeriksaan arsip satu per satu.
 + *Akurasi.* Data yang disalin berulang pada beberapa dokumen rawan salah ketik dan perbedaan antardokumen.
 + *Kesiapan akreditasi.* Bukti administrasi sulit dikumpulkan dan tidak tersusun sebagai repositori.
-+ *Kualitas keputusan.* Pimpinan tidak memiliki ringkasan data siswa, kehadiran, dan kuota yang dapat dilihat cepat.
++ *Kualitas keputusan.* Pimpinan tidak memiliki ringkasan data pendaftar, siswa, dan kuota yang dapat dilihat cepat.
 
 === Kebutuhan Teknologi
 
@@ -105,7 +110,7 @@ Berdasarkan kondisi tersebut, ditambah tersedianya jaringan internet nirkabel be
     inset: 4pt,
     table.header([*Aspek*], [*Dasar Kelayakan*]),
     [Teknis], [Sekolah telah memiliki listrik PLN dan akses internet nirkabel @kemendikdasmen2026. Sistem berbasis web berjalan pada platform yang sudah tersedia dan diakses melalui peramban pada laptop atau ponsel; tidak ada pengadaan perangkat lunak khusus.],
-    [Operasional], [Alur kerja mitra (pendaftaran, presensi, jurnal, rapor) sudah jelas dan dipertahankan; sistem mendigitalkan alur tersebut, bukan menggantinya.],
+    [Operasional], [Alur pendaftaran peserta didik sudah jelas dan dipertahankan; sistem mendigitalkan alur tersebut, bukan menggantinya.],
     [Sumber daya manusia], [Tenaga yang tersedia berjumlah lima orang termasuk empat guru, sehingga antarmuka dibuat sederhana. Mitra menunjuk admin internal, dan hak akses dibagi menurut peran (guru, kepala sekolah, admin); pelatihan praktik langsung disiapkan untuk pengguna.],
     [Ekonomi], [Mitra tidak menanggung biaya pengembangan (kontribusi mitra Rp 0); biaya program bersumber dari dana DIPA Polinema.],
   ),

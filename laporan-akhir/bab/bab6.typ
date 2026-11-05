@@ -10,7 +10,7 @@
 + Pelatihan lima sesi dan pendampingan meningkatkan kemampuan pengelola mengoperasikan sistem; skor kompetensi pengelola meningkat dengan N-Gain #dummy[#s-ng (kategori #lower(kat-ng))].
 + Tata kelola sistem dikukuhkan melalui SOP pengelolaan website dan PPDB, penunjukan admin internal, dan serah terima sistem kepada mitra, sehingga pemanfaatan dapat berlanjut secara mandiri.
 + Sistem ABA-EDU Web, SOP, berita acara serah terima, dan analisis peningkatan penerapan iptek telah dihasilkan, sedangkan naskah artikel ilmiah, naskah rilis media massa, naskah dan storyboard video, serta permohonan Hak Cipta telah disiapkan dan masih dalam proses penerbitan atau pendaftaran sebagaimana pada @tab-realisasi-luaran dan Lampiran 6.
-+ Pengembangan sistem didasarkan pada analisis kebutuhan bersama guru dan pengelola, sehingga fitur yang dibangun (kebutuhan fungsional KF-01 sampai KF-14) mengikuti alur kerja mitra, seperti pendaftaran, presensi, jurnal harian, dan rapor.
++ Pengembangan sistem didasarkan pada analisis kebutuhan bersama guru dan pengelola, sehingga fitur yang dibangun (kebutuhan fungsional KF-01 sampai KF-07) mengikuti alur kerja mitra pada profil lembaga, pendaftaran online, dan pengelolaan data peserta didik.
 + Platform tempat ABA-EDU Web berjalan telah menyediakan modul rapor digital, kehadiran, jurnal guru dan pembelajaran, serta pemantauan tumbuh kembang yang belum diadopsi mitra; modul tersebut menjadi potensi pengembangan lanjutan.
 
 == Saran

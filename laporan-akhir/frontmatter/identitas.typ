@@ -40,6 +40,6 @@
 - _Permasalahan:_ belum ada website profil resmi; pendaftaran peserta didik baru manual dan datanya tersebar; dokumentasi administrasi dan pembelajaran tidak terpusat; literasi digital guru dan pengelola masih rendah; kesiapan akreditasi PAUD terhambat.
 - _Solusi:_ penerapan ABA-EDU Web sebagai website profil dan portal PPDB online disertai data terpusat, pelatihan dan pendampingan pengelola, serta penyusunan SOP tata kelola digital.
 
-*9. Kontribusi mendasar pada mitra:* kanal informasi digital resmi, pendaftaran online dengan data terpusat, rapor dan administrasi kelas digital, serta pengelola yang mampu mengoperasikan sistem secara mandiri.
+*9. Kontribusi mendasar pada mitra:* kanal informasi digital resmi, pendaftaran online dengan data peserta didik terpusat, serta pengelola yang mampu mengoperasikan sistem secara mandiri.
 
 *10. Luaran yang dihasilkan:* ABA-EDU Web sebagai produk teknologi tepat guna; SOP pengelolaan website dan PPDB; analisis peningkatan penerapan iptek; artikel ilmiah, publikasi media massa, video kegiatan, dan Hak Cipta (status pada BAB V).
