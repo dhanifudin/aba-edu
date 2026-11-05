@@ -31,13 +31,12 @@ Pendaftaran Hak Cipta program komputer ABA-EDU Web sedang dalam proses. Formulir
 #pagebreak()
 #fit-page("/build/supplement-form-hki.pdf", 1)
 
-== Dokumen Tata Kelola dan Serah Terima
+== Dokumen Tata Kelola
 
-Standar Operasional Prosedur pengelolaan website dan PPDB disahkan pimpinan yayasan pada #dummy[#tgl.sop], dan Berita Acara Serah Terima ABA-EDU Web ditandatangani pada #dummy[#tgl.bast]. Dokumennya ditunjukkan pada halaman berikut. Lembar analisis peningkatan level keberdayaan mitra (format Lampiran 70) terdapat pada Lampiran 9.
+Standar Operasional Prosedur pengelolaan website dan PPDB disahkan pimpinan yayasan pada #dummy[#tgl.sop]. Dokumennya ditunjukkan pada halaman berikut. Lembar analisis peningkatan level keberdayaan mitra (format Lampiran 70) terdapat pada Lampiran 9.
 
 #for p in range(1, 3) [
   #pagebreak()
   #fit-page("/build/supplement-sop.pdf", p)
 ]
-#pagebreak()
-#fit-page("/build/supplement-bast.pdf", 1)
+

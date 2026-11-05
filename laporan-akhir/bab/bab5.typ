@@ -356,7 +356,7 @@ Sistem diaktifkan pada lingkungan produksi pada alamat #laporan.mitra.situs. Tim
 
 *SOP.* Tim bersama pengurus menyusun Standar Operasional Prosedur pengelolaan website dan PPDB yang mengatur hak akses admin, jadwal pembaruan profil, dan alur verifikasi berkas pendaftaran. SOP ditandatangani pimpinan yayasan pada #dummy[#tgl.sop] dan salinannya diserahkan kepada pengelola sebagai pedoman kerja resmi (bukti pada Lampiran 6).
 
-*Serah terima.* Tim menyerahterimakan ABA-EDU Web kepada pengelola yayasan melalui Berita Acara Serah Terima (BAST) pada #dummy[#tgl.bast], mencakup hak akses akun admin dan dokumen petunjuk penggunaan (bukti pada Lampiran 6). Karena sistem berjalan sebagai tenant platform, sisi server dan pemeliharaan platform tetap berada pada tim sebagai penyedia layanan.
+*Serah terima.* Tim menyerahterimakan ABA-EDU Web kepada pengelola yayasan melalui Berita Acara Serah Terima (BAST) pada #dummy[#tgl.bast], mencakup hak akses akun admin dan dokumen petunjuk penggunaan. Karena sistem berjalan sebagai tenant platform, sisi server dan pemeliharaan platform tetap berada pada tim sebagai penyedia layanan.
 
 *Keberlanjutan.* Yayasan menunjuk #dummy[#n-admin-internal orang (operator pendaftaran dan staf administrasi)] sebagai admin internal yang terlatih mengelola konten dan data pendaftar. Pencadangan data dilakukan berkala pada sisi platform #dummy[(pencadangan otomatis harian dan ekspor rekap pada akhir setiap periode PPDB)]. Tim tetap menyediakan dukungan teknis setelah kegiatan berakhir #dummy[berupa konsultasi teknis dan pemeliharaan platform selama #masa-dukungan].
 
