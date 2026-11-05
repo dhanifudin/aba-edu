@@ -11,7 +11,7 @@ Laporan BAB V ditulis seolah situs sudah operasional. Saat dicek, halaman publik
 
 ## 2. Berkas scan (salin ke `laporan-akhir/scan/`, nama persis)
 Sudah terpasang: `pernyataan-keaslian.pdf` dan `sptjb.pdf` (pindaian bertanda tangan, 13 Okt 2026).
-Masih sementara/kosong: `kesediaan-mitra.pdf` (sementara dari proposal, resolusi rendah), `pernyataan-ketua.pdf` (placeholder). Lalu `make scan-index laporan`.
+Seluruh pindaian pada `laporan-akhir/scan/` kini asli (lihat `scan/README.md`); jalankan `make scan-index laporan` setelah mengganti berkas.
 
 ## 3. Data yang harus diisi (cari `TODO` di PDF, atau `grep -rn "todo\[" laporan-akhir`)
 - Nomor surat perjanjian (nomor SP DIPA 139.03.2.693474/2026 sudah diisi dari pengesahan proposal), jarak ke mitra (`mitra.jarak-km`, rute peta = 9,2 km), jabatan fungsional Dian (Lektor vs Asisten Ahli).
@@ -42,10 +42,9 @@ Masih sementara/kosong: `kesediaan-mitra.pdf` (sementara dari proposal, resolusi
 
 Catatan dari `docs/proposal.pdf`:
 - Surat kesediaan mitra (9 Feb 2026) menyepakati 8 kemampuan ABA-EDU Web (CMS berita, manajemen pengguna berbasis peran, dasbor statistik, ekspor data, dst.). Tabel "Kesesuaian dengan Spesifikasi" di BAB V 5.1.3 menunggu status masing-masing; fitur yang belum ada harus dibuat atau dijelaskan sebagai penyesuaian lingkup.
-- `scan/kesediaan-mitra.pdf` sementara diambil dari proposal (resolusi rendah); ganti dengan pindaian asli.
 - Surat keaslian pada proposal (hlm. 74) tertulis "penelitian ... diusulkan" dan mencantumkan NIDN 0023098604 (NIDN Usman, bukan Dian); buat surat baru lewat `make pernyataan`.
 - Biodata pada proposal hlm. 68--69 berjudul "Biodata Ketua" padahal milik Erfan Rohadi (anggota); di laporan sudah ditempatkan sebagai Anggota Pelaksana 5.
-- Ejaan nama pimpinan yayasan ("Qurrotu A'yunul Chasanah") dan NPSN diambil dari scan beresolusi rendah; verifikasi di `config.typ`.
+- Ejaan nama pimpinan yayasan ("Qurrotu A'yunul Chasanah") dan NPSN (KB 70050031, TK 70050030) sudah dicocokkan dengan kop surat kesediaan mitra dan halaman pengesahan bertanda tangan.
 
 ## 6. Selisih antara halaman pengesahan proposal (SIM P2M, `docs/proposal.pdf` hlm. 3) dan laporan
 Dibaca dari scan beresolusi rendah; pastikan mana yang benar sebelum laporan dicetak:
@@ -72,7 +71,7 @@ Seluruh angka hasil dan tanggal pelaksanaan berikut adalah **dummy**, tampil **b
 - Realisasi anggaran = rencana per uraian (Rp 8.000.000).
 - Tanggal: koordinasi 8 April; website aktif 20 Mei; PPDB aktif dan diuji 24 Juni; repositori 8 Juli; digitalisasi 22 Juli; pelatihan 5 dan 19 Agustus, 2, 16, dan 30 September; SOP disahkan 7 Oktober; rapat refleksi 9 Oktober; BAST 12 Oktober 2026.
 - Nyata (bukan dummy): jarak 9,2 km (rute peta), kontribusi mitra Rp 0 (halaman pengesahan proposal).
-- Belum final (bukan angka/tanggal): URL dan status artikel/media/video/Hak Cipta, nomor SOP, nomor surat perjanjian, tingkat TKT. Uraian fitur admin dan orang tua sudah mengikuti menu nyata di abs.halokes.com (akun demo); konten profil lembaga belum punya menu pengelolaan sendiri pada portal admin (diperbarui melalui pendampingan tim) dan spesifikasi surat kesediaan nomor 4 ditandai "Sebagian".
+- Belum final (bukan angka/tanggal): URL dan status artikel/media/video/Hak Cipta, nomor SOP, tingkat TKT. Uraian fitur admin dan orang tua sudah mengikuti menu nyata di abs.halokes.com (akun demo); konten profil lembaga belum punya menu pengelolaan sendiri pada portal admin (diperbarui melalui pendampingan tim) dan spesifikasi surat kesediaan nomor 4 ditandai "Sebagian".
 - `supplement/ringkasan-pkm.typ` sengaja tetap berkata "kegiatan masih berlangsung" (permintaan sebelumnya), jadi tidak memuat angka dummy.
 
 ## 10. Status luaran dan placeholder (diperbarui)
@@ -94,9 +93,9 @@ Seluruh angka hasil dan tanggal pelaksanaan berikut adalah **dummy**, tampil **b
 - Tanggal foto 4 November 2026 (setelah masa pelaksanaan 31 Oktober); teks laporan sengaja tidak menyebut tanggal. Konfirmasi tanggal dan peserta kegiatan bila akan dicantumkan.
 - Kebutuhan KF-01 sampai KF-14 dan KNF-01 sampai KNF-05 disintesis dari foto, permasalahan mitra, dan fitur sistem; periksa kembali dengan notulen asli bila ada.
 - BAB V 5.1.2 memuat tangkapan layar halaman profil, PPDB, dan admin (`images/manual-a-*.jpg`, `manual-w-*.jpg` yang dipertahankan, akun demonstrasi) yang terbatas pada lingkup proposal; modul rapor, presensi, jurnal, fisik, dan materi tidak dibahas (hanya disebut sebagai tahap adopsi berikutnya di BAB I, II, VI). Kebutuhan fungsional kini KF-01 sampai KF-07. Isi BAB I sampai BAB VI kini 41 halaman (syarat minimal 40).
-- Data profil TK (BAB I dan 4.4.1, Tabel 4.2) bersumber dari data pokok pendidikan Kemendikdasmen (Sekolah Kita, diakses 4 Nov 2026; dalam daftar pustaka sebagai `kemendikdasmen2026`). NPSN TK 70050030 menggantikan nilai lama pada `config.typ`; NPSN KB belum diverifikasi.
+- Data profil TK (BAB I dan 4.4.1, Tabel 4.2) bersumber dari data pokok pendidikan Kemendikdasmen (Sekolah Kita, diakses 4 Nov 2026; dalam daftar pustaka sebagai `kemendikdasmen2026`). NPSN TK 70050030 menggantikan nilai lama pada `config.typ`; 
 - TK sudah terakreditasi B (SK 561/BAN-PDM/SK/2025, berlaku sampai 2030). Narasi laporan tentang "kesiapan akreditasi" sebaiknya dibaca sebagai pemeliharaan dan persiapan akreditasi berikutnya; periksa konsistensi kalimat di BAB I, 2, dan 3.
 - Data pokok mencatat kurikulum 2013 (semester 2025 Gasal), sedangkan template rapor sistem memakai Kurikulum Merdeka PAUD/TK; belum disebut di laporan.
 - Daftar peserta penggalian kebutuhan (7 guru dan pengelola: 3 TK, 4 KB) dari pengguna; tanpa tanggal kegiatan. Perhatikan: pelatihan pada `dummy.typ` memakai 6 peserta dan kuesioner kepuasan n = 6, sedangkan data pokok mencatat 4 guru TK; sesuaikan bila jumlah sebenarnya berbeda.
 - Nilai pada `laporan-akhir/dummy.typ` (skor pre/post-test, kepuasan, tanggal SOP/BAST/aktivasi, jumlah skenario dan pendaftar uji, dan sejenisnya) masih data contoh; sorotan kuning dimatikan (`tampilkan-dummy: false`) sehingga tidak tampak berbeda. Samakan dengan hasil pengukuran nyata sebelum laporan diserahkan.
-- Scan yang masih placeholder: `kesediaan-mitra.pdf` (perlu `docs/proposal.pdf` hlm. 75--76) dan `pernyataan-ketua.pdf` (perlu pindaian bertanda tangan).
+- Scan yang masih placeholder: Lampiran 3 (`kesediaan-mitra.pdf`) kini pindaian asli dari `docs/Mitra Yayasan 1.pdf`. Lampiran 4 (`pernyataan-ketua.pdf`) sementara memakai pernyataan keaslian bertanda tangan ketua (sama dengan yang di depan lampiran); ganti bila ada surat pernyataan ketua tim pelaksana tersendiri.

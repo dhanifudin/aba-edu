@@ -26,7 +26,7 @@
     situs: "https://abs.halokes.com",
     pimpinan: "Qurrotu A'yunul Chasanah",
     jabatan-pimpinan: "Pimpinan Yayasan",
-    npsn: "70050030 (TK Rumah Bintang Kecil)", // sumber: profil sekolah Kemendikdasmen, diakses 4 Nov 2026; NPSN KB belum diverifikasi
+    npsn: "KB 70050031 / TK 70050030", // kop surat kesediaan mitra dan profil sekolah Kemendikdasmen
   ),
 
   ketua: (
